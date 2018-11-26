@@ -1,13 +1,37 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
+    "pages/account/account",
+    "pages/challenge/challenge",
     "pages/landing/landing"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "black",
+    "navigationBarTitleText": "MindRock",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#FFFFFF",
+    "selectedColor": "white",
+    "borderColor": "#1D1F34",
+    "color": "black",
+    "font-size":"40rpx",
+    "font-weight":"bold",
+  
+    "list": [
+        {
+          "pagePath": "pages/index/index",
+          "text": "Search"
+        },
+      {
+        "pagePath": "pages/challenge/challenge",
+        "text": "Challenge"
+      },
+      {
+        "pagePath": "pages/account/account",
+        "text": "Me"
+      }
+    ]
   }
 }

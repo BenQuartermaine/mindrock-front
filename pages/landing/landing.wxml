@@ -3,5 +3,5 @@
   <view class="content">
     <h1>MindRock</h1>
     <text>For Stronger Minds</text>
-    <a class="btn">Start Your Journey</a>
+    <button class="btn" bindtap="clickSearh">Start Your Journey</button> 
   </view>
