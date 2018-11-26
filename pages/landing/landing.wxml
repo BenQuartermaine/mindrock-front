@@ -6,5 +6,4 @@
     <button bindtap='login' open-type="getUserInfo" bindgetuserinfo="getUserInfo">
     Start Your Journey
     </button>
-
   </view>
