@@ -3,5 +3,7 @@
   <view class="content">
     <h1>MindRock</h1>
     <text>For Stronger Minds</text>
-    <button class="btn" bindtap="clickSearh">Start Your Journey</button> 
+    <button bindtap='login' open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+    Start Your Journey
+    </button>
   </view>

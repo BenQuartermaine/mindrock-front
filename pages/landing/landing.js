@@ -1,4 +1,5 @@
 // pages/landing/landing.js
+const app = getApp()
 Page({
 
   /**
@@ -19,7 +20,45 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // get user_id from local storage if it exists
+    let userId = wx.getStorageSync("userId")
+    if (userId) {
+      wx.switchTab({
+        // if already has user_id, switch to index page
+        url: '../index/index',
+      });
+    }else{
+      // if no userid in storage
+      let page = this
+      const host = app.globalData.dev
+      // send post request to wx
+      wx.login({
+        success: (res) => {
+          wx.request({
+            url: host + 'login',
+            method: 'POST',
+            data: {
+              code: res.code
+            },
+            success: (res) => {
+              //store userid in local storage
+              wx.setStorageSync("userId", res.data.userId)
+            }
+          })
+        }
+      })
 
+    }
+
+  },
+
+  getUserInfo: function (e) {
+    let userInfo = e.detail.userInfo
+    wx.setStorageSync("userInfo", userInfo)
+
+    wx.switchTab({
+      url: '../index/index',
+    })
   },
 
   /**
