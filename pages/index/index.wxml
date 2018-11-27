@@ -1,12 +1,12 @@
 <!-- search bar -->
-<view class='search_row' bindtap="search"> 
+<!-- <view class='search_row' bindtap="search"> 
   <view class="search">
     <view class="search_arr"> 
       <icon class="searchcion" size='20' type='search'></icon> 
       <input class="" disabled placeholder="eg. negotiation" value="{{searchValue}}"/> </view> 
     </view> 
   <view class='text'>search</view> 
-</view>
+</view> -->
 <!-- cards -->
 <view class="container">
   <view class='cards'>
