@@ -9,12 +9,31 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  //事件处理函数
-  bindViewTap: function() {
+ 
+  ClickCreativity: function() {
+   wx.navigateTo({
+     url: '/pages/creativity/creativity',
+     success: function (res) { },
+     fail: function (res) { },
+     complete: function (res) { },
+   })
+  },
+  ClickSpeaking: function () {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '/pages/speaking/speaking',
     })
   },
+  ClickNo: function () {
+    wx.navigateTo({
+      url: '/pages/yes/yes',
+    })
+  },
+  ClickYes: function () {
+    wx.navigateTo({
+      url: '/pages/no/no',
+    })
+  },
+
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

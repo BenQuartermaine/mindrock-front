@@ -60,7 +60,7 @@ input{
 }
 
 .card {
-  height: 400px;
+  height: 700rpx;
   width:100%;
   color:rgba(0,0,0,0.8);
   justify-content: center;
@@ -79,5 +79,11 @@ input{
 .card-footer .description{
   font-weight:light;
   font-size:20rpx;
+
+}
+.btn{
+  margin-top: 40rpx;
+  font-size: 20rpx;
+  width: 35%;
 
 }

@@ -1,9 +1,12 @@
 {
   "pages": [
+    "pages/landing/landing",
     "pages/index/index",
     "pages/account/account",
-    "pages/challenge/challenge",
-    "pages/landing/landing"
+    "pages/creativity/creativity",
+    "pages/speaking/speaking",
+    "pages/no/no",
+    "pages/yes/yes"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -24,10 +27,7 @@
           "pagePath": "pages/index/index",
           "text": "Search"
         },
-      {
-        "pagePath": "pages/challenge/challenge",
-        "text": "Challenge"
-      },
+
       {
         "pagePath": "pages/account/account",
         "text": "Me"

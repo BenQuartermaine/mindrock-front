@@ -1,4 +1,4 @@
-// pages/challenge/challenge.js
+// pages/creativity/creativity.js
 Page({
 
   /**
@@ -7,7 +7,7 @@ Page({
   data: {
 
   },
-
+  
   /**
    * Lifecycle function--Called when page load
    */

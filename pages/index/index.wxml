@@ -10,70 +10,74 @@
 <!-- cards -->
 <view class="container">
   <view class='cards'>
-   <view class='card'>
+   <!-- <view class='card'>
     <view class='card-image'> 
        <image src='/img/1.jpg'/>
     </view> 
     <view class='card-footer'>
-      <text  class="title">30 Days of Confidence</text>
+      <text  class="title">7 Days of Confidence</text>
       <view class="description">Develop the most attractive quality a man can possess. Feel sexy in your own skin and become more accepting of the parts of yourself that you’ve always hated.
-</view>
+      </view>
     </view>
-  </view>
+  </view> -->
 
-  <view class='card'>
+  <!-- <view class='card'>
     <view class='card-image'> 
        <image src='/img/2.jpg'></image>
     </view>
     <view class='card-footer'>
-      <text class="title"> 30 Days Negotiation</text>
+      <text class="title"> 7 Days Negotiation</text>
       <view class="description">Life is not about what you deserve, it is about how you negotiate. Negotiation is one of the most difficult jobs a person can do yet nowhere is the return on investment potential so high. Get started and be confident in your ability to negotiate.
       </view>
     </view>
-   </view>
+   </view> -->
 
    <view class='card'>
     <view class='card-image'> 
       <image src='/img/3.jpg'/>
     </view>
     <view class='card-footer'>
-      <text class="title">30 Days of Creativity</text>
-      <view class="description">Are you stuck? Do you need some inspiration to get around? These enjoyable and stimulating challenges do exactly what they sound like: They get you in the habit of becoming more creative by getting you to practice your creative muscle.</view>
+      <text class="title">7 Days of Creativity</text>
+      <!-- <view class="description">Are you stuck? Do you need some inspiration to get around? These enjoyable and stimulating challenges do exactly what they sound like: They get you in the habit of becoming more creative by getting you to practice your creative muscle.
+      </view> -->
+    <button class="btn" bindtap='ClickCreativity'>Discover more</button>
     </view>
    </view>
 
-   <view class='card'>
+   <!-- <view class='card'>
      <view class='card-image'> 
         <image src='/img/4.jpg'/>
      </view>
      <view class='card-footer'>
-       <text class="title">30 Days of Mindfulness </text>
-       <view class="description">A 30-day mindfulness challenge promotes the practice of daily activities that reduce stress and anxiety, improve performance and productivity, and increase happiness with a greater sense of peace, presence and overall well-being.</view>
+       <text class="title">7 Days of Mindfulness           </text>
+       <view class="description">A 30-day mindfulness challenge promotes the practice of daily activities that reduce stress and anxiety, improve performance and productivity, and increase happiness with a greater sense of peace, presence and overall well-being.
+       </view>
      </view>
-   </view>
+   </view> -->
 
-  <view class='card'>
+  <!-- <view class='card'>
     <view class='card-image'> 
       <image src='/img/5.jpg'/>
     </view>
     <view class='card-footer'>
-      <text class="title">30 Days of Self-awareness</text>
+      <text class="title">7 Days of Self-awareness</text>
         <view class="description">
       Achieving self-awareness gives you the opportunity to make positive changes in your behavior and increase your self-confidence.
   Learn to increase your self-knowledge and find new ways to interpret your thoughts, actions, feelings, and conversations that you have with other people.
-        </view>
+      </view>
     </view>
-  </view>
+  </view> -->
 
   <view class='card'>
     <view class='card-image'>
        <image src='/img/6.jpg'/>
     </view>
     <view class='card-footer'>
-      <text class="title">30 Days of Public Speaking</text>
-      <view class="description">
+      <text class="title">7 Days of Public Speaking</text>
+      <!-- <view class="description">
       Time and again, you speak in front of larger crowds. However, you have probably experienced time where you sound weak, unsure or outright confused. Mind you – being persuasive is not magic.Practice is the key!
-      </view>
+      </view> -->
+      <button class="btn"bindtap='ClickSpeaking'>Discover more</button>
     </view>
   </view>
 
@@ -82,8 +86,10 @@
       <image src='/img/7.jpg'/>
     </view>
     <view class='card-footer'>
-      <text class="title">30 Days of No</text>
-       <view class="description">One of the most important skills we can master is the ability to get comfortable with no.  It's time to start saying no to the things that aren’t worth doing, that are a misuse of our time and energy, and that will hold us back from achieving our goals.</view>
+      <text class="title">7 Days of No</text>
+       <!-- <view class="description">One of the most important skills we can master is the ability to get comfortable with no.  It's time to start saying no to the things that aren’t worth doing, that are a misuse of our time and energy, and that will hold us back from achieving our goals.
+       </view> -->
+     <button class="btn" bindtap='ClickNo'>Discover more</button>
     </view>
    </view>
 
@@ -92,10 +98,11 @@
       <image src='/img/8.jpg'/>
     </view>
     <view class='card-footer'>
-      <text class="title">30 Days of Yes</text>
-      <view class="description">
+      <text class="title">7 Days of Yes</text>
+      <button class="btn" bindtap='ClickYes'>Discover more</button>
+      <!-- <view class="description">
       The point of saying yes is see what happens when you begin to  take risks, do more things that you wouldn’t normally do, perform tasks asked of you, and start saying yes to people instead of saying no.
-      </view>
+      </view> -->
      </view>
     </view>
   </view>
