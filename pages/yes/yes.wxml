@@ -6,10 +6,4 @@
   </view>
 </view>
 
-<view class='review-container'>
-  <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/ranyuhan"></image>
-  <view class='body-wrapper'>"Saying yes opened up so many opportunities that I have ever paid attention to!"
-  </view>
-</view>
 
- <!-- <view class="btn"><button>Let's Go</button></view> -->

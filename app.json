@@ -2,7 +2,6 @@
   "pages": [
     "pages/landing/landing",
     "pages/index/index",
-    "pages/account/account",
     "pages/creativity/creativity",
     "pages/speaking/speaking",
     "pages/no/no",
@@ -29,13 +28,12 @@
           "selectedIconPath": "img/search.png",
           "text": ""
         },
-
-      {
-        "pagePath": "pages/account/account",
-        "iconPath": "img/menew.png",
-        "selectedIconPath": "img/menew.png",
-        "text": ""
-      }
+        {
+          "pagePath": "pages/landing/landing",
+          "iconPath": "img/menew.png",
+          "selectedIconPath": "img/menew.png",
+          "text": ""
+        }
     ]
   }
 }

@@ -5,9 +5,4 @@
   </view>
 </view>
 
-<view class='review-container'>
-  <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/bellacally"></image>
-  <view class='body-wrapper'>"After I started taking this challenges, speaking in the public gradually becomes more naturally for me. I pushed me out of my comfort zone"
-  </view>
-</view>
-<view class="btn"><button>Let's Go</button></view>
+
