@@ -25,12 +25,16 @@
     "list": [
         {
           "pagePath": "pages/index/index",
-          "text": "Search"
+          "iconPath": "img/search.png",
+          "selectedIconPath": "img/search.png",
+          "text": ""
         },
 
       {
         "pagePath": "pages/account/account",
-        "text": "Me"
+        "iconPath": "img/menew.png",
+        "selectedIconPath": "img/menew.png",
+        "text": ""
       }
     ]
   }

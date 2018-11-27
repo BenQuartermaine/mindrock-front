@@ -1,4 +1,5 @@
 // pages/account/account.js
+const app = getApp()
 Page({
 
   /**
@@ -12,7 +13,27 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    const page = this
+    const host = app.globalData.dev
+    // when page loads, get the user id & info from local storage and save to page data
+    const userId = wx.getStorageSync("userId")
+    const userInfo = wx.getStorageSync("userInfo")
 
+    this.setData({
+      userId: userId,
+      userInfo: userInfo
+    });
+
+    wx.request({
+      url: host + 'login',
+      method: "GET",
+      success(res) {
+        page.setData(
+          res.data
+        )
+      }
+    })
+    console.log(this.data)
   },
 
   /**
