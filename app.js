@@ -7,6 +7,6 @@ App({
     // development mode testing api
     dev: '',
      // production mode testing api
-    production: ''
+    prod: ''
   }
 })

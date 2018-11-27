@@ -30,23 +30,26 @@ Page({
     }else{
       // if no userid in storage
       let page = this
-      const host = app.globalData.dev
-      // send post request to wx
-      // wx.login({
-      //   success: (res) => {
-      //     wx.request({
-      //       url: host + 'login',
-      //       method: 'POST',
-      //       data: {
-      //         code: res.code
-      //       },
-      //       success: (res) => {
-      //         //store userid in local storage
-      //         wx.setStorageSync("userId", res.data.userId)
-      //       }
-      //     })
-      //   }
-      // })
+      // get api url from globalData, dev for testing, prod for production
+      const dev = app.globalData.dev
+      const prod = app.globalData.prod
+      //send post request to wx
+      wx.login({
+        success: (res) => {
+          console.log(res)
+          wx.request({
+            url: dev + 'login',
+            method: 'POST',
+            data: {
+              code: res.code
+            },
+            success: (res) => {
+              //store userid in local storage
+              wx.setStorageSync("userId", res.data.userId)
+            }
+          })
+        }
+      })
 
     }
 
