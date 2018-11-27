@@ -32,21 +32,21 @@ Page({
       let page = this
       const host = app.globalData.dev
       // send post request to wx
-      wx.login({
-        success: (res) => {
-          wx.request({
-            url: host + 'login',
-            method: 'POST',
-            data: {
-              code: res.code
-            },
-            success: (res) => {
-              //store userid in local storage
-              wx.setStorageSync("userId", res.data.userId)
-            }
-          })
-        }
-      })
+      // wx.login({
+      //   success: (res) => {
+      //     wx.request({
+      //       url: host + 'login',
+      //       method: 'POST',
+      //       data: {
+      //         code: res.code
+      //       },
+      //       success: (res) => {
+      //         //store userid in local storage
+      //         wx.setStorageSync("userId", res.data.userId)
+      //       }
+      //     })
+      //   }
+      // })
 
     }
 
