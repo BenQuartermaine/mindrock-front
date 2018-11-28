@@ -70,14 +70,9 @@
 				},
 				{
 					"id": -1,
-					"name": "journal",
-					"pathName": "pages/journal/journal",
-					"query": ""
-				},
-				{
-					"id": -1,
 					"name": "dashboard",
-					"pathName": "pages/dashboard/dashboard"
+					"pathName": "pages/dashboard/dashboard",
+					"query": ""
 				}
 			]
 		}
