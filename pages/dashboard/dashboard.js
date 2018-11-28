@@ -2,6 +2,10 @@
 Page({
 
   data: {
+    showExpand: false,
+    min: '/img/min.svg',
+    max: '/img/max.svg'
+
   },
 
   journalLog: function (e) {
@@ -41,6 +45,20 @@ Page({
     })
 
     console.log(this.data)
+  },
+
+  // Expand and minimize challenge box
+  expand: function () {
+    console.log(this.data.showExpand)
+    if (this.data.showExpand) {
+      this.setData({
+        showExpand: false
+      })
+    } else {
+      this.setData({
+        showExpand: true
+      })
+    }
   },
 
   /**
