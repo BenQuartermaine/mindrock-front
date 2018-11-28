@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 4,
+			"current": 5,
 			"list": [
 				{
 					"id": -1,
@@ -67,6 +67,11 @@
 					"name": "yes",
 					"pathName": "pages/yes/yes",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "journal",
+					"pathName": "pages/journal/journal"
 				}
 			]
 		}

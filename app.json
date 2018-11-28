@@ -6,9 +6,9 @@
     "pages/speaking/speaking",
     "pages/no/no",
     "pages/yes/yes",
+    "pages/journal/journal",
     "pages/account/account",
     "pages/show/show"
-   
   ],
   "window": {
     "backgroundTextStyle": "light",
