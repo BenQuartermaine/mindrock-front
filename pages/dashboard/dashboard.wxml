@@ -72,7 +72,7 @@
     <view wx:if="{{item == currentDay}}">
       <view class='day'>
         <view><text>Day {{index + 1}}</text></view>
-        <view><button bindtap='journalLog'>Journal</button></view>
+        <view><button bindtap='journalLog' data-assignment="{{id}}">Journal</button></view>
       </view>
     </view>
   <!-- Day has yet to be completed -->

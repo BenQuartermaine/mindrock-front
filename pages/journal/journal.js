@@ -50,7 +50,7 @@ Page({
       showCancel: false,
       success: function (res) {
         wx.switchTab({
-          url: '../index/index'
+          url: '../dashboard/dashboard'
         })
       },
     })
