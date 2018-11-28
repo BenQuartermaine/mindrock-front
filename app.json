@@ -5,7 +5,8 @@
     "pages/creativity/creativity",
     "pages/speaking/speaking",
     "pages/no/no",
-    "pages/yes/yes"
+    "pages/yes/yes",
+    "pages/journal/journal"
   ],
   "window": {
     "backgroundTextStyle": "light",

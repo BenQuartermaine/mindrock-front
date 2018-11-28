@@ -1,0 +1,25 @@
+<view>
+<h1>Daily Journal</h1>
+
+  <form bindsubmit='formSubmit'>
+    <view class="section content">
+      <h3>How was your challenge day?</h3>
+      <input name="content" placeholder='e.g. It went well today or OMG it was not easy as I thought at all.'></input>
+    </view>
+
+    <view class="section summary-tag">
+    <h3>Tags</h3>
+    <input name="summary_tag_list"></input>
+    </view>
+
+    <view class="section photo-tag">
+    <h3>Photos</h3>
+    <input name="photo_tag_list"></input>
+    </view>
+    <view class="submit-btn">
+      <button bindtap='journalSuccess' form-type="submit" >Challenge Done!</button>
+    </view>
+  </form>
+   <button bindtap='backhome'  style="margin-bottom:50px" loading="{{loading}}">Back</button>
+
+</view>
