@@ -1,7 +1,7 @@
 //app.js
 App({
   onLaunch: function () {
-    this.globalData.dev = 'http://localhost:3000/api/v1/'
+    this.globalData.dev = 'http://localhost:3000/'
   },
   globalData: {
     // development mode testing api
