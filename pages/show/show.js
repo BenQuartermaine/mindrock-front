@@ -18,6 +18,7 @@ Page({
     ]
   },
   clickToDash:function (){
+
     const challenge_id = this.data.challenge.id
     const userId = wx.getStorageSync("userId")
     const app = getApp()
