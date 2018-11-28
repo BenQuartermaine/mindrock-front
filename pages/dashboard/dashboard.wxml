@@ -1,4 +1,3 @@
-<!--pages/dashboard/dashboard.wxml-->
 
 <!-- Avatar -->
 <view class='head-wrapper'>
@@ -85,3 +84,4 @@
   </block>
   </view> 
 </view> 
+

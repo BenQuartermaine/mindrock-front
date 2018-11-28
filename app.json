@@ -10,7 +10,10 @@
     "pages/dashboard/dashboard",
     "pages/journal/journal",
     "pages/account/account",
-    "pages/show/show"
+    "pages/show/show",
+    "pages/dashboard/dashboard"
+
+
   ],
   "window": {
     "backgroundTextStyle": "light",

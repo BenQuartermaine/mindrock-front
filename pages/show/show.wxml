@@ -1,2 +1,35 @@
-<!--pages/show/show.wxml-->
-<text>pages/show/show.wxml</text>
+<view class="container">
+  <image src="{{photo[0]}}"></image>
+
+  <!-- tagging section -->
+  <view class="challenge-name">{{challenge.name}}</view>
+  <view class="tags-container">
+    <view class="tag">Hard</view>
+    <view class="tag">Hard</view>
+    <view class="tag">Hard</view>
+    <view class="tag">Hard</view>
+    <view class="tag">Hard</view>
+    <view class="tag">Hard</view>
+    <view class="tag">Hard</view>
+    <view class="tag">{{challenge.challenge_tag_list}}</view>
+</view>
+  <!-- description section  -->
+  <view class="{{showExpand? 'des-section-long': 'des-section'}}">
+    <view class="row">
+      <view class="des-title">Description</view>
+      <image class="dropdown" src='/img/hidden.png' bindtap="expand"></image>
+    </view>
+    <view class="{{showExpand? 'des-details-long': 'des-details'}}">
+  {{challenge.description}}
+
+    The event is the way how the view layer is communicated with the logical layer.
+    The event can feed the user's behavior back to the logical layer for processing.
+    The event can be bound to components, and when the trigger event is reached, the corresponding event handler in the logical layer is executed.
+    The event objects can carry additional information such as id, dataset and touches.
+
+    </view>
+  </view>
+  <button class="btn" bindtap='clickToDash'>Challenge Accepted</button>
+</view>
+
+

@@ -1,10 +1,8 @@
 // pages/dashboard/dashboard.js
 Page({
 
-  /**
 
-   * Page initial data
-   */
+ Page initial data
   data: {
     days: [1, 2, 3, 4, 5, 6, 7],
     currentDay: 4,
@@ -17,6 +15,7 @@ Page({
   },
 
 
+
   /**
    * Lifecycle function--Called when page load
    */
@@ -26,12 +25,16 @@ Page({
 
   /**
 
+   * Lifecycle function--Called when page is initially rendered
+
    */
   onReady: function () {
 
   },
 
 
+   * Lifecycle function--Called when page show
+r
    */
   onShow: function () {
 
@@ -39,12 +42,16 @@ Page({
 
   /**
 
+   * Lifecycle function--Called when page hide
+r
    */
   onHide: function () {
 
   },
 
   /**
+
+   * Lifecycle function--Called when page unload
 
    */
   onUnload: function () {
@@ -53,6 +60,8 @@ Page({
 
   /**
 
+   * Page event handler function--Called when user drop down
+
    */
   onPullDownRefresh: function () {
 
@@ -60,12 +69,13 @@ Page({
 
   /**
 
+   * Called when page reach bottom
+
    */
   onReachBottom: function () {
 
   },
 
-  /**
 
    */
   onShareAppMessage: function () {
