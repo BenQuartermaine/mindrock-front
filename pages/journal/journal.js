@@ -1,4 +1,5 @@
 let app = getApp();
+let host = app.globalData.dev;
 Page({
 
   /**
@@ -12,7 +13,7 @@ Page({
     console.log('form发生了submit事件，携带数据为：', e.detail.value);
     const userId = wx.getStorageSync("userId")
     console.log(userId)
-    let host = app.globalData.dev
+  
     let page = this
     
     let journal = {
@@ -20,7 +21,7 @@ Page({
         user_id: userId
       },
       assignment: {
-        assignment_id: options.id,
+        assignment_id: page.data.assignment_id,
         status: true,
       },
       content: e.detail.value.content,
@@ -64,7 +65,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    console.log(options)
+
+    this.setData({
+      assignment_id: options.id
+    })
+    //get the assignment data and set to page data
+   
+ 
   },
 
   /**
