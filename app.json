@@ -6,10 +6,14 @@
     "pages/speaking/speaking",
     "pages/no/no",
     "pages/yes/yes",
+    "pages/journal/journal",
+    "pages/dashboard/dashboard",
+    "pages/journal/journal",
     "pages/account/account",
     "pages/show/show",
     "pages/dashboard/dashboard"
-   
+
+
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -25,7 +29,6 @@
     "font-size": "40rpx",
     "font-weight": "bold",
     "list": [
-
       {
         "pagePath": "pages/index/index",
         "iconPath": "img/search.png",
@@ -33,12 +36,11 @@
         "text": ""
       },
       {
-        "pagePath": "pages/account/account",
+        "pagePath": "pages/landing/landing",
         "iconPath": "img/menew.png",
         "selectedIconPath": "img/menew.png",
         "text": ""
       }
-
     ]
   }
 }

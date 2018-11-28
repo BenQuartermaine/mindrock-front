@@ -4,12 +4,9 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    categories: [],
   },
- 
+  // --------for submission only----------
   ClickCreativity: function() {
    wx.navigateTo({
      url: '/pages/creativity/creativity',
@@ -34,10 +31,37 @@ Page({
     })
   },
 
-  onLoad: function () {
-    // get api url from globalData, dev for testing, prod for production
+  getChallengeData() {
     const dev = app.globalData.dev
     const prod = app.globalData.prod
+    const userId = wx.getStorageSync("userId")
+    const page = this
+
+    wx.request({
+      url: dev + 'api/v1/categories',
+      method: "GET",
+      success(res) {
+        page.setData({
+          categories: res.data
+        })
+      }
+    })
+    console.log(this.data)
   },
-  
+  // ------------for submission only-----------
+
+  onLoad: function () {
+    this.getChallengeData()
+
+  },
+
+  showChallenge(e) {
+    console.log(e)
+    const data = e.currentTarget.dataset;
+    const challenge = data.challenge;
+
+    wx.navigateTo({
+      url: `../show/show?id=${challenge.id}`
+    });
+  },
 })

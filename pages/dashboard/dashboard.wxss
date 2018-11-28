@@ -1,1 +1,44 @@
+
 /* pages/dashboard/dashboard.wxss */
+.head-wrapper {
+  display: flex;
+}
+.dashboard-avatar {
+  width: 350rpx;
+  height: 350rpx;
+  border-radius: 3px;
+  margin: 20rpx;
+}
+.toggle-sign {
+  width: 30rpx;
+  height: 30rpx;
+}
+.challenge-wrapper {
+  margin: 20rpx;
+  padding: 3;
+}
+  
+.challenge-wrapper {
+  margin: 20rpx;
+  padding: 30rpx;
+  background: #FFFFFF;
+  border: 1px solid #E7E7E7;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+.challenge-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.day {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx;
+  margin: 5rpx;
+  background: #FFFFFF;
+  border: 1px solid #E7E7E7;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
