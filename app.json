@@ -6,8 +6,10 @@
     "pages/speaking/speaking",
     "pages/no/no",
     "pages/yes/yes",
-    "pages/dashboard/dashboard"
-   
+    "pages/dashboard/dashboard",
+    "pages/journal/journal",
+    "pages/account/account",
+    "pages/show/show"
   ],
   "window": {
     "backgroundTextStyle": "light",

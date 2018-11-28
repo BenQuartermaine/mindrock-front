@@ -60,7 +60,7 @@ input{
 }
 
 .card {
-  height: 700rpx;
+  height: 100px;
   width:100%;
   color:rgba(0,0,0,0.8);
   justify-content: center;
@@ -85,5 +85,18 @@ input{
   margin-top: 40rpx;
   font-size: 20rpx;
   width: 35%;
+}
 
+.scroll-view-container {
+  width: 100vw;
+  border: 1px solid black;
+  display: flex;
+  overflow: auto;
+  height: 100px;
+}
+
+.scroll-item {
+  width: 50vw;
+  height: 25px;
+  flex-shrink: 0;
 }
