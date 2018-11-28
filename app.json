@@ -7,7 +7,8 @@
     "pages/no/no",
     "pages/yes/yes",
     "pages/account/account",
-    "pages/show/show"
+    "pages/show/show",
+    "pages/dashboard/dashboard"
    
   ],
   "window": {
