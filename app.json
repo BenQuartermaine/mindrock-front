@@ -8,12 +8,8 @@
     "pages/yes/yes",
     "pages/journal/journal",
     "pages/dashboard/dashboard",
-    "pages/journal/journal",
     "pages/account/account",
-    "pages/show/show",
-    "pages/dashboard/dashboard"
-
-
+    "pages/show/show"
   ],
   "window": {
     "backgroundTextStyle": "light",

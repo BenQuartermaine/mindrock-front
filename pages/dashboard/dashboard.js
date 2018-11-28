@@ -1,8 +1,6 @@
 // pages/dashboard/dashboard.js
 Page({
 
-
- Page initial data
   data: {
     days: [1, 2, 3, 4, 5, 6, 7],
     currentDay: 4,
@@ -32,10 +30,6 @@ Page({
 
   },
 
-
-   * Lifecycle function--Called when page show
-r
-   */
   onShow: function () {
 
   },
@@ -76,8 +70,6 @@ r
 
   },
 
-
-   */
   onShareAppMessage: function () {
 
   }
