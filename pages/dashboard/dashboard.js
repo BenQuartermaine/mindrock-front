@@ -2,23 +2,52 @@
 Page({
 
   data: {
-    days: [1, 2, 3, 4, 5, 6, 7],
-    currentDay: 4,
   },
 
-  journalLog: function () {
+  journalLog: function (e) {
+    console.log(e)
+    const data = e.currentTarget.dataset
+    const assignment_id = data.assignment
+
     wx.navigateTo({
-      url: '../journal/journal',
+      url: `../journal/journal?id=${assignment_id}`,
     })
   },
 
+  getDashboardData() {
+    const userId = wx.getStorageSync("userId")
 
+    const app = getApp()
+    const dev = app.globalData.dev
+
+    const page = this
+
+    wx.request({
+      url: dev + `api/v1/users/${userId}`,
+      method: "GET",
+      success(res) {
+        page.setData(
+          res.data
+        )
+      }
+    })
+    const d = new Date()
+    const year = d.getFullYear()
+    const month = d.getMonth() + 1
+    const day = d.getDate()
+    const date = `${year}-${month}-${day}`
+    this.setData({
+      currentDay: date
+    })
+
+    console.log(this.data)
+  },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    this.getDashboardData()
   },
 
   /**

@@ -30,7 +30,7 @@ Page({
     };
 
     wx.request({
-      url: host +`assignments/${page.data.assignment_id}/journals`,
+      url: host +`api/v1/assignments/${page.data.assignment_id}/journals`,
       method: 'POST',
       data: journal,
       success(res) {

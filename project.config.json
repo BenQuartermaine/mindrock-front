@@ -72,6 +72,7 @@
 					"id": -1,
 					"name": "dashboard",
 					"pathName": "pages/dashboard/dashboard",
+
 					"query": ""
 				},
 				{
