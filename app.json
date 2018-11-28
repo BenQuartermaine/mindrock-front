@@ -2,7 +2,6 @@
   "pages": [
     "pages/landing/landing",
     "pages/index/index",
-    "pages/account/account",
     "pages/creativity/creativity",
     "pages/speaking/speaking",
     "pages/no/no",
@@ -23,6 +22,7 @@
     "font-size": "40rpx",
     "font-weight": "bold",
     "list": [
+
       {
         "pagePath": "pages/index/index",
         "iconPath": "img/search.png",
@@ -35,6 +35,7 @@
         "selectedIconPath": "img/menew.png",
         "text": ""
       }
+
     ]
   }
 }
