@@ -15,13 +15,10 @@
 .title {
   padding: 20rpx 20rpx 0rpx 20rpx;
 }
-input {
-  /* height: 300rpx; */
-  max-width: 95%;
-  word-wrap: break-word;  
-  word-break: normal;  
+textarea {
   padding: 10rpx 10rpx 0 20rpx;
- 
+  margin: 0;
+  width: 96%;
 }
 .content {
   background-color: #FFFFFF;
@@ -33,6 +30,11 @@ input {
 .photo-tag {
   height: 250rpx;
   margin-bottom: 60rpx;
+}
+
+image {
+  width:400rpx;
+  height:900rpx;
 }
 button{
   width: 260rpx;

@@ -70,8 +70,8 @@
 				},
 				{
 					"id": -1,
-					"name": "show",
-					"pathName": "pages/show/show"
+					"name": "journal",
+					"pathName": "pages/journal/journal"
 				}
 			]
 		}

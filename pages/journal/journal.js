@@ -1,46 +1,71 @@
 let app = getApp();
 let host = app.globalData.dev;
+const AV = require('../../utils/av-weapp-min.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    tempFilePaths: "/img/upload.png",
+  },
 
+  photoUpload: function () {
+    var page = this;
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success(res) {
+        page.setData({
+          tempFilePaths: res.tempFilePaths[0]
+        })
+      }
+    })
   },
 
   formSubmit: function (e) {
     console.log('form发生了submit事件，携带数据为：', e.detail.value);
-    const userId = wx.getStorageSync("userId")
-    console.log(userId)
-  
     let page = this
-    
-    let journal = {
-      user:{
-        user_id: userId
-      },
-      assignment: {
-        assignment_id: page.data.assignment_id,
-        status: true,
-      },
-      content: e.detail.value.content,
-      summary_tag_list: e.detail.value.summary_tag_list,
-      photo_tag_list: e.detail.value.photo_tag_list
-    };
 
+    new AV.File('file-name', {
+      blob: {
+        uri: this.data.tempFilePaths,
+      },
+    }).save().then(
+      function (file) {
+        //got url from LeanCloud
+        console.log(file.url())
+        let userId = wx.getStorageSync("userId")
+        // console.log(userId)
+        let journal = {
+          user:{
+            user_id: userId
+          },
+          assignment: {
+            assignment_id: page.data.assignment_id,
+            status: true,
+          },
+          content: e.detail.value.content,
+          summary_tag_list: e.detail.value.summary_tag_list,
+          photo_tag_list: file.url(),
+        }
+      
     wx.request({
       url: host +`api/v1/assignments/${page.data.assignment_id}/journals`,
       method: 'POST',
       data: journal,
       success(res) {
-        console.log(res)
+        // console.log(res)
         // wx.redirectTo({
         //   url: '',
         // })
       }
-    })
+      })
+      }).catch(console.error)
   },
+
   journalSuccess: function() {
     wx.showModal({
       title: ' Your Mind Rock',
