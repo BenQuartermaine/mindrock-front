@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    
+    challenges: [],
   },
   // --------for submission only----------
   ClickCreativity: function() {
@@ -30,26 +30,29 @@ Page({
       url: '/pages/no/no',
     })
   },
-  // ------------for submission only-----------
 
-  onLoad: function () {
-    // get api url from globalData, dev for testing, prod for production
+  getChallengeData() {
     const dev = app.globalData.dev
     const prod = app.globalData.prod
-    // get current user id
     const userId = wx.getStorageSync("userId")
-
     const page = this
 
     wx.request({
       url: dev + 'api/v1/challenges',
       method: "GET",
       success(res) {
-        page.setData(
-          res.data
-        )
+        page.setData({
+          challenges: res.data
+        })
       }
     })
+    console.log(this.data)
+  },
+  // ------------for submission only-----------
+
+  onLoad: function () {
+    this.getChallengeData()
+
   },
 
   showChallenge(e) {
@@ -60,6 +63,5 @@ Page({
     wx.navigateTo({
       url: `../show/show?id=${challenge.id}`
     });
-  }
-  
+  },
 })
