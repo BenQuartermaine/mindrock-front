@@ -5,7 +5,8 @@
     "pages/creativity/creativity",
     "pages/speaking/speaking",
     "pages/no/no",
-    "pages/yes/yes"
+    "pages/yes/yes",
+    "pages/dashboard/dashboard"
    
   ],
   "window": {
@@ -22,7 +23,6 @@
     "font-size": "40rpx",
     "font-weight": "bold",
     "list": [
-
       {
         "pagePath": "pages/index/index",
         "iconPath": "img/search.png",
@@ -30,12 +30,11 @@
         "text": ""
       },
       {
-        "pagePath": "pages/account/account",
+        "pagePath": "pages/landing/landing",
         "iconPath": "img/menew.png",
         "selectedIconPath": "img/menew.png",
         "text": ""
       }
-
     ]
   }
 }
