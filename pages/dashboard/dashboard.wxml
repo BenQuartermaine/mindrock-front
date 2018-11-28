@@ -2,7 +2,7 @@
 <!-- Avatar -->
 <view class='head-wrapper'>
   <view>
-    <image class='dashboard-avatar' src="/img/1.jpg"/>
+    <image class='dashboard-avatar' src="{{user.avatar_url}}"/>
   </view>
 
   <!-- Stats section -->
@@ -37,7 +37,7 @@
 
 <!-- Current challenge section (outside) -->
 <view class='challenge-name'>
-  <text>Challenge Name</text> 
+  <text>{{user.challenges[0].name}}</text> 
 </view>
 
 
@@ -46,7 +46,7 @@
 <view class='challenge-wrapper'>
   <view class='challenge-header'>
     <view>
-      <text>7-Day Confidence</text>
+      <text>{{user.challenges[0].description}}</text>
     </view>
 
     <!-- Minus/plus sign icon for toggling keyframe -->
@@ -59,23 +59,23 @@
   <!-- Day 1 through 7 -->
   <view class='challenge-day-list'>
 
-  <block wx:for="{{days}}">
+  <block wx:for="{{user.challenges[0].assignments}}" wx:for-item="assignment">
   <!-- If the day has been completed -->
-    <view wx:if="{{item < currentDay}}">
+    <view wx:if="{{assignment.date < currentDay}}">
       <view class='day'>
         <view><text>Day {{index + 1}}</text></view>
         <view><text>Completed status</text></view>
       </view>
     </view>
   <!-- If the current day -->
-    <view wx:if="{{item == currentDay}}">
+    <view wx:if="{{assignment.date == currentDay}}">
       <view class='day'>
         <view><text>Day {{index + 1}}</text></view>
-        <view><button bindtap='journalLog' data-assignment="{{id}}">Journal</button></view>
+        <view><button bindtap='journalLog' data-assignment="{{assignment.id}}">Journal</button></view>
       </view>
     </view>
   <!-- Day has yet to be completed -->
-    <view wx:if="{{item > currentDay}}">
+    <view wx:if="{{assignment.date > currentDay}}">
       <view class='day'>
         <view><text>Day {{index + 1}}</text></view>
         <view><text>Not unlocked</text></view>
