@@ -6,7 +6,9 @@
     "pages/speaking/speaking",
     "pages/no/no",
     "pages/yes/yes",
-    "pages/journal/journal"
+    "pages/journal/journal",
+    "pages/account/account",
+    "pages/show/show"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -19,22 +21,23 @@
     "selectedColor": "white",
     "borderColor": "#1D1F34",
     "color": "black",
-    "font-size":"40rpx",
-    "font-weight":"bold",
-  
+    "font-size": "40rpx",
+    "font-weight": "bold",
     "list": [
-        {
-          "pagePath": "pages/index/index",
-          "iconPath": "img/search.png",
-          "selectedIconPath": "img/search.png",
-          "text": ""
-        },
-        {
-          "pagePath": "pages/landing/landing",
-          "iconPath": "img/menew.png",
-          "selectedIconPath": "img/menew.png",
-          "text": ""
-        }
+
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "img/search.png",
+        "selectedIconPath": "img/search.png",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/account/account",
+        "iconPath": "img/menew.png",
+        "selectedIconPath": "img/menew.png",
+        "text": ""
+      }
+
     ]
   }
 }
