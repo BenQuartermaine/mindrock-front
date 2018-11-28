@@ -10,21 +10,22 @@ Page({
 
   formSubmit: function (e) {
     console.log('form发生了submit事件，携带数据为：', e.detail.value);
+    const userId = wx.getStorageSync("userId")
+    console.log(userId)
     let host = app.globalData.dev
     let page = this
-    console.log(this.data)
-
+    
     let journal = {
       user:{
-        user_id: this.data.userId
+        user_id: userId
       },
       assignment: {
-        assignment_id: this.data.assignment_id,
+        assignment_id: options.id,
         status: true,
       },
-      content: content,
-      summary_tag_list: summary_tag_list,
-      photo_tag_list: photo_tag_list
+      content: e.detail.value.content,
+      summary_tag_list: e.detail.value.summary_tag_list,
+      photo_tag_list: e.detail.value.photo_tag_list
     };
 
     wx.request({
@@ -63,7 +64,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
