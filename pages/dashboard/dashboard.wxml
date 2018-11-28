@@ -1,0 +1,87 @@
+<!--pages/dashboard/dashboard.wxml-->
+
+<!-- Avatar -->
+<view class='head-wrapper'>
+  <view>
+    <image class='dashboard-avatar' src="/img/1.jpg"/>
+  </view>
+
+  <!-- Stats section -->
+  <view class='stats-wrapper'>
+    <view>
+      <view>
+        <text>Current Day</text>
+      </view>
+      <view>
+        <text>3/7</text>
+      </view>
+    </view>
+    <view>
+      <view>
+        <text>Current Streak</text>
+      </view>
+      <view>
+        <text>3/7</text>
+      </view>
+    </view>
+    <view>
+      <view>
+        <text>Longest Streak</text>
+      </view>
+      <view>
+        <text>45 days</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!-- Current challenge section (outside) -->
+<view class='challenge-name'>
+  <text>Challenge Name</text> 
+</view>
+
+
+
+<!-- Current challenge section (inside) -->
+<view class='challenge-wrapper'>
+  <view class='challenge-header'>
+    <view>
+      <text>7-Day Confidence</text>
+    </view>
+
+    <!-- Minus/plus sign icon for toggling keyframe -->
+    <!-- How can we use font-awesome or sth similar here? -->
+    <view>
+      <image class='toggle-sign' src='/img/min.svg'></image>
+    </view>
+  </view>
+
+  <!-- Day 1 through 7 -->
+  <view class='challenge-day-list'>
+
+  <block wx:for="{{days}}">
+  <!-- If the day has been completed -->
+    <view wx:if="{{item < currentDay}}">
+      <view class='day'>
+        <view><text>Day {{index + 1}}</text></view>
+        <view><text>Completed status</text></view>
+      </view>
+    </view>
+  <!-- If the current day -->
+    <view wx:if="{{item == currentDay}}">
+      <view class='day'>
+        <view><text>Day {{index + 1}}</text></view>
+        <view><button bindtap='journalLog' data-assignment="{{id}}">Journal</button></view>
+      </view>
+    </view>
+  <!-- Day has yet to be completed -->
+    <view wx:if="{{item > currentDay}}">
+      <view class='day'>
+        <view><text>Day {{index + 1}}</text></view>
+        <view><text>Not unlocked</text></view>
+      </view>
+    </view>
+  </block>
+  </view> 
+</view> 
