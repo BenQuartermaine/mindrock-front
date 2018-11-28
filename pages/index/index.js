@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    challenges: [],
+    categories: [],
   },
   // --------for submission only----------
   ClickCreativity: function() {
@@ -38,11 +38,11 @@ Page({
     const page = this
 
     wx.request({
-      url: dev + 'api/v1/challenges',
+      url: dev + 'api/v1/categories',
       method: "GET",
       success(res) {
         page.setData({
-          challenges: res.data
+          categories: res.data
         })
       }
     })

@@ -1,11 +1,14 @@
 <view class="container">
-  <view class="scroll-view-container">
-    <view wx:for="{{challenges.challenges}}" wx:for-item="challenge" wx:key="challenge.id" bindtap="showChallenge" data-challenge="{{challenge}}">
-      <view class="scroll-item">
-        <view class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('{{challenge.photo}}');">
-          <view class="card-category">{{challenge.name}}</view>
+
+  <view wx:for="{{categories.categories}}" wx:for-item="category">
+    <view class="scroll-view-container">
+      <view wx:for="{{category.challenges}}" wx:for-item="challenge" bindtap="showChallenge" data-challenge="{{challenge}}">
+        <view class="scroll-item">
+          <view class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('{{challenge.photo}}');">
+            <view class="card-category">{{category.name}}</view>
+          </view>
         </view>
       </view>
     </view>
   </view>
-</view>
+  </view>
