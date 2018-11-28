@@ -18,8 +18,8 @@ Page({
     ]
   },
   clickToDash:function (){
-    wx.navigateTo({
-      url: 'pages/dashboard/dashboard',
+    wx.switchTab({
+      url: '../dashboard/dashboard'
     })
   },
 

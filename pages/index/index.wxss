@@ -21,14 +21,16 @@
   justify-content: center;
   justify-items: center;
   display: flex;
+  margin:20rpx;
 }
 
 .card-category{
  font-size: 30rpx;
  font-weight: light;
  color: white;
- position: absolute;
- bottom: 40rpx;
+ display: flex;
+ /* position: absolute;
+ bottom: 40rpx; */
 }
 .container{
   padding: 50rpx;
