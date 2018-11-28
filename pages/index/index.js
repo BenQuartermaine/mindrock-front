@@ -38,6 +38,20 @@ Page({
     // get api url from globalData, dev for testing, prod for production
     const dev = app.globalData.dev
     const prod = app.globalData.prod
+    // get current user id
+    const userId = wx.getStorageSync("userId")
+
+    const page = this
+
+    wx.request({
+      url: dev + `users/${userId}`,
+      method: "GET",
+      success(res) {
+        page.setData(
+          res.data
+        )
+      }
+    })
   },
   
 })
