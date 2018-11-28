@@ -5,6 +5,15 @@ const app = getApp()
 Page({
   data: {
     categories: [],
+    photos: [
+      '/img/confidence.png',
+      '/img/self-awareness.png',
+      '/img/courage.png',
+      '/img/productivity.png',
+      '/img/habit.png',
+      '/img/communication.jpg',
+      
+    ]
   },
   // --------for submission only----------
   ClickCreativity: function() {
@@ -43,6 +52,7 @@ Page({
       success(res) {
         page.setData({
           categories: res.data
+
         })
       }
     })
