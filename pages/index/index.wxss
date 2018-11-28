@@ -60,7 +60,7 @@ input{
 }
 
 .card {
-  height: 700rpx;
+  height: 100px;
   width:100%;
   color:rgba(0,0,0,0.8);
   justify-content: center;
