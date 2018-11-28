@@ -2,10 +2,6 @@
   "pages": [
     "pages/landing/landing",
     "pages/index/index",
-    "pages/creativity/creativity",
-    "pages/speaking/speaking",
-    "pages/no/no",
-    "pages/yes/yes",
     "pages/journal/journal",
     "pages/dashboard/dashboard",
     "pages/account/account",

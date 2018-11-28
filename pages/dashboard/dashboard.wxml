@@ -40,8 +40,6 @@
   <text>{{user.challenges[0].name}}</text> 
 </view>
 
-
-
 <!-- Current challenge section (inside) -->
 <view class='challenge-wrapper'>
   <view class='challenge-header'>
@@ -50,14 +48,15 @@
     </view>
 
     <!-- Minus/plus sign icon for toggling keyframe -->
-    <!-- How can we use font-awesome or sth similar here? -->
     <view>
-      <image class='toggle-sign' src='/img/min.svg'></image>
+      <image class='toggle-sign' bindtap='expand' src='{{showExpand? min : max}}'></image>
     </view>
   </view>
 
   <!-- Day 1 through 7 -->
   <view class='challenge-day-list'>
+
+
 
   <block wx:for="{{user.challenges[0].assignments}}" wx:for-item="assignment">
   <!-- If the day has been completed -->
