@@ -20,8 +20,8 @@
       <image class="dropdown" src='/img/hidden.png' bindtap="expand"></image>
     </view>
     <view class="{{showExpand? 'des-details-long': 'des-details'}}">
-  {{challenge.description}}
-
+  This is the real description : {{challenge.description}}
+  
     The event is the way how the view layer is communicated with the logical layer.
     The event can feed the user's behavior back to the logical layer for processing.
     The event can be bound to components, and when the trigger event is reached, the corresponding event handler in the logical layer is executed.

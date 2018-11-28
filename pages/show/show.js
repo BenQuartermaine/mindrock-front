@@ -18,8 +18,24 @@ Page({
     ]
   },
   clickToDash:function (){
-    wx.switchTab({
-      url: '../dashboard/dashboard'
+
+    const challenge_id = this.data.challenge.id
+    const userId = wx.getStorageSync("userId")
+    const app = getApp()
+    const dev = app.globalData.dev
+
+    const request = {
+      user_id: userId
+    }
+    wx.request({
+      url: dev + `/api/v1/challenges/${challenge_id}/assignments`,
+      method: "POST",
+      data: request,
+      success(res) {
+        wx.navigateTo({
+          url: '/pages/dashboard/dashboard',
+        })
+      }
     })
   },
 
@@ -45,7 +61,7 @@ Page({
     const that = this
     const dev = app.globalData.dev
     wx.request({
-      url: dev + "api/v1/challenges/1",
+      url: dev + `api/v1/challenges/${options.id}`,
       method: 'GET',
       success(res) {
         console.log(res)
