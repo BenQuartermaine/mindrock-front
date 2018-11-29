@@ -1,57 +1,42 @@
 <!-- Avatar -->
 <view class='head-wrapper'>
   <view>
-    <image class='dashboard-avatar' src="{{avatar}}" />
+  <image class='dashboard-avatar' src="{{avatar}}"/>
   </view>
 
   <!-- Stats section -->
   <view class='stats-wrapper'>
-    <view>
-      <view>
-        <text>Current Day</text>
-      </view>
-      <view>
-        <text>3/7</text>
-      </view>
+    <view class="row">
+      <view class="current">Current Day</view>
+      <view class="number">3/7</view>
+     </view>
+    <view class="row">
+      <view class="current">Current Streak</view>
+      <view class="number">3/7</view>
     </view>
-    <view>
-      <view>
-        <text>Current Streak</text>
-      </view>
-      <view>
-        <text>3/7</text>
-      </view>
-    </view>
-    <view>
-      <view>
-        <text>Longest Streak</text>
-      </view>
-      <view>
-        <text>45 days</text>
-      </view>
+    <view class="row last">
+      <view class="current">Longest Streak</view>
+      <view class="number">45 days</view>
     </view>
   </view>
 </view>
 
 <block wx:for="{{user.challenges}}" wx:for-item="challenge">
   <block wx:if="{{challenge.assignments[challenge.assignments.length - 1].date >= currentDay}}">
-    <view>Current</view>
-    <!-- Current challenge section (outside) -->
-    <view class='challenge-name'>
-      <text>{{challenge.name}}</text>
-    </view>
+    
     <!-- Current challenge section (inside) -->
-    <view class='challenge-wrapper'>
-      <view class='challenge-header'>
-        <view>
-          <text>{{challenge.description}}</text>
-        </view>
-
+  <view class="{{showExpand? 'challenge-wrapper-long': 'challenge-wrapper'}}">
+    <!-- <view class='challenge-wrapper'> -->
+      <view class="row stats">
+        <view class="status">current</view>
+    <!-- Current challenge section (outside) -->
+        <view class='challenge-name'>{{challenge.name}}</view>
         <!-- Minus/plus sign icon for toggling keyframe -->
-        <view>
-          <image class='toggle-sign' bindtap='expand' src='{{showExpand? min : max}}'></image>
-        </view>
+        <!-- <image class='toggle-sign' bindtap='expand' src='{{showExpand? min : max}}'></image> -->
+        <image class="toggle-sign" src='/img/hidden.png' bindtap="expand"></image>
+        
       </view>
+      <view class="{{showExpand? 'description-long': 'description'}}">{{challenge.description}}</view>
 
       <!-- Day 1 through 7 -->
       <view class='challenge-day-list'>
@@ -64,7 +49,7 @@
             </view>
             <view wx:if="{{assignment.date < currentDay}}">
               <view wx:if="{{assignment.status}}">
-                <text>Completed</text>
+                <text></text>
               </view>
               <view wx:else>
                 <text>Failed</text>
@@ -76,14 +61,12 @@
                 <button bindtap='journalLog' data-assignment="{{assignment.id}}">Journal</button>
               </view>
               <view wx:else>
-                <text>Completed</text>
+                <image class='locked'src='/img/pass.png'/>
               </view>
             </view>
             <!-- Day has yet to be completed -->
             <view wx:else>
-              <view>
-                <text>Not unlocked</text>
-              </view>
+                <image class='locked'src='/img/locked.png'/>
             </view>
           </view>
         </block>
@@ -93,21 +76,15 @@
   <block wx:else>
     <view>History</view>
     <!-- History challenge section (outside) -->
-    <view class='challenge-name'>
-      <text>{{challenge.name}}</text>
-    </view>
-    <!-- Current challenge section (inside) -->
-    <view class='challenge-wrapper'>
-      <view class='challenge-header'>
-        <view>
-          <text>{{challenge.description}}</text>
-        </view>
-
+      <view class='challenge-wrapper'>
+      <view class="row stats">
+        <view class="status">current</view>
+    <!-- Current challenge section (outside) -->
+        <view class='challenge-name'>{{challenge.name}}</view>
         <!-- Minus/plus sign icon for toggling keyframe -->
-        <view>
-          <image class='toggle-sign' bindtap='expand' src='{{showExpand? min : max}}'></image>
-        </view>
+        <image class='toggle-sign' bindtap='expand' src='{{showExpand? min : max}}'></image>
       </view>
+      <view class="description">{{challenge.description}}</view>
 
       <!-- Day 1 through 7 -->
       <view class='challenge-day-list'>
@@ -119,7 +96,7 @@
               <text>{{assignment.date}}</text>
             </view>
             <view wx:if="{{assignment.status}}">
-              <text>Completed</text>
+              <image class='locked'src='/img/locked.png'/>
             </view>
             <view wx:else>
               <text>Failed</text>

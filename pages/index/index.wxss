@@ -6,8 +6,9 @@
  font-size: 35rpx;
 }
 .card {
-  height: 200rpx;
-  width: 200rpx;
+  border-radius: 50%;
+  height: 200px;
+  width:200rpx;
   color:rgba(0,0,0,0.8);
   margin:20rpx;
   border-radius: 50%;
