@@ -36,7 +36,8 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 4,
+			"current": 6,
+
 			"list": [
 				{
 					"id": -1,
@@ -66,6 +67,8 @@
 					"id": -1,
 					"name": "dashboard",
 					"pathName": "pages/dashboard/dashboard",
+
+
 					"query": ""
 				},
 				{
