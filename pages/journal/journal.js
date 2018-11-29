@@ -1,5 +1,6 @@
 let app = getApp();
-let host = app.globalData.dev;
+let dev = app.globalData.dev;
+const prod = app.globalData.prod;
 const AV = require('../../utils/av-weapp-min.js');
 
 Page({
@@ -54,7 +55,7 @@ Page({
         }
       
     wx.request({
-      url: host +`api/v1/assignments/${page.data.assignment_id}/journals`,
+      url: prod +`api/v1/assignments/${page.data.assignment_id}/journals`,
       method: 'POST',
       data: journal,
       success(res) {

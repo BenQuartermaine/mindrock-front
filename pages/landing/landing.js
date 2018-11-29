@@ -38,7 +38,7 @@ Page({
         success: (res) => {
           console.log(res)
           wx.request({
-            url: dev + 'login',
+            url: prod + 'login',
             method: 'POST',
             data: {
               code: res.code
