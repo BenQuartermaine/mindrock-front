@@ -1,13 +1,21 @@
-<view class="content">
-  <text>
-    Awesome Job!
-  </text>
-  <text>
-    You finished Challenge Day {{assignment_id%7}}!
-  </text>
+<view class="wrapper">
+  <view class="container">
+
+    <view class="content">
+      <text class="header">
+        Awesome Job!
+      </text>
+      <text>
+        You finished Challenge Day {{assignment_id%7}}!
+      </text>
+    </view>
+
+    <view class="btn">
+     <button open-type="share">Share</button>
+      <button bindtap='backHome'>Home</button>
+     </view>
+
+  </view>
 </view>
 
-<view class="btn">
-<button open-type="share">Share</button>
-<button bindtap='backHome'>Home</button>
-</view>
+
