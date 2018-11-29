@@ -2,3 +2,6 @@
 <text>Awesome Job! You finished {{assignment_id%7}} Day Challenge!</text>
 
 </view>
+
+<button open-type="share">Share</button>
+<button>Home</button>
