@@ -59,8 +59,8 @@ Page({
       data: journal,
       success(res) {
         // console.log(res)
-        // wx.redirectTo({
-        //   url: '',
+        // wx.navigateTo({
+        //   url: '../confirm/confirm',
         // })
       }
       })
@@ -68,19 +68,20 @@ Page({
   },
 
   journalSuccess: function() {
-    wx.showModal({
-      title: ' Your Mind Rock',
-      content: 'Journal submitted successfully!',
-      confirmText: "Rock",
-      confirmColor: '#931621',
-      showCancel: false,
-      success: function () {
-        wx.switchTab({
-          url: '../dashboard/dashboard'
+    // wx.showModal({
+    //   title: ' Your Mind Rock',
+    //   content: 'Journal submitted successfully!',
+    //   confirmText: "Rock",
+    //   confirmColor: '#931621',
+    //   showCancel: false,
+    //   success: function () {
+      const page = this
+        wx.navigateTo({
+          url: `../confirm/confirm?id=${page.data.assignment_id}`,
         })
       },
-    })
-  },
+    // })
+  // },
 
   /**
    * 生命周期函数--监听页面加载

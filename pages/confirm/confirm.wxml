@@ -1,0 +1,4 @@
+<view>
+<text>Awesome Job! You finished {{assignment_id%7}} Day Challenge!</text>
+
+</view>
