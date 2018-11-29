@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.4.0",
 	"appid": "wx573e38657ba17623",
-	"projectname": "mindrock-front",
+	"projectname": "mindrock",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -37,6 +37,7 @@
 		},
 		"miniprogram": {
 			"current": 6,
+
 			"list": [
 				{
 					"id": -1,
@@ -51,21 +52,9 @@
 					"query": ""
 				},
 				{
-					"id": 2,
-					"name": "creativity",
-					"pathName": "pages/creativity/creativity",
-					"query": ""
-				},
-				{
 					"id": -1,
 					"name": "challenge",
 					"pathName": "pages/challenge/challenge",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "yes",
-					"pathName": "pages/yes/yes",
 					"query": ""
 				},
 				{
@@ -76,9 +65,16 @@
 				},
 				{
 					"id": -1,
-					"name": "journal",
-					"pathName": "pages/journal/journal",
+					"name": "dashboard",
+					"pathName": "pages/dashboard/dashboard",
+
+
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "journal",
+					"pathName": "pages/journal/journal"
 				}
 			]
 		}

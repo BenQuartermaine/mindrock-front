@@ -1,56 +1,11 @@
-.search{ 
-   width: 60%;
-    } 
-.search_arr {
-    border: 1px solid #d0d0d0; 
-    border-radius: 10rpx; 
-    margin-left: 20rpx; 
-    } 
-    
-.search_arr input{ 
-  margin-left: 60rpx; 
-  height: 60rpx; 
-  border-radius: 5px; 
-  } 
-.bc_text { 
-  line-height: 68rpx;
-   height: 68rpx; 
-   margin-top: 34rpx; 
-  } 
-  
-.text {
-  margin-left: 15rpx; 
-  width: 18%; 
-  line-height: 150%; 
-  text-align: center; 
-  border: 1px solid #d0d0d0; 
-  border-radius: 10rpx; 
-  font-size:30rpx;
-  font-weight: bold;
-     } 
-.search_row{ 
-  display: flex; 
-  flex-direction: row;
-  margin-bottom: 0px;
-  /* align-items: center; */
-  justify-content: center;
- } 
- .searchcion { 
-   margin: 10rpx 10rpx 10rpx 10rpx;
-   position: absolute; 
-   left:110rpx; 
-   z-index: 2; 
-   width: 20px; 
-   height: 20px; 
-   text-align: center; 
-    }
-input{
-  font-weight: lighter;
-  font-size:30rpx;
-
-}
 
 /* cards' styling */
+.category{
+ padding:20rpx;
+ text-transform: uppercase;
+ font-size:25rpx;
+ font-weight: bolder;
+}
 .cards{
   display: flex;
   flex-direction: column;
@@ -65,8 +20,18 @@ input{
   color:rgba(0,0,0,0.8);
   justify-content: center;
   justify-items: center;
+  display: flex;
+  margin:20rpx;
 }
 
+.card-category{
+ font-size: 30rpx;
+ font-weight: light;
+ color: white;
+ display: flex;
+ /* position: absolute;
+ bottom: 40rpx; */
+}
 .container{
   padding: 50rpx;
 }
@@ -89,14 +54,20 @@ input{
 
 .scroll-view-container {
   width: 100vw;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   overflow: auto;
-  height: 100px;
+  height: 300rpx;
 }
 
 .scroll-item {
   width: 50vw;
   height: 25px;
   flex-shrink: 0;
+}
+
+image{
+  width:350rpx;
+  height:100%;
+  display: flex;
 }
