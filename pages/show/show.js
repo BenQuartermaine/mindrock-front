@@ -26,12 +26,13 @@ Page({
     const userId = wx.getStorageSync("userId")
     const app = getApp()
     const dev = app.globalData.dev
+    const prod = app.globalData.prod
 
     const request = {
       user_id: userId
     }
     wx.request({
-      url: dev + `/api/v1/challenges/${challenge_id}/assignments`,
+      url: prod + `/api/v1/challenges/${challenge_id}/assignments`,
       method: "POST",
       data: request,
       success(res) {
@@ -67,7 +68,7 @@ Page({
     const userId = wx.getStorageSync("userId")
 
     wx.request({
-      url: dev + `api/v1/challenges/${options.id}`,
+      url: prod + `api/v1/challenges/${options.id}`,
       method: 'GET',
       success(res) {
         console.log(res)
@@ -77,7 +78,7 @@ Page({
         )
 
         wx.request({
-          url: dev + `api/v1/users/${userId}`,
+          url: prod + `api/v1/users/${userId}`,
           method: 'GET',
           success(res) {
             console.log(res)

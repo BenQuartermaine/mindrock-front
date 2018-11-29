@@ -9,7 +9,7 @@ AV.init({
 App({
   onLaunch: function () {
     this.globalData.dev = 'http://localhost:3000/'
-    this.globalData.prod = 'http://mindrock.wogengapp.cn/'
+    this.globalData.prod = 'https://mindrock.wogengapp.cn/'
   },
   globalData: {
     // development mode testing api

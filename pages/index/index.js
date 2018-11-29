@@ -47,7 +47,7 @@ Page({
     const page = this
 
     wx.request({
-      url: dev + 'api/v1/categories',
+      url: prod + 'api/v1/categories',
       method: "GET",
       success(res) {
         page.setData({
