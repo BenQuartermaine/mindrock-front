@@ -70,6 +70,7 @@ Page({
     this.setData({
       avatar: userInfo.avatarUrl
     })
+    console.log(this.data)
   },
 
   /**
