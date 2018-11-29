@@ -66,6 +66,10 @@ Page({
    */
   onLoad: function (options) {
     this.getDashboardData()
+    const userInfo = wx.getStorageSync("userInfo")
+    this.setData({
+      avatar: userInfo.avatarUrl
+    })
   },
 
   /**
