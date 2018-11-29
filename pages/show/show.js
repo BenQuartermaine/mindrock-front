@@ -32,7 +32,7 @@ Page({
       method: "POST",
       data: request,
       success(res) {
-        wx.navigateTo({
+        wx.switchTab({
           url: '/pages/dashboard/dashboard',
         })
       }
