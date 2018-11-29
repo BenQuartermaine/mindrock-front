@@ -30,14 +30,14 @@
       },
       {
         "pagePath": "pages/dashboard/dashboard",
-        "iconPath": "img/menew.png",
-        "selectedIconPath": "img/menew.png",
+        "iconPath": "img/compass.png",
+        "selectedIconPath": "img/compass.png",
         "text": ""
       },
       {
         "pagePath": "pages/account/account",
-        "iconPath": "img/menew.png",
-        "selectedIconPath": "img/menew.png",
+        "iconPath": "img/user.png",
+        "selectedIconPath": "img/user.png",
         "text": ""
       }
 
