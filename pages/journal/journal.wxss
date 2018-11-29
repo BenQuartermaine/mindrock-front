@@ -22,19 +22,22 @@ textarea {
 }
 .content {
   background-color: #FFFFFF;
-  height: 300rpx;
+  height: 400rpx;
 }
 .summary-tag {
   height: 200rpx;
 }
 .photo-tag {
-  height: 250rpx;
+  height: 350rpx;
   margin-bottom: 60rpx;
 }
 
 image {
   width:400rpx;
   height:900rpx;
+  position:relative;
+  bottom:17px;
+  right:-70px;
 }
 button{
   width: 260rpx;
@@ -43,6 +46,6 @@ button{
   background-color: #95C8C0;
   color: #FFFFFF;
   font-size: 12px;
-  margin-top: 20rpx;
+  margin-top: 60rpx;
   margin-bottom: 40rpx;
 }

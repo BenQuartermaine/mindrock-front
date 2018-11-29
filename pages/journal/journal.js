@@ -9,6 +9,7 @@ Page({
    */
   data: {
     tempFilePaths: "/img/upload.png",
+    assignment_id: '',
   },
 
   photoUpload: function () {
@@ -73,7 +74,7 @@ Page({
       confirmText: "Rock",
       confirmColor: '#931621',
       showCancel: false,
-      success: function (res) {
+      success: function () {
         wx.switchTab({
           url: '../dashboard/dashboard'
         })
@@ -81,11 +82,6 @@ Page({
     })
   },
 
-  backhome: function () {
-    wx.switchTab({
-      url: '/pages/index/index',
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
