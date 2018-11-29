@@ -10,7 +10,7 @@
   font-size: 40rpx;
 }
 
-image {
+.pic {
   border-radius: 20px 20px 0px 0px;
   margin-top: 60rpx;
   width: 100vw;
@@ -100,7 +100,7 @@ image {
   width:5%;
   height:30rpx;
   position: absolute;
-  top: 545rpx;
+  top: 600rpx;
   right: 38rpx;
 }
 
