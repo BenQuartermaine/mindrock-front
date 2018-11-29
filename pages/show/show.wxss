@@ -101,6 +101,6 @@
   width:5%;
   height:30rpx;
   position: absolute;
-  top: 630rpx;
+  top: 640rpx;
   right: 38rpx;
 }
