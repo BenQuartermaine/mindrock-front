@@ -1,6 +1,6 @@
 <view class="container">
 <text class="header">7 Day {{challenge.name}} Challenge</text>
-  <image src="{{photo[0]}}"></image>
+  <image class="pic" src="{{photo[0]}}"></image>
 
   <!-- tagging section
   <view class="challenge-name">{{challenge.name}}</view>
@@ -26,7 +26,7 @@
     </view>
   </view>
   <view wx:if="{{joined}}">
-    <text>You are already doing this challenge!</text>
+    <text> 👍🏻👍🏻👍🏻 You've already Accepted</text>
   </view>
   <view wx:else>
     <button class="btn" bindtap='clickToDash'>Challenge Accepted</button> 
