@@ -5,14 +5,15 @@
 
 .header {
   position: absolute;
-  left: 20rpx;
+  top: 20rpx;
+  left: 30rpx;
   font-weight: bold;
   font-size: 40rpx;
 }
 
 .pic {
   border-radius: 20px 20px 0px 0px;
-  margin-top: 60rpx;
+  margin-top: 90rpx;
   width: 100vw;
 }
 /* .tags-container{
@@ -49,8 +50,8 @@
 }
 .des-section {
   height: 300rpx;
-  margin: 40rpx 0 30rpx 0;
-  width:95%;
+  margin: 50rpx 0 30rpx 0;
+  width:96%;
   border: 1px solid lightgrey;
   /* overflow: hidden; */
   border-radius: 10rpx;
@@ -100,6 +101,6 @@
   width:5%;
   height:30rpx;
   position: absolute;
-  top: 600rpx;
+  top: 630rpx;
   right: 38rpx;
 }
