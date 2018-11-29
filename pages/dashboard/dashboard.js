@@ -2,7 +2,7 @@
 Page({
 
   data: {
-    showExpand: false,
+    collapse: false,
     min: '/img/min.svg',
     max: '/img/max.svg'
 
@@ -51,14 +51,14 @@ Page({
 
   // Expand and minimize challenge box
   expand: function () {
-    console.log(this.data.showExpand)
-    if (this.data.showExpand) {
+    console.log(this.data.collapse)
+    if (this.data.collapse) {
       this.setData({
-        showExpand: false
+        collapse: false
       })
     } else {
       this.setData({
-        showExpand: true
+       collapse: true
       })
     }
   },
