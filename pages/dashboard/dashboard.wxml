@@ -49,7 +49,6 @@
             </view>
             <view wx:if="{{assignment.date < currentDay}}">
               <view wx:if="{{assignment.status}}">
-                <text></text>
               </view>
               <view wx:else>
                 <text>Failed</text>
