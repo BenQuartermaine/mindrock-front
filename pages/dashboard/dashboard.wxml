@@ -1,8 +1,7 @@
-
 <!-- Avatar -->
 <view class='head-wrapper'>
   <view>
-    <image class='dashboard-avatar' src="{{avatar}}"/>
+    <image class='dashboard-avatar' src="{{avatar}}" />
   </view>
 
   <!-- Stats section -->
@@ -34,11 +33,11 @@
   </view>
 </view>
 
-<block wx:for="{{user.challenges}}" wx:for-item="challenge"> 
+<block wx:for="{{user.challenges}}" wx:for-item="challenge">
   <block wx:if="{{challenge.assignments[challenge.assignments.length - 1] >= currentDay}}">
     <!-- Current challenge section (outside) -->
     <view class='challenge-name'>
-      <text>{{challenge.name}}</text> 
+      <text>{{challenge.name}}</text>
     </view>
     <!-- Current challenge section (inside) -->
     <view class='challenge-wrapper'>
@@ -56,33 +55,46 @@
       <!-- Day 1 through 7 -->
       <view class='challenge-day-list'>
 
-
-
-      <block wx:for="{{challenge.assignments}}" wx:for-item="assignment">
-      <!-- If the day has been completed -->
-        <view wx:if="{{assignment.date < currentDay}}">
-          <view class='day'>
-            <view><text>Day {{index + 1}}</text></view>
-            <view><text>Completed status</text></view>
+        <block wx:for="{{challenge.assignments}}" wx:for-item="assignment">
+          <!-- If the day has been completed -->
+          <view wx:if="{{assignment.date < currentDay}}">
+            <view class='day'>
+              <view>
+                <text>Day {{index + 1}}</text>
+              </view>
+              <view wx:if="{{assignment.status}}">
+                <text>Completed</text>
+              </view>
+              <view wx:else>
+                <text>Failed</text>
+              </view>
+            </view>
           </view>
-        </view>
-      <!-- If the current day -->
-        <view wx:if="{{assignment.date == currentDay}}">
-          <view class='day'>
-            <view><text>Day {{index + 1}}</text></view>
-            <view><button bindtap='journalLog' data-assignment="{{assignment.id}}">Journal</button></view>
+          <!-- If the current day -->
+          <view wx:if="{{assignment.date == currentDay}}">
+            <view class='day'>
+              <view>
+                <text>Day {{index + 1}}</text>
+              </view>
+              <view>
+                <button bindtap='journalLog' data-assignment="{{assignment.id}}">Journal</button>
+              </view>
+            </view>
           </view>
-        </view>
-      <!-- Day has yet to be completed -->
-        <view wx:if="{{assignment.date > currentDay}}">
-          <view class='day'>
-            <view><text>Day {{index + 1}}</text></view>
-            <view><text>Not unlocked</text></view>
+          <!-- Day has yet to be completed -->
+          <view wx:if="{{assignment.date > currentDay}}">
+            <view class='day'>
+              <view>
+                <text>Day {{index + 1}}</text>
+              </view>
+              <view>
+                <text>Not unlocked</text>
+              </view>
+            </view>
           </view>
-        </view>
-      </block>
-      </view> 
-    </view> 
+        </block>
+      </view>
+    </view>
   </block>
 
 
