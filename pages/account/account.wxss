@@ -1,1 +1,14 @@
-/* pages/account/account.wxss */
+.container {
+  display: felx;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50rpx;
+}
+
+.avatar {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  /* margin-top: 50rpx;
+  margin-left: 280rpx; */
+}
