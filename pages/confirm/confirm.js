@@ -7,7 +7,21 @@ Page({
   data: {
   
   },
-
+  onShareAppMessage: function (res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: 'MindRock',
+      path: '/pages/confirm/confirm'
+    }
+  },
+  backHome: function () {
+    wx.switchTab({
+      url: '../dashboard/dashboard',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

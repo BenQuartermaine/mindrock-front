@@ -1,1 +1,8 @@
 /* pages/confirm/confirm.wxss */
+.content {
+  
+}
+.btn {
+  display: flex;
+  flex-direction: row;
+}
