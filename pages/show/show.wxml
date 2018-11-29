@@ -29,7 +29,10 @@
 
     </view>
   </view>
-  <button class="btn" bindtap='clickToDash'>Challenge Accepted</button>
+  <view wx:if="{{joined}}">
+    <text>You are already doing this challenge!</text>
+  </view>
+  <view wx:else>
+    <button class="btn" bindtap='clickToDash'>Challenge Accepted</button> 
+  </view>
 </view>
-
-

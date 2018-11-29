@@ -5,6 +5,9 @@ Page({
    * Page initial data
    */
   data: {
+    joined: false,
+    challenge_list: [],
+    challenge: {},
     showExpand: false, 
     photo: [
       '/img/1.jpg',
@@ -60,18 +63,46 @@ Page({
     const app = getApp()
     const that = this
     const dev = app.globalData.dev
+    const prod = app.globalData.prod
+    const userId = wx.getStorageSync("userId")
+
     wx.request({
       url: dev + `api/v1/challenges/${options.id}`,
       method: 'GET',
       success(res) {
         console.log(res)
-        const challenges = res.data
+        const challenge = res.data.challenge
         that.setData(
-          challenges
+          { challenge: challenge}
         )
+
+        wx.request({
+          url: dev + `api/v1/users/${userId}`,
+          method: 'GET',
+          success(res) {
+            console.log(res)
+            let i
+            let id = []
+            for (i = 0; i < res.data.user.challenges.length; i++) {
+              const d = new Date()
+              const year = d.getFullYear()
+              const month = d.getMonth() + 1
+              const day = d.getDate()
+              const date = `${year}-${month}-${day}`
+              if (res.data.user.challenges[i].assignments[6].date >= date) {
+                id.push(res.data.user.challenges[i].id);
+              }
+            }
+            that.setData({
+              challenge_list: id,
+              joined: id.includes(challenge.id)
+            })
+          }
+        })
       }
     })
-
+    console.log("data")
+    console.log(this.data)
   },
 
   /**
