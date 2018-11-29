@@ -4,6 +4,7 @@ const app = getApp()
 
 Page({
   data: {
+    categories: []
   },
   
 
@@ -17,9 +18,12 @@ Page({
       url: prod + 'api/v1/categories',
       method: "GET",
       success(res) {
+        let categories = res.data.categories.map((item) => {
+          item.lowerCaseName = item.name.toLowerCase()
+          return item
+        })
         page.setData({
-          categories: res.data
-
+          categories: categories
         })
       }
     })
