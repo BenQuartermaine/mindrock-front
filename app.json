@@ -5,13 +5,14 @@
     "pages/journal/journal",
     "pages/dashboard/dashboard",
     "pages/account/account",
-    "pages/show/show"
+    "pages/show/show",
+    "pages/confirm/confirm"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "black",
+    "navigationBarBackgroundColor": "#327383",
     "navigationBarTitleText": "MindRock",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "backgroundColor": "#FFFFFF",
@@ -29,14 +30,14 @@
       },
       {
         "pagePath": "pages/dashboard/dashboard",
-        "iconPath": "img/menew.png",
-        "selectedIconPath": "img/menew.png",
+        "iconPath": "img/compass.png",
+        "selectedIconPath": "img/compass.png",
         "text": ""
       },
       {
         "pagePath": "pages/account/account",
-        "iconPath": "img/menew.png",
-        "selectedIconPath": "img/menew.png",
+        "iconPath": "img/user.png",
+        "selectedIconPath": "img/user.png",
         "text": ""
       }
 

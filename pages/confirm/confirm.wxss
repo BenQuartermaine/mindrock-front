@@ -1,0 +1,33 @@
+.wrapper {
+  background: #327383;
+  color: #FFFFFF;
+  height: 100%;
+}
+
+.content {
+  height: 800rpx;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+text {
+text-align:center;
+font-size: 45rpx;
+}
+
+.header {
+text-align:center;
+font-size: 65rpx;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 200rpx;
+}
+
+button {
+  margin: 40rpx;
+  
+}

@@ -6,12 +6,12 @@ Page({
   data: {
     categories: [],
     photos: [
-      '/img/confidence.png',
-      '/img/self-awareness.png',
-      '/img/courage.png',
-      '/img/productivity.png',
-      '/img/habit.png',
-      '/img/communication.jpg',
+      '/img/category/confidence.png',
+      '/img/category/self-awareness.png',
+      '/img/category/courage.png',
+      '/img/category/productivity.png',
+      '/img/category/habit.png',
+      '/img/category/communication.jpg',
       
     ]
   },
@@ -71,7 +71,7 @@ Page({
     const challenge = data.challenge;
 
     wx.navigateTo({
-      url: `../show/show?id=${challenge.id}`
+      url: `../show/show?id=${challenge.id}&name=${challenge.name}`
     });
   },
 })

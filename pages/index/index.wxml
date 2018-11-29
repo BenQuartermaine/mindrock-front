@@ -1,28 +1,20 @@
 <view class="container">
-
+  <view class='index-header'>
+    <text>Challenges</text>
+  </view>
   <view wx:key='index' wx:for="{{categories.categories}}" wx:for-item="category">
-    <view class=category">{{category.name}}</view>
-    <view class="scroll-view-container">
-      <view wx:for="{{category.challenges}}" wx:for-item="challenge" bindtap="showChallenge" data-challenge="{{challenge}}">
-        <view class="scroll-item">
-          <view class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('{{photos[2]}}');">
-            <!-- <image class="img" src='{{photos[2]}}'> -->
-              <view class="card-category">{{challenge.name}}</view>
+    <view class="modules">
+      <view class="category">{{category.name}}</view>
+      <view class="scroll-view-container">
+        <view class='card-wrapper' wx:for="{{category.challenges}}" wx:for-item="challenge" bindtap="showChallenge" data-challenge="{{challenge}}">
+          <view class="scroll-item">
+            <view class="card" >
+            <image class='image-size' src='/img/category/{{category.name}}.png'></image>
             </view>
-
+            <view class="card-category">{{challenge.name}}</view>
           </view>
         </view>
       </view>
-  </view>
-</view>
-
-<!-- <view class="container">
-  <view wx:key=
-  'index' wx:for="{{categories.categories}}" wx:for-item="category">
-    <view>{{category.name}}</view>
-    <view wx:key=
-  'index' wx:for="{{photos}}" wx:for-item="photo">
-      <image src='{{photo}}'></image>
     </view>
   </view>
-</view> -->
+</view>
