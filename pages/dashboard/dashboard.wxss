@@ -4,41 +4,127 @@
   display: flex;
 }
 .dashboard-avatar {
-  width: 350rpx;
-  height: 350rpx;
-  border-radius: 3px;
-  margin: 20rpx;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  margin-right:100rpx;
+  margin-left:50rpx;
+}
+
+.current{
+  padding:15rpx;
+  font-size:25rpx;
+  text-transform: uppercase;
+  font-weight: bold;
+  
+}
+.number{
+ padding-top:20rpx;
+ font-size:20rpx;
+ font-weight: light;
+ display: flex;
 }
 .toggle-sign {
   width: 30rpx;
   height: 30rpx;
+  display: flex;
+  padding-right:15rpx;
 }
 .challenge-wrapper {
-  margin: 20rpx;
-  padding: 3;
-}
-  
-.challenge-wrapper {
-  margin: 20rpx;
-  padding: 30rpx;
   background: #FFFFFF;
   border: 1px solid #E7E7E7;
-  border-radius: 3px;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  width: 90vw;
+  margin: 0 auto;
+  margin-bottom: 30rpx;
+  overflow:hidden;
+  height: auto;
 }
-.challenge-header {
-  display: flex;
-  justify-content: space-between;
+.challenge-wrapper-long {
+  background: #FFFFFF;
+  border: 1px solid #E7E7E7;
+  border-radius: 20px;
+  width: 90vw;
+  margin: 0 auto;
+  margin-bottom: 30rpx;
+  height:auto;
 }
 
 .day {
   display: flex;
   justify-content: space-between;
   padding: 10rpx;
-  margin: 5rpx;
+  margin: 15rpx;
   background: #FFFFFF;
   border: 1px solid #E7E7E7;
   border-radius: 3px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
 }
 
+.row{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #C4C4C4;
+  /* background:#327383; */
+}
+.row.last{
+  margin-bottom: 40rpx;
+}
+
+.row.stats{
+  background:#327383;
+  padding:20rpx;
+  color: white;
+  border-radius: 10px 20px 0 0; 
+  text-transform: uppercase;
+}
+
+.status, .challenge-name{
+  display:flex;
+  padding-bottom: 15rpx;
+  font-size:30rpx;
+}
+
+.locked{
+  width:40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  padding-left:20rpx;
+}
+button{
+  border:2rpx solid #A0BE3E;
+  /* padding: 10px 15px; */
+  border-radius: 15px;
+  height: 60rpx;
+  width:140rpx;
+  background-color: white;
+  font-size:18rpx;
+  color: #A0BE3E;
+  font-weight: bold;
+
+}
+
+.button:hover {
+  opacity: 1;
+  text-decoration: none;
+  color:#327383;
+}
+
+.description{
+height:100rpx;
+padding:20rpx;
+font-size:25rpx;
+overflow: hidden;
+}
+.description-long{
+height:300rpx;
+overflow:hidden;
+padding:20rpx;
+font-size:25rpx;
+}
+
+.day{
+  padding:15rpx;
+  font-size:24rpx;
+  /* font-weight: bold; */
+}

@@ -15,8 +15,10 @@
 }
 
 .card {
+
+  border-radius: 50%;
   height: 100px;
-  width:100%;
+  width:100rpx;
   color:rgba(0,0,0,0.8);
   justify-content: center;
   justify-items: center;
