@@ -71,7 +71,7 @@ Page({
     const challenge = data.challenge;
 
     wx.navigateTo({
-      url: `../show/show?id=${challenge.id}`
+      url: `../show/show?id=${challenge.id}&name=${challenge.name}`
     });
   },
 })
