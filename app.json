@@ -28,11 +28,18 @@
         "text": ""
       },
       {
-        "pagePath": "pages/landing/landing",
+        "pagePath": "pages/dashboard/dashboard",
+        "iconPath": "img/menew.png",
+        "selectedIconPath": "img/menew.png",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/account/account",
         "iconPath": "img/menew.png",
         "selectedIconPath": "img/menew.png",
         "text": ""
       }
+
     ]
   }
 }

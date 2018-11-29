@@ -5,6 +5,17 @@
 
 
   <form bindsubmit='formSubmit'>
+
+  <view class="section photo-tag" bindtap="photoUpload">
+      <view class="title">
+        <h3>Photos</h3>
+      </view>
+      <!-- <view class="photoUpload" > -->
+      <image src='{{tempFilePaths}}'></image> 
+        <!-- <input name="photo_tag_list"></input> -->
+      <!-- </view> -->
+       </view>
+       
     <view class="section content">
       <view class="title">
         <h3>How was your challenge day?</h3>
@@ -14,30 +25,23 @@
       <!-- </view> -->
     </view>
 
-    <view class="section summary-tag">
+    <!-- <view class="section summary-tag">
       <view class="title">
         <h3>Tags</h3>
       </view>
       <view class="input">
       <input name="summary_tag_list"></input>
       </view>
-    </view>
+    </view> -->
 
-    <view class="section photo-tag" bindtap="photoUpload">
-      <view class="title">
-        <h3>Photos</h3>
-      </view>
-      <!-- <view class="photoUpload" > -->
-      <image src='{{tempFilePaths}}'></image> 
-        <!-- <input name="photo_tag_list"></input> -->
-      <!-- </view> -->
     
-    </view>
+    
+   
     <view class="submit-btn">
       <button bindtap='journalSuccess' form-type="submit" >Challenge Done!</button>
     </view>
    
   </form>
-    <button bindtap='backhome' >Back</button>
+    
 
 </view>
