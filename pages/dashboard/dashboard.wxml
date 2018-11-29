@@ -25,7 +25,7 @@
   <block wx:if="{{challenge.assignments[challenge.assignments.length - 1].date >= currentDay}}">
     
     <!-- Current challenge section (inside) -->
-  <view class="{{showExpand? 'challenge-wrapper-long': 'challenge-wrapper'}}">
+  <view class="{{showExpand? 'challenge-wrapper-short': 'challenge-wrapper'}}">
     <!-- <view class='challenge-wrapper'> -->
       <view class="row stats">
         <view class="status">current</view>
@@ -36,11 +36,11 @@
         <image class="toggle-sign" src='/img/hidden.png' bindtap="expand"></image>
         
       </view>
-      <view class="{{showExpand? 'description-long': 'description'}}">{{challenge.description}}</view>
+      <view class="'description">{{challenge.description}}</view>
 
       <!-- Day 1 through 7 -->
-      <view class='challenge-day-list'>
-
+      <!-- <view class="{{showExpand? 'day-list-short': 'day-list'}}"> -->
+      <view wx:if="{{!collapse}}">
         <block wx:for="{{challenge.assignments}}" wx:for-item="assignment">
           <!-- If the day has been completed -->
           <view class='day'>
