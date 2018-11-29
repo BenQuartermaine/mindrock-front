@@ -7,13 +7,38 @@ Page({
   data: {
 
   },
+  getDashboardData() {
+    const userId = wx.getStorageSync("userId")
+    const app = getApp()
+    const dev = app.globalData.dev
+    const prod = app.globalData.prod
 
+    const page = this
+
+    wx.request({
+      url: prod + `api/v1/users/${userId}`,
+      method: "GET",
+      success(res) {
+        page.setData(
+          res.data
+        )
+      }
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    console.log(options)
+    this.getDashboardData()
+    const userInfo = wx.getStorageSync("userInfo")
+    this.setData({
+      avatar: userInfo.avatarUrl,
+      name: userInfo.nickName
+    })
+    console.log(this.data)
   },
+
 
   /**
    * Lifecycle function--Called when page is initially rendered

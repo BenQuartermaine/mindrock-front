@@ -73,6 +73,23 @@
 					"name": "show",
 					"pathName": "pages/show/show",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "confirm",
+					"pathName": "pages/confirm/confirm",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "landing",
+					"pathName": "pages/landing/landing",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "account",
+					"pathName": "pages/account/account"
 				}
 			]
 		}
