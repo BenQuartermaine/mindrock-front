@@ -10,9 +10,9 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "black",
+    "navigationBarBackgroundColor": "#327383",
     "navigationBarTitleText": "MindRock",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "backgroundColor": "#FFFFFF",
