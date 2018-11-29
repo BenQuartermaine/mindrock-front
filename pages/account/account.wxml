@@ -1,2 +1,5 @@
-<!--pages/account/account.wxml-->
-<text>pages/account/account.wxml</text>
+ <!-- Avatar -->
+ <view class="container">
+  <image class='avatar' src="{{avatar}}"/>
+  <text class='name'>{{name}}</text>
+  </view>
