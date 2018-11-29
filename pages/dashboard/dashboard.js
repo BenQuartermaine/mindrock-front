@@ -83,7 +83,12 @@ Page({
   },
 
   onShow: function () {
-
+    this.getDashboardData()
+    const userInfo = wx.getStorageSync("userInfo")
+    this.setData({
+      avatar: userInfo.avatarUrl
+    })
+    console.log(this.data)
   },
 
   /**
