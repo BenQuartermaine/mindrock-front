@@ -13,6 +13,7 @@ Page({
     const data = e.currentTarget.dataset
     const assignment_id = data.assignment
 
+
     wx.navigateTo({
       url: `../journal/journal?id=${assignment_id}`,
     })
@@ -65,6 +66,7 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    console.log(options)
     this.getDashboardData()
     const userInfo = wx.getStorageSync("userInfo")
     this.setData({

@@ -1,7 +1,13 @@
-<view>
-<text>Awesome Job! You finished {{assignment_id%7}} Day Challenge!</text>
-
+<view class="content">
+  <text>
+    Awesome Job!
+  </text>
+  <text>
+    You finished Challenge Day {{assignment_id%7}}!
+  </text>
 </view>
 
+<view class="btn">
 <button open-type="share">Share</button>
-<button>Home</button>
+<button bindtap='backHome'>Home</button>
+</view>
