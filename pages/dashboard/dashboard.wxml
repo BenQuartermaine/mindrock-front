@@ -2,7 +2,7 @@
 <!-- Avatar -->
 <view class='head-wrapper'>
   <view>
-    <image class='dashboard-avatar' src="{{user.avatar_url}}"/>
+    <image class='dashboard-avatar' src="{{avatar}}"/>
   </view>
 
   <!-- Stats section -->
