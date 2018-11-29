@@ -60,6 +60,8 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    console.log('challenges')
+    console.log(options)
     const app = getApp()
     const that = this
     const dev = app.globalData.dev
