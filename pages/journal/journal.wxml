@@ -38,7 +38,7 @@
     
    
     <view class="submit-btn">
-      <button bindtap='journalSuccess' form-type="submit" >Challenge Done!</button>
+      <button bindtap='journalSuccess' form-type="submit" data-journal="{{assignment_id}}" >Challenge Done!</button>
     </view>
    
   </form>

@@ -37,7 +37,6 @@
 		},
 		"miniprogram": {
 			"current": 6,
-
 			"list": [
 				{
 					"id": -1,
@@ -67,14 +66,18 @@
 					"id": -1,
 					"name": "dashboard",
 					"pathName": "pages/dashboard/dashboard",
-
-
 					"query": ""
 				},
 				{
 					"id": -1,
 					"name": "journal",
-					"pathName": "pages/journal/journal"
+					"pathName": "pages/journal/journal",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "confirm",
+					"pathName": "pages/confirm/confirm"
 				}
 			]
 		}
