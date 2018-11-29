@@ -4,41 +4,8 @@ const app = getApp()
 
 Page({
   data: {
-    categories: [],
-    photos: [
-      '/img/category/confidence.png',
-      '/img/category/self-awareness.png',
-      '/img/category/courage.png',
-      '/img/category/productivity.png',
-      '/img/category/habit.png',
-      '/img/category/communication.jpg',
-      
-    ]
   },
-  // --------for submission only----------
-  ClickCreativity: function() {
-   wx.navigateTo({
-     url: '/pages/creativity/creativity',
-     success: function (res) { },
-     fail: function (res) { },
-     complete: function (res) { },
-   })
-  },
-  ClickSpeaking: function () {
-    wx.navigateTo({
-      url: '/pages/speaking/speaking',
-    })
-  },
-  ClickNo: function () {
-    wx.navigateTo({
-      url: '/pages/yes/yes',
-    })
-  },
-  ClickYes: function () {
-    wx.navigateTo({
-      url: '/pages/no/no',
-    })
-  },
+  
 
   getChallengeData() {
     const dev = app.globalData.dev
