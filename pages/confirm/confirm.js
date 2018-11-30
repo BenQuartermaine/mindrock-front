@@ -14,7 +14,13 @@ Page({
     }
     return {
       title: 'MindRock',
-      path: '/pages/confirm/confirm'
+      path: '/pages/confirm/confirm',
+      success: function (res) {
+        // 转发成功
+        wx.switchTab({
+          url: '../dashboard/dashboard',
+        })
+      }
     }
   },
   backHome: function () {

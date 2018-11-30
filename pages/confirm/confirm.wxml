@@ -5,10 +5,30 @@
       <text class="header">
         Awesome Job!
       </text>
-      <text>
-        You finished Challenge Day {{assignment_id%7}}!
-      </text>
+
+      <block>
+        <view wx:if="{{assignment_id%7 == 0}}">
+          <text>
+            You finished MindRock Challenge Day 7!
+          </text>
+          <text>
+            Now Go Accept A New MindRock Challange!
+          </text>
+        </view>
+
+        <view wx:else>
+          <text>
+            You finished MindRock Challenge 
+          </text>
+          <text>
+            🤘🏻Day {{assignment_id%7}}🤘🏻
+          </text>
+        </view>
+      
+      </block>   
     </view>
+
+   
 
     <view class="btn">
      <button open-type="share">Share</button>
@@ -17,5 +37,3 @@
 
   </view>
 </view>
-
-
