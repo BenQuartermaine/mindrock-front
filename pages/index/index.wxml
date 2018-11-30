@@ -4,7 +4,7 @@
 <view class="container">
   <view wx:key='index' wx:for="{{categories}}" wx:for-item="category">
     <view class="modules">
-      <view class="category">{{category.name}}</view>
+      <view class="category {{category.lowerCaseName}}"><text>{{category.name}}</text></view>
       <view class="scroll-view-container">
         <view class='card-wrapper' wx:for="{{category.challenges}}" wx:for-item="challenge" bindtap="showChallenge" data-challenge="{{challenge}}">
           <view class="scroll-item">
