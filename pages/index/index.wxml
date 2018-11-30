@@ -1,15 +1,15 @@
-<view class="container">
   <view class='index-header'>
     <text>Challenges</text>
   </view>
+<view class="container">
   <view wx:key='index' wx:for="{{categories}}" wx:for-item="category">
     <view class="modules">
-      <view class="category">{{category.name}}</view>
+      <view class="category {{category.lowerCaseName}}"><text>{{category.name}}</text></view>
       <view class="scroll-view-container">
         <view class='card-wrapper' wx:for="{{category.challenges}}" wx:for-item="challenge" bindtap="showChallenge" data-challenge="{{challenge}}">
           <view class="scroll-item">
-            <view class="card" >
-            <image class='image-size' src='/img/category/{{category.lowerCaseName}}.png'></image>
+            <view class="card">
+              <image class='image-size' src='/img/category/{{category.lowerCaseName}}.png'></image>
             </view>
             <view class="card-category">{{challenge.name}}</view>
           </view>

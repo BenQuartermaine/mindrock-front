@@ -3,6 +3,7 @@
     <h1>Daily Journal</h1>
   </view>
 
+  <view class='wrapper'>
 
   <form bindsubmit='formSubmit'>
 
@@ -41,4 +42,5 @@
       <button bindtap='journalSuccess' form-type="submit" data-journal="{{assignment_id}}" >Challenge Done!</button>
     </view>
   </form>
+  </view>
 </view>

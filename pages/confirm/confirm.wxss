@@ -13,14 +13,15 @@
   text-align: center;
 }
 
+
 .subheader {
 display: flex;
-text-align:center;
-font-size: 45rpx;
-font-family: 'Gotham';
-font-weight: 300;
-font-style: normal;
+view {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
 }
+
 
 .header {
 text-align:center;
@@ -36,10 +37,12 @@ font-weight: bold;
 }
 
 button {
-  margin: 40rpx;
-  font-family: 'Gotham';
   font-weight: 300;
   font-style: normal;
-  
+  width: 200rpx;
+  border-radius: 8rpx;
+  color:#327383; 
+  font-size: 12px;
+  margin: 15rpx;
 }
 
