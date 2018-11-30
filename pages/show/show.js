@@ -32,7 +32,7 @@ Page({
       user_id: userId
     }
     wx.request({
-      url: dev + `/api/v1/challenges/${challenge_id}/assignments`,
+      url: prod + `/api/v1/challenges/${challenge_id}/assignments`,
       method: "POST",
       data: request,
       success(res) {
