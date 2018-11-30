@@ -56,7 +56,14 @@ Page({
     }
   },
 
-
+  NavigateToDashboard: function() {
+    wx.switchTab({
+      url: '/pages/dashboard/dashboard',
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */

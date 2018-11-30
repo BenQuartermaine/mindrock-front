@@ -67,7 +67,10 @@
       </view>
   </block>
   <block wx:else>
+  <view class='history-header'>
     <view>History</view>
+  </view>
+    
     <!-- History challenge section (outside) -->
       <view class='challenge-wrapper'>
       <view class="row stats">

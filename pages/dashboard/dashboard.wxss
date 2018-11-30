@@ -3,28 +3,35 @@
 .head-wrapper {
   display: flex;
 }
+.history-header {
+  margin: 10rpx 10rpx 10rpx 20rpx;
+  background-color:#F6F6F6;
+  width: 92vw;
+  padding: 10rpx;
+  border-radius: 10rpx;
+}
 .dashboard-avatar {
-  width: 250rpx;
-  height: 200rpx;
+  width: 300rpx;
+  height: 220rpx;
   border-radius: 20px;
   margin-right: 50rpx;
-  margin-left:50rpx;
+  margin-left:30rpx;
   margin-top: 30rpx;
 }
 .head {
   margin-top: 30rpx;
 }
-.current{
+.current {
   padding:15rpx;
-  font-size:25rpx;
-  text-transform: uppercase;
+  font-size:28rpx;
+  text-transform: capitalize;
   font-weight: bold;
-  
 }
-.number{
- padding-top:20rpx;
- font-size:20rpx;
+.number {
+ padding-top: 20rpx;
+ font-size: 20rpx;
  font-weight: light;
+ margin-left: 20rpx;
  display: flex;
 }
 .toggle-sign {
@@ -77,9 +84,9 @@
 .row.last{
   margin-bottom: 40rpx;
 }
-
 .row.stats{
   background:#327383;
+  border: 1px solid #327383;
   padding: 20rpx;
   color: white;
   border-radius: 5px 5px 0px 0px;
