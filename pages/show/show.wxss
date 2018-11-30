@@ -1,5 +1,14 @@
-/* pages/show/show.wxss */
+@import '/style/fonts.wxss';
 .container{
+  padding-top:20rpx;
+}
+
+.header {
+  position: absolute;
+  top: 60rpx;
+  left: 50rpx;
+  font-size: 48rpx;
+  font-family: 'Gotham';
   padding-top:0rpx;
   background: #FFFFFF;
   box-shadow: 0px -3px 2px rgba(144, 144, 144, 0.25);
@@ -7,18 +16,16 @@
   padding: 30rpx;
 }
 
-.header {
-  font-weight: bold;
-  font-size: 45rpx;
-  padding: 10rpx;
-}
 .pic {
   border-radius: 8rpx;
   margin-top: 50rpx;
   width: 90vw;
 }
 .des-title{
-  font-size:25rpx;
+  font-family: 'Gotham';
+  font-size:30rpx;
+  font-weight: 300;
+  font-style: normal;
 }
 .challenge-name {
   margin-top:30rpx;
@@ -54,7 +61,6 @@
   display: block;
   overflow-wrap:break-word;
   overflow:hidden;
-
   }
 
   .des-details-long {
@@ -64,7 +70,6 @@
   height:300rpx;
   display: block;
   overflow-wrap:break-word;
-
   }
 
 button {
@@ -78,6 +83,9 @@ button {
   border: 1rpx solid #327383;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   text-align:center;
+  font-family: 'Gotham';
+  font-weight: 300;
+  font-style: normal;
 }
 
 .dropdown{

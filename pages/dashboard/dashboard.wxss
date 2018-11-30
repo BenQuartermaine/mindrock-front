@@ -1,7 +1,8 @@
-
-/* pages/dashboard/dashboard.wxss */
+@import '/style/fonts.wxss';
 .head-wrapper {
   display: flex;
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
 }
 .history-header {
   margin: 10rpx 10rpx 10rpx 20rpx;
@@ -23,16 +24,19 @@
 }
 .current {
   padding:15rpx;
-  font-size:28rpx;
-  text-transform: capitalize;
-  font-weight: bold;
+  font-size:25rpx;
+  font-family: 'Gotham';
+  font-weight: 300;
+  font-style: normal;
+  
 }
-.number {
- padding-top: 20rpx;
- font-size: 20rpx;
- font-weight: light;
+.number{
+ padding-top:30rpx;
+ padding-left:20rpx;
+ font-size:20rpx;
  margin-left: 20rpx;
  display: flex;
+ font-family: 'Gotham';
 }
 .toggle-sign {
   width: 30rpx;
@@ -69,8 +73,11 @@
   border: 1px solid #E7E7E7;
   border-radius: 3px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
-  padding:25rpx;
-  font-size:24rpx;
+  padding: 25rpx;
+  font-size: 24rpx;
+  font-family: 'Gotham';
+  font-weight: 300;
+  font-style: normal;
 }
 .day:last-child{
   margin-bottom: 25rpx;
@@ -79,7 +86,6 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #C4C4C4;
-  /* background:#327383; */
 }
 .row.last{
   margin-bottom: 40rpx;
@@ -89,6 +95,9 @@
   border: 1px solid #327383;
   padding: 20rpx;
   color: white;
+  border-radius: 10px 20px 0 0; 
+  text-transform: uppercase;
+  font-family: 'Gotham';
   border-radius: 5px 5px 0px 0px;
   text-transform: capitalize;
   display: flex;
@@ -98,8 +107,9 @@
 
 .status, .challenge-name{
   display:flex;
-  padding-bottom: 15rpx;
-  font-size:30rpx;
+  padding: 20rpx;
+  font-size:25rpx;
+  font-family: 'Gotham';
 }
 
 .locked{
@@ -117,7 +127,9 @@ button{
   background-color: white;
   font-size:18rpx;
   color: #A0BE3E;
-  font-weight: bold;
+  font-family: 'Gotham';
+  font-weight: 300;
+  font-style: normal;
 
 }
 
@@ -132,6 +144,9 @@ height:100rpx;
 padding:20rpx;
 font-size:25rpx;
 overflow: hidden;
+font-family: 'Gotham';
+font-weight: 300;
+font-style: normal;
 }
 .description-long{
 height:300rpx;
