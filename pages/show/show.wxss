@@ -8,7 +8,7 @@
   top: 20rpx;
   left: 30rpx;
   font-weight: bold;
-  font-size: 40rpx;
+  font-size: 50rpx;
 }
 
 .pic {
@@ -16,29 +16,9 @@
   margin-top: 90rpx;
   width: 100vw;
 }
-/* .tags-container{
-  width:90%;
-  margin-top:30rpx;
-  height:200rpx;
-  Offset: 1px, 1px, rgba(0, 0, 0, 0.25);
-  background:#E7E7E7;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.des-title{
+  font-size:25rpx;
 }
-
-.tag{
-  height:30rpx;
-  width: auto;
-  padding:10rpx 20rpx;
-  border: 1px solid, lightgrey;
-  margin: 10px;
-  font-size: 20rpx;
-  background:white;
-  border-radius: 6rpx;
-
-} */
-
 .challenge-name{
   margin-top:30rpx;
 }
@@ -88,13 +68,17 @@
   }
  
 
-.btn{
-  background: #327383;
-  color:white;
-  font-family: roboto;
-  font-size:28rpx;
-  font-weight:bold;
-  margin-top:100rpx;
+button{
+  width:700rpx;
+  border-radius: 8rpx;
+  line-height:2.55555556;
+  color:#327383;
+  font-size: 12px;
+  margin-top: 60rpx;
+  margin-bottom: 60rpx; 
+  border: 1rpx solid #327383;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  text-align:center;
 }
 
 .dropdown{
@@ -104,3 +88,4 @@
   top: 640rpx;
   right: 38rpx;
 }
+

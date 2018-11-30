@@ -52,12 +52,6 @@
 				},
 				{
 					"id": -1,
-					"name": "challenge",
-					"pathName": "pages/challenge/challenge",
-					"query": ""
-				},
-				{
-					"id": -1,
 					"name": "dashboard",
 					"pathName": "pages/dashboard/dashboard",
 					"query": ""
@@ -89,7 +83,8 @@
 				{
 					"id": -1,
 					"name": "account",
-					"pathName": "pages/account/account"
+					"pathName": "pages/account/account",
+					"query": ""
 				}
 			]
 		}
