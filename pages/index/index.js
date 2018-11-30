@@ -15,7 +15,7 @@ Page({
     const page = this
 
     wx.request({
-      url: prod + 'api/v1/categories',
+      url: dev + 'api/v1/categories',
       method: "GET",
       success(res) {
         let categories = res.data.categories.map((item) => {
