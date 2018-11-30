@@ -19,6 +19,6 @@
     <button bindtap='NavigateToDashboard'>Go to Challenge</button>
   </view>
   <view wx:else>
-    <button bindtap='clickToDash'>Challenge Accepted</button> 
+    <button bindtap='clickToDash'>Accept Challenge</button> 
   </view>
 </view>
