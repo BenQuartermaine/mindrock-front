@@ -5,18 +5,18 @@
   </view>
 
   <!-- Stats section -->
-  <view class='stats-wrapper'>
+  <view class='stats-wrapper head'>
     <view class="row">
       <view class="current">Current Day</view>
-      <view class="number">3/7</view>
+      <view class="number">2/7</view>
      </view>
     <view class="row">
       <view class="current">Current Streak</view>
-      <view class="number">3/7</view>
+      <view class="number">2/7</view>
     </view>
     <view class="row last">
       <view class="current">Longest Streak</view>
-      <view class="number">45 days</view>
+      <view class="number">11 days</view>
     </view>
   </view>
 </view>
@@ -28,24 +28,17 @@
   <view class="{{showExpand? 'challenge-wrapper-short': 'challenge-wrapper'}}">
     <!-- <view class='challenge-wrapper'> -->
       <view class="row stats">
-        <view class="status">current</view>
-    <!-- Current challenge section (outside) -->
         <view class='challenge-name'>{{challenge.name}}</view>
-        <!-- Minus/plus sign icon for toggling keyframe -->
-        <!-- <image class='toggle-sign' bindtap='expand' src='{{showExpand? min : max}}'></image> -->
-        <image class="toggle-sign" src='/img/hidden.png' bindtap="expand"></image>
-        
+        <image class="toggle-sign" src="{{collapse? max : min }}" bindtap="expand"></image>
       </view>
       <view class="'description">{{challenge.description}}</view>
-
-      <!-- Day 1 through 7 -->
-      <!-- <view class="{{showExpand? 'day-list-short': 'day-list'}}"> -->
+      
       <view wx:if="{{!collapse}}">
         <block wx:for="{{challenge.assignments}}" wx:for-item="assignment">
           <!-- If the day has been completed -->
           <view class='day'>
             <view>
-              <text>{{assignment.date}}</text>
+              <text>Day {{index + 1}}</text>
             </view>
             <view wx:if="{{assignment.date < currentDay}}">
               <view wx:if="{{assignment.status}}">
@@ -78,22 +71,20 @@
     <!-- History challenge section (outside) -->
       <view class='challenge-wrapper'>
       <view class="row stats">
-        <view class="status">current</view>
     <!-- Current challenge section (outside) -->
         <view class='challenge-name'>{{challenge.name}}</view>
         <!-- Minus/plus sign icon for toggling keyframe -->
-        <image class='toggle-sign' bindtap='expand' src='{{showExpand? min : max}}'></image>
+        <image class='toggle-sign' bindtap='expand' src='{{collapse? max : min}}'></image>
       </view>
       <view class="description">{{challenge.description}}</view>
 
       <!-- Day 1 through 7 -->
       <view class='challenge-day-list'>
-
         <block wx:for="{{challenge.assignments}}" wx:for-item="assignment">
           <!-- If the day has been completed -->
           <view class='day'>
             <view>
-              <text>{{assignment.date}}</text>
+              <text>Day {{index + 1}}</text>
             </view>
             <view wx:if="{{assignment.status}}">
               <image class='locked'src='/img/pass.png'/>

@@ -4,14 +4,16 @@
   display: flex;
 }
 .dashboard-avatar {
-  width: 200rpx;
+  width: 250rpx;
   height: 200rpx;
-  border-radius: 50%;
-  margin-top: 10rpx;
-  margin-right:100rpx;
+  border-radius: 20px;
+  margin-right: 50rpx;
   margin-left:50rpx;
+  margin-top: 30rpx;
 }
-
+.head {
+  margin-top: 30rpx;
+}
 .current{
   padding:15rpx;
   font-size:25rpx;
@@ -34,8 +36,9 @@
 .challenge-wrapper {
   background: #FFFFFF;
   border: 1px solid #E7E7E7;
-  border-radius: 20px;
-  width: 90vw;
+  border-top: none;
+  border-radius: 5px;
+  width: 95vw;
   margin: 0 auto;
   margin-bottom: 30rpx;
   overflow:hidden;
@@ -49,12 +52,12 @@
   margin: 0 auto;
   margin-bottom: 30rpx;
   height: 300rpx;
+  transition: 1s;
 }
-
 .day {
   display: flex;
   justify-content: space-between;
-  margin: 15rpx;
+  margin: 15rpx 25rpx 15rpx 25rpx;
   background: #FFFFFF;
   border: 1px solid #E7E7E7;
   border-radius: 3px;
@@ -62,7 +65,9 @@
   padding:25rpx;
   font-size:24rpx;
 }
-
+.day:last-child{
+  margin-bottom: 25rpx;
+}
 .row{
   display: flex;
   justify-content: space-between;
@@ -75,10 +80,13 @@
 
 .row.stats{
   background:#327383;
-  padding:20rpx;
+  padding: 20rpx;
   color: white;
-  border-radius: 10px 20px 0 0; 
-  text-transform: uppercase;
+  border-radius: 5px 5px 0px 0px;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .status, .challenge-name{
