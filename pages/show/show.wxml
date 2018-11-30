@@ -29,6 +29,6 @@
     <text> 👍🏻👍🏻👍🏻 Check out your current challenge!</text>
   </view>
   <view wx:else>
-    <button class="btn" bindtap='clickToDash'>Challenge Accepted</button> 
+    <button bindtap='clickToDash'>Challenge Accepted</button> 
   </view>
 </view>

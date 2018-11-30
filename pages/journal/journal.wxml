@@ -7,14 +7,14 @@
   <form bindsubmit='formSubmit'>
 
   <view class="section photo-tag" bindtap="photoUpload">
-      <view class="title">
+      <view class="row">
         <h3>Photos</h3>
-      </view>
       <!-- <view class="photoUpload" > -->
       <image src='{{tempFilePaths}}'></image> 
         <!-- <input name="photo_tag_list"></input> -->
       <!-- </view> -->
        </view>
+   </view>
        
     <view class="section content">
       <view class="title">
@@ -40,8 +40,5 @@
     <view class="submit-btn">
       <button bindtap='journalSuccess' form-type="submit" data-journal="{{assignment_id}}" >Challenge Done!</button>
     </view>
-   
   </form>
-    
-
 </view>
