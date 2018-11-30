@@ -16,11 +16,11 @@
 .title {
   display: flex;
   color: rgb(3, 117, 133);
-  font-size: 80px;
+  font-size: 60px;
   font-weight: bolder;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
   text-align: center;
-  font-family:Salazar DEMO ;
+  font-family: Salazar DEMO ;
 }
 .subtitle {
   display: flex;
