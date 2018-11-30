@@ -12,7 +12,7 @@
   border-radius: 30rpx;
   font-family: 'Gotham';
   font-size: 30rpx;
-  padding: 25rpx 20rpx; 
+  padding: 30rpx 20rpx 10rpx 30rpx; 
   /* height: 10rpx; */
 }
 
