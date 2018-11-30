@@ -34,7 +34,10 @@ font-size: 65rpx;
 }
 
 button {
-  margin: 40rpx;
-  
+  width: 200rpx;
+  border-radius: 8rpx;
+  color:#327383; 
+  font-size: 12px;
+  margin: 15rpx;
 }
 
