@@ -1,13 +1,14 @@
+@import '/style/fonts.wxss';
 .header {
-  margin: 10rpx 0 30rpx 25rpx;
-  
+  margin: 25rpx 0 30rpx 25rpx;
+
 }
 
 .section {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   flex: wrap;
-  justify-items: center; 
+  justify-items: center;
   background-color: #F6F6F6;
   border-radius: 10rpx;
   margin: 25rpx;
@@ -18,10 +19,11 @@
 }
 textarea {
   padding: 15rpx 10rpx 0 20rpx;
-  margin: 0;
   width: 96%;
-  font-weight:lighter;
-  font-size:24rpx;
+  font-family: 'Gotham';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 22rpx;
 }
 .content {
   background-color: #FFFFFF;
@@ -42,9 +44,12 @@ button{
   color:#327383;
   font-size: 12px;
   margin-top: 60rpx;
-  margin-bottom: 20rpx; 
+  margin-bottom: 20rpx;
   border: 1rpx solid #327383;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  font-family: 'Gotham';
+  font-weight: 300;
+  font-style: normal;
 }
 
 .row{
@@ -60,9 +65,13 @@ image {
 h3{
   display: flex;
   padding: 20rpx;
+  font-family: 'Gotham';
+  font-size:30rpx;
+  font-weight: 300;
+  font-style: normal;
 }
 
 h1{
-  font-weight: bold;
-  font-size: 50rpx;
-}
+  font-size: 48rpx;
+  font-family: 'Gotham';
+  }

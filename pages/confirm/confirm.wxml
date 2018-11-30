@@ -5,7 +5,7 @@
       <text class="header">
         Awesome Job!
       </text>
-      <text>
+      <text class="subheader">
         You finished Challenge Day {{assignment_id%7}}!
       </text>
     </view>

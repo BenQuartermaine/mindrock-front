@@ -1,3 +1,4 @@
+@import '/style/fonts.wxss';
 .wrapper {
   background: #327383;
   color: #FFFFFF;
@@ -9,16 +10,23 @@
   display: flex;
   flex-direction: column;
   justify-items: center;
+  text-align: center;
 }
 
-text {
+.subheader {
+display: flex;
 text-align:center;
 font-size: 45rpx;
+font-family: 'Gotham';
+font-weight: 300;
+font-style: normal;
 }
 
 .header {
 text-align:center;
 font-size: 65rpx;
+font-family: 'Gotham';
+font-weight: bold;
 }
 
 .btn {
@@ -29,5 +37,9 @@ font-size: 65rpx;
 
 button {
   margin: 40rpx;
+  font-family: 'Gotham';
+  font-weight: 300;
+  font-style: normal;
   
 }
+
