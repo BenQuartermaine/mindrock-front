@@ -96,7 +96,7 @@
               <text>{{assignment.date}}</text>
             </view>
             <view wx:if="{{assignment.status}}">
-              <image class='locked'src='/img/locked.png'/>
+              <image class='locked'src='/img/pass.png'/>
             </view>
             <view wx:else>
               <text>Failed</text>
