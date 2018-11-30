@@ -26,7 +26,8 @@
     </view>
   </view>
   <view wx:if="{{challenge_list.length > 0}}">
-    <text> 👍🏻👍🏻👍🏻 Check out your current challenge!</text>
+    <text>You've already got a challenge!</text>
+    <button bindtap='NavigateToDashboard'>Go to Challenge</button>
   </view>
   <view wx:else>
     <button class="btn" bindtap='clickToDash'>Challenge Accepted</button> 

@@ -3,6 +3,7 @@
     <h1>Daily Journal</h1>
   </view>
 
+  <view class='wrapper'>
 
   <form bindsubmit='formSubmit'>
 
@@ -43,5 +44,5 @@
    
   </form>
     
-
+  </view>
 </view>
