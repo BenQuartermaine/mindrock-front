@@ -1,24 +1,13 @@
+<view class="header">
+ <text class="header">7 Day {{challenge.name}} Challenge</text>
+</view>
+ 
 <view class="container">
-<text class="header">7 Day {{challenge.name}} Challenge</text>
   <image class="pic" src="{{photo[0]}}"></image>
-
-  <!-- tagging section
-  <view class="challenge-name">{{challenge.name}}</view>
-  <view class="tags-container">
-    <view class="tag">Hard</view>
-    <view class="tag">Hard</view>
-    <view class="tag">Hard</view>
-    <view class="tag">Hard</view>
-    <view class="tag">Hard</view>
-    <view class="tag">Hard</view>
-    <view class="tag">Hard</view>
-    <view class="tag">{{challenge.challenge_tag_list}}</view>
-</view> -->
-  <!-- description section  -->
   <view class="{{showExpand? 'des-section-long': 'des-section'}}">
     <view class="row">
       <view class="des-title">Description</view>
-      <image class="dropdown" src='/img/hidden.png' bindtap="expand"></image>
+      <image class="dropdown" src="{{showExpand? '/img/min-bl.svg' : '/img/max-bl.svg'}}" bindtap="expand"></image>
     </view>
     <view class="{{showExpand? 'des-details-long': 'des-details'}}">
     <textarea>{{challenge.description}}</textarea>
