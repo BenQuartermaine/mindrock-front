@@ -6,7 +6,8 @@
     "pages/dashboard/dashboard",
     "pages/account/account",
     "pages/show/show",
-    "pages/confirm/confirm"
+    "pages/confirm/confirm",
+    "pages/display/display"
   ],
   "window": {
     "backgroundTextStyle": "light",

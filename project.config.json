@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 9,
 			"list": [
 				{
 					"id": -1,
@@ -85,6 +85,17 @@
 					"name": "account",
 					"pathName": "pages/account/account",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "journalShow",
+					"pathName": "pages/journalShow/journalShow",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "display",
+					"pathName": "pages/display/display"
 				}
 			]
 		}
