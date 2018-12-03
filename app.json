@@ -8,6 +8,7 @@
     "pages/show/show",
     "pages/confirm/confirm",
     "pages/display/display"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
