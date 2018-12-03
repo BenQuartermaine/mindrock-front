@@ -158,5 +158,22 @@ height:0rpx;
 
 /* Toggle button team & dashboard */
 .active-class {
-  color: red;
+  color: black;
+  border-bottom: 2rpx solid #565656;
+  transition: 0.3s ease-in;
+}
+.mutual-class {
+  padding: 10rpx;
+  width: 180rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+.inactive-class {
+  color: #E7E7E7;
+}
+
+.dashboardTeamToggle {
+  display: flex;
+  justify-content: center;
+  padding: 10rpx;
 }
