@@ -44,18 +44,24 @@
       <view wx:if="{{!collapse}}">
         <block wx:for="{{challenge.assignments}}" wx:for-item="assignment">
           <!-- If the day has been completed -->
+          
           <view class='day'>
-            <view>
-              <text>Day {{index + 1}}</text>
-            </view>
-            <view wx:if="{{assignment.date < currentDay}}">
-              <view wx:if="{{assignment.status}}">
-                <image class='locked'src='/img/pass.png'/>
+          
+              <view>
+                <text>Day {{index + 1}}</text>
               </view>
+           
+            <view wx:if="{{assignment.date < currentDay}}">
+             
+              <view wx:if="{{assignment.status}}">
+                <image class='locked'src='/img/pass.png' ></image>
+              </view>
+       
               <view wx:else>
                 <text>Failed</text>
               </view>
             </view>
+             
             <!-- If the current day -->
             <view wx:elif="{{assignment.date == currentDay}}">
               <view wx:if="{{!assignment.status}}">
