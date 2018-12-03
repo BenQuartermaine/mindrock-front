@@ -58,10 +58,24 @@ Page({
   getUserInfo: function (e) {
     let userInfo = e.detail.userInfo
     wx.setStorageSync("userInfo", userInfo)
-
-    wx.switchTab({
-      url: '../index/index',
+    let userId = wx.getStorageSync("userId")
+    const dev = app.globalData.dev
+    const prod = app.globalData.prod
+    wx.request({
+      url: prod + `api/v1/users/${userId}`,
+      method: "PUT",
+      data: {
+        user: userInfo
+      },
+      success: (res) => {
+        console.log(res.data)
+        wx.switchTab({
+          url: '../index/index',
+        })
+      }
     })
+
+    
   },
 
   /**
