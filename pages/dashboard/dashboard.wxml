@@ -21,6 +21,13 @@
   </view>
 </view>
 
+<!-- Menu toggle function -->
+<view class='dashboardTeamToggle'>
+  <text wx:for='{{dashboardTeamToggle}}' data-idx="{{index}}" class="toggle-box {{dashboardTeamNum==index ? 'active-class' : ''}}" data-toggle="{{index}}" bindtap='dashboardTeamFunction'>{{item}}</text>
+</view>
+
+
+
 <block wx:for="{{user.challenges}}" wx:for-item="challenge">
   <block wx:if="{{challenge.assignments[challenge.assignments.length - 1].date >= currentDay}}">
     

@@ -152,7 +152,11 @@ overflow:hidden;
 padding:20rpx;
 font-size:25rpx;
 }
-
 .day-list-short{
 height:0rpx;
+}
+
+/* Toggle button team & dashboard */
+.active-class {
+  color: red;
 }
