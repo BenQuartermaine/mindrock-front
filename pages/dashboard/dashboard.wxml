@@ -22,9 +22,6 @@
 </view>
 
 <block wx:for="{{user.challenges}}" wx:for-item="challenge">
-  <text>{{ currentDay }}</text>
-  
-  <text>{{  "2018-12-09" >= currentDay}}</text>
   
   <block wx:if="{{challenge.assignments[challenge.assignments.length - 1].date >= currentDay}}">
     
