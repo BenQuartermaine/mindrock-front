@@ -48,8 +48,8 @@
                 <view wx:if="{{assignment.status}}">
                 <button bindtap='journalHistory' class='journal-show' data-assignment="{{assignment.id}}">History</button>
                 </view>
-                <view else>
-                fail
+                <view wx:else>
+                  fail
                 </view>
               </view>
               <!-- If the current day -->
@@ -89,7 +89,7 @@
                 <text>Day {{index + 1}}</text>
               </view>
               <view wx:if="{{assignment.status}}">
-                <image class='locked' src='/img/pass.png' />
+                <button bindtap='journalHistory' class='journal-show' data-assignment="{{assignment.id}}">History</button>
               </view>
               <view wx:else>
                 <text>Failed</text>
@@ -126,10 +126,9 @@
               </view>
               <view wx:if="{{assignment.date < currentDay}}">
                 <view wx:if="{{assignment.status}}">
-                  <image class='locked' src='/img/pass.png' />
+                  <button bindtap='journalHistory' class='journal-show' data-assignment="{{assignment.id}}">History</button>
                 </view>
-                <!-- <view wx:else><text>Failed</text></view> -->
-                <button bindtap='journalHistory' class='journal-show' data-assignment="{{assignment.id}}">History</button>
+                <view wx:else><text>Failed</text></view>
               </view>
               <!-- If the current day -->
               <view wx:elif="{{assignment.date == currentDay}}">
@@ -137,7 +136,7 @@
                   <button bindtap='journalLog' data-assignment="{{assignment.id}}">Journal</button>
                 </view>
                 <view wx:else>
-                  <image class='locked' src='/img/pass.png' />
+                  <button bindtap='journalHistory' class='journal-show' data-assignment="{{assignment.id}}">History</button>
                 </view>
               </view>
               <!-- Day has yet to be completed -->
