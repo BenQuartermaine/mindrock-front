@@ -98,7 +98,13 @@ Page({
               const year = d.getFullYear()
               const month = d.getMonth() + 1
               const day = d.getDate()
-              const date = `${year}-${month}-${day}`
+              let date = ""
+
+              if (day < 10) {
+                date = `${year}-${month}-0${day}`;
+              } else {
+                date = `${year}-${month}-${day}`;
+              }
               if (res.data.user.challenges[i].assignments[6].date >= date) {
                 id.push(res.data.user.challenges[i].id);
               }

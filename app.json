@@ -7,7 +7,8 @@
     "pages/account/account",
     "pages/show/show",
     "pages/confirm/confirm",
-    "pages/journals/journals"
+    "pages/display/display"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -25,20 +26,20 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "img/search.png",
-        "selectedIconPath": "img/search.png",
+        "iconPath": "img/index.png",
+        "selectedIconPath": "img/index.png",
         "text": ""
       },
       {
         "pagePath": "pages/dashboard/dashboard",
-        "iconPath": "img/compass.png",
-        "selectedIconPath": "img/compass.png",
+        "iconPath": "img/dashboard.png",
+        "selectedIconPath": "img/dashboard.png",
         "text": ""
       },
       {
         "pagePath": "pages/account/account",
-        "iconPath": "img/user.png",
-        "selectedIconPath": "img/user.png",
+        "iconPath": "img/me.png",
+        "selectedIconPath": "img/me.png",
         "text": ""
       }
 

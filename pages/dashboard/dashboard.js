@@ -41,12 +41,17 @@ Page({
     const year = d.getFullYear()
     const month = d.getMonth() + 1
     const day = d.getDate()
-    const date = `${year}-${month}-${day}`
+    let date = ""
+
+    if(day<10){
+      date = `${year}-${month}-0${day}`;
+    }else{
+      date = `${year}-${month}-${day}`;
+    }
+    
     this.setData({
       currentDay: date
     })
-
-    console.log(this.data)
   },
 
   // Expand and minimize challenge box
