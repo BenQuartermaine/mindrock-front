@@ -1,10 +1,9 @@
 
 <!-- import calendar template -->
 <import src="/template/calendar/index.wxml"/>
+<import src="/template/datepicker/index.wxml"/>
 
-<!-- <view class="datepicker-box">
-    <template is="datepicker" data="{{...datepicker}}" />
-</view> -->
+
 
 <view class='head-wrapper'>
   <view class="title">My journals</view>
@@ -24,6 +23,10 @@
           <template is="calendar" data="{{...calendar}}" />
         </view>
       </block>
+
+      <!-- <view class="datepicker-box">
+    <template is="datepicker" data="{{...datepicker}}" />
+</view> -->
 
       <view class= "content-row">
         <image id="pic" src="{{photo_tag_list}}"></image>

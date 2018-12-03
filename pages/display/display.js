@@ -1,12 +1,40 @@
 import initCalendar from '../../template/calendar/index';
 import { getSelectedDay } from '../../template/calendar/index';
-// import initDatepicker from '../../template/datepicker/index';
+import initDatepicker from '../../template/datepicker/index';
 const conf = {
   disablePastDay: false,
   defaultDay: false,
-  // placeholder: 'Pick a date', // input 输入框
-  // type: 'normal',
+  afterTapDay: (currentSelect, allSelectedDays) => { },
+  /**
+   * 日期点击事件（此事件会完全接管点击事件）
+   * @param { object } currentSelect 当前点击的日期
+   * @param { object } event 日期点击事件对象
+   */
+  onTapDay(currentSelect, event) { },
+  /**
+   * 日历初次渲染完成后触发事件，如设置事件标记
+   */
+  afterCalendarRender() { },
   };
+const config = {
+  disablePastDay: false, // 是否禁选过去日期
+  showInput: false, // 默认为 true
+  placeholder: '请选择日期', // input 输入框
+  type: 'normal', // [normal 普通单选模式(默认), timearea 时间区域选择模式(待开发), multiSelect 多选模式(待完善)]
+
+  /**
+   * 选择日期后执行的事件
+   * @param { object } currentSelect 当前点击的日期
+   */
+  afterTapDay: (currentSelect) => { },
+
+  /**
+   * 日期点击事件（此事件会完全接管点击事件）
+   * @param { object } currentSelect 当前点击的日期
+   * @param {object} event 日期点击事件对象
+   */
+  onTapDay(currentSelect, event) { },
+}
 const app = getApp();
 const dev = app.globalData.dev;
 const prod = app.globalData.prod;
@@ -16,15 +44,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    photo: [
-      '/img/1.jpg',
-      '/img/2.jpg',
-      '/img/4.jpg',
-      '/img/5.jpg',
-      '/img/6.jpg',
-      '/img/7.jpg',
-      '/img/8.jpg',
-    ],
     calendar_show: false,
   
   },
@@ -77,9 +96,9 @@ Page({
       method: "GET",
       success(res) {
         console.log(res.data)
-        const data = res.data.journals.journals[0]
+        const data = res.data.assignment.journals[0]
         page.setData({
-          date: res.data.journals.date,
+          date: res.data.assignment.date,
           content: data.content,
           id: data.id,
           photo_tag_list: data.photo_tag_list
@@ -102,7 +121,7 @@ Page({
   onShow: function () {
 
     initCalendar(conf);
-    // initDatepicker(conf);
+    initDatepicker(config);
 
   },
   /**
