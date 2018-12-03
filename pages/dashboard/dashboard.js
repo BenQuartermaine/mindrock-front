@@ -6,7 +6,7 @@ Page({
     min: '/img/min.svg',
     max: '/img/max.svg',
     dashboardTeamToggle: ['Dashboard', 'Team'],
-    dashboardTeamNum: 0,
+    dashboardTeamNum: 1,
   },
 
   dashboardTeamFunction: function (e) {
@@ -21,9 +21,18 @@ Page({
     const data = e.currentTarget.dataset
     const assignment_id = data.assignment
 
-
     wx.navigateTo({
       url: `../journal/journal?id=${assignment_id}`,
+    })
+  },
+
+  journalHistory: function (e) {
+    console.log(e)
+    const data = e.currentTarget.dataset
+    const assignment_id = data.assignment
+
+    wx.navigateTo({
+      url: `../display/display?id=${assignment_id}`,
     })
   },
 
