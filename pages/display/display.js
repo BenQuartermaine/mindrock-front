@@ -34,10 +34,9 @@ Page({
     })
   },
   redirectDashboard: function () {
-
         wx.switchTab({
-          url: '/pages/dashboard/dashboard'
-    })
+          url: '/pages/dashboard/dashboard',
+        })
   },
   getDisplayData() {
     const userId = wx.getStorageSync("userId")
@@ -74,7 +73,7 @@ Page({
    
     
     wx.request({
-      url: dev + `api/v1/assignments/${assignment_id}/journals`,
+      url: prod + `api/v1/assignments/${assignment_id}/journals`,
       method: "GET",
       success(res) {
         console.log(res.data)
