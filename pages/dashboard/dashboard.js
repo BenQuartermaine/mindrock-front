@@ -4,8 +4,16 @@ Page({
   data: {
     collapse: false,
     min: '/img/min.svg',
-    max: '/img/max.svg'
+    max: '/img/max.svg',
+    dashboardTeamToggle: ['Dashboard', 'Team'],
+    dashboardTeamNum: 0,
+  },
 
+  dashboardTeamFunction: function (e) {
+    console.log(e)
+    this.setData ({
+      dashboardTeamNum: e.currentTarget.dataset.toggle
+    })
   },
 
   journalLog: function (e) {
