@@ -1,0 +1,9 @@
+<!-- import calendar template -->
+
+<import src="../../templates/calendar/calendar.wxml " />
+<view class="container">
+<!-- <block wx:for="{{ calendar }}"  -->
+<template is="calendar" data="{{ ...item }}" />
+ <!-- </block> -->
+ </view>
+
