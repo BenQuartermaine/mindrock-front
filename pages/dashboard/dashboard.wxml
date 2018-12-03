@@ -45,7 +45,7 @@
               <view wx:if="{{assignment.date < currentDay}}">
                 <view wx:if="{{assignment.status}}"><image class='locked'src='/img/pass.png'/></view>
                 <!-- <view wx:else><text>Failed</text></view> -->
-                <button bindtap='journalHistory' class='journal-show' data-assignment="{{assignment.id}}">History</button>
+                <button bindtap='journalHistory' class='journal-show' data-assignment="{{assignment_id}}">History</button>
               </view>
               <!-- If the current day -->
               <view wx:elif="{{assignment.date == currentDay}}">

@@ -15,7 +15,7 @@
      </view>
     <view class="journal-container">
       <view class="row">
-        <view class="date">2018.12.03</view>
+        <view class="date">{{date}}</view>
         <image id='icon' src="/img/calendar.png" bindtap="showCalendar"></image>
       </view>
 
@@ -26,14 +26,11 @@
       </block>
 
       <view class= "content-row">
-        <image id="pic" src="/img/1.jpg"></image>
+        <image id="pic" src="{{photo_tag_list}}"></image>
         <view class="{{showExpand? 'summary-long': 'summary'}}">
           <image class="dropdown" src="{{showExpand? '/img/min-bl.svg' : '/img/max-bl.svg'}}" bindtap="expand"></image>
-          <textarea>{{challenge.description}}</textarea>
+          <textarea>{{content}}</textarea>
       
-    
-      
-    <!-- <view class="summary">it went well today.egle text chat is a famous anonymous text chat, with which you can chat with random interlocutors. Simple usability is everywhere, beautiful design and great functionality while nothing distracts the communication. -->
     </view>
     </view>
     </view>
@@ -42,7 +39,6 @@
 
   
       <button bindtap="redirectDashboard">Go back</button>
-              <!-- <button bindtap='journalLog' data-assignment="{{assignment.id}}">Journal</butt
 
 
 

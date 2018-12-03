@@ -22,17 +22,18 @@ Page({
     const assignment_id = data.assignment
 
     wx.navigateTo({
-      url: `../journal/journal?id=${assignment_id}`,
+      url: `../journal/journal?assignment=${assignment_id}`,
     })
   },
 
   journalHistory: function (e) {
+    console.log("JournalHistory")
     console.log(e)
     const data = e.currentTarget.dataset
     const assignment_id = data.assignment
 
     wx.navigateTo({
-      url: `../display/display?id=${assignment_id}`,
+      url: `../display/display?id=${assignment_id}`
     })
   },
 
@@ -46,7 +47,7 @@ Page({
     const page = this
 
     wx.request({
-      url: prod + `api/v1/users/${userId}`,
+      url: dev + `api/v1/users/${userId}`,
       method: "GET",
       success(res) {
         page.setData(
@@ -86,15 +87,16 @@ Page({
   },
   
   /**Display Show Page */
-  displayShow: function (e) {
-    console.log(e)
-    const data = e.currentTarget.dataset
-    const assignment_id = data.assignment
+  // displayShow: function (e) {
+  //   console.log(displayShow)
+  //   console.log(e)
+  //   const data = e.currentTarget.dataset
+  //   const assignment_id = data.assignment
 
-    wx.redirectTo({
-      url: `../display/display?id=${assignment_id}`,
-    })
-  },
+  //   wx.redirectTo({
+  //     url: `../display/display?id=${assignment_id}`,
+  //   })
+  // },
 
   /**
    * Lifecycle function--Called when page load
