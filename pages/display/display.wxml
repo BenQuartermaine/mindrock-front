@@ -1,3 +1,17 @@
+
+<!-- import calendar template -->
+<import src="/template/calendar/index.wxml"/>
+
+
+
+<view class="calendar-wrap">
+   <template is="calendar" data="{{...calendar}}" />
+</view>
+
+<!-- <view class="datepicker-box">
+    <template is="datepicker" data="{{...datepicker}}" />
+</view> -->
+
 <view class='head-wrapper'>
   <view class="title">My journals</view>
   <view class= 'head-container'>
@@ -24,6 +38,10 @@
     </view>
   </view>
 </view>
+
   
       <button bindtap="redirectDashboard">Go back</button>
               <!-- <button bindtap='journalLog' data-assignment="{{assignment.id}}">Journal</butt
+
+
+

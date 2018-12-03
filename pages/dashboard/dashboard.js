@@ -75,7 +75,17 @@ Page({
       })
     }
   },
+  
+  /**Display Show Page */
+  displayShow: function (e) {
+    console.log(e)
+    const data = e.currentTarget.dataset
+    const assignment_id = data.assignment
 
+    wx.redirectTo({
+      url: `../display/display?id=${assignment_id}`,
+    })
+  },
 
   /**
    * Lifecycle function--Called when page load
