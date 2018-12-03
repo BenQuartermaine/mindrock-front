@@ -8,10 +8,7 @@
 <view class='head-wrapper'>
   <view class="title">My journals</view>
   <view class= 'head-container'>
-    <view class="personal-info">
-      <image class='avatar' src="{{avatar}}"/>
-      <view class="total">You have 22 journals!!</view>
-     </view>
+   
     <view class="journal-container">
       <view class="row">
         <view class="date">{{date}}</view>
@@ -31,7 +28,7 @@
       <view class= "content-row">
         <image id="pic" src="{{photo_tag_list}}"></image>
         <view class="{{showExpand? 'summary-long': 'summary'}}">
-          <image class="dropdown" src="{{showExpand? '/img/min-bl.svg' : '/img/max-bl.svg'}}" bindtap="expand"></image>
+        
           <textarea>{{content}}</textarea>
       
     </view>

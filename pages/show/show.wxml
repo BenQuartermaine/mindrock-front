@@ -21,6 +21,6 @@
   <view wx:else>
     <text>How to take the challenge</text>
     <button bindtap='clickToDash'>Individual</button>
-    <button bindtap='clickToDash'>Create a team</button>  
   </view>
+   <button bindtap='createTeam'>Create a team</button>  
 </view>

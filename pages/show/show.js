@@ -43,6 +43,30 @@ Page({
     })
   },
 
+  createTeam: function () {
+    const challenge_id = this.data.challenge.id
+    const userId = wx.getStorageSync("userId")
+    const app = getApp()
+    const dev = app.globalData.dev
+    const prod = app.globalData.prod
+
+    const request = {
+      userId: userId,
+      challenge_id: challenge_id
+    }
+
+    wx.request({
+      url: prod + `/api/v1/teams`,
+      method: "POST",
+      data: request,
+      success(res) {
+        wx.switchTab({
+          url: '/pages/dashboard/dashboard',
+        })
+      }
+    })
+  },
+
   expand:function () {
     console.log(this.data.showExpand)
     if (this.data.showExpand) {
@@ -105,8 +129,10 @@ Page({
               } else {
                 date = `${year}-${month}-${day}`;
               }
-              if (res.data.user.challenges[i].assignments[6].date >= date) {
-                id.push(res.data.user.challenges[i].id);
+              if (res.data.user.challenges[i].dashboard) {
+                if (res.data.user.challenges[i].dashboard.assignments[6].date >= date) {
+                  id.push(res.data.user.challenges[i].id);
+                }
               }
             }
             that.setData({
