@@ -105,7 +105,7 @@ Page({
               } else {
                 date = `${year}-${month}-${day}`;
               }
-              if (res.data.user.challenges[i].assignments[6].date >= date) {
+              if (res.data.user.challenges[i].dashboard.assignments[6].date >= date) {
                 id.push(res.data.user.challenges[i].id);
               }
             }
