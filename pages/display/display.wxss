@@ -76,9 +76,15 @@
   justify-items: center;
 } */
 .title{
-  font-family: 'Gotham';
-  margin: 50rpx 0;
+margin-top:45rpx;
+margin-bottom:25rpx;
+font-size:40rpx;
+font-family:'Gotham';
+padding:30rpx;
+
 }
+
+
 
 .avatar {
   display: flex;
@@ -137,10 +143,14 @@
 display: flex;
 justify-content: space-between;
 margin-top:25rpx;
-background: #E7E7E7;
 padding:20rpx;
 width: 95%;
-border-radius: 8rpx;
+text-align:center;
+font-family:'Gotham';
+font-weight:600;
+font-style:normal;
+
+
 }
 #icon {
   display: flex;
