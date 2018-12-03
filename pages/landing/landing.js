@@ -38,7 +38,7 @@ Page({
         success: (res) => {
           console.log(res)
           wx.request({
-            url: prod + 'login',
+            url: dev + 'login',
             method: 'POST',
             data: {
               code: res.code
@@ -62,7 +62,7 @@ Page({
     const dev = app.globalData.dev
     const prod = app.globalData.prod
     wx.request({
-      url: prod + `api/v1/users/${userId}`,
+      url: dev + `api/v1/users/${userId}`,
       method: "PUT",
       data: {
         user: userInfo
