@@ -1,9 +1,12 @@
 <!-- import calendar template -->
+<import src="/template/calendar/index.wxml"/>
 
-<import src="../../templates/calendar/calendar.wxml " />
-<view class="container">
-<!-- <block wx:for="{{ calendar }}"  -->
-<template is="calendar" data="{{ ...item }}" />
- <!-- </block> -->
- </view>
 
+
+<view class="calendar-wrap">
+   <template is="calendar" data="{{...calendar}}" />
+</view>
+
+<!-- <view class="datepicker-box">
+    <template is="datepicker" data="{{...datepicker}}" />
+</view> -->

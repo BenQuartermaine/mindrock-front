@@ -1,1 +1,69 @@
- @import "../../templates/calendar/calendar.wxss";
+ @import '/template/calendar/index.wxss';
+ /* @import '/template/datepicker/index.wxss'; */
+.calendar-wrap {
+  width: calc(100% - 2px);
+  margin: auto 0;
+  height: 570rpx;
+  background: rgba(250,250,250,0.9);
+  color: black;
+  box-shadow: 1px 4px 7px #c1c1c1;
+  border-radius:5px;
+}
+.pink-color {
+  color:black;
+}
+
+.grid,
+.week {
+  width: 80rpx;
+  height: 60rpx;
+}
+
+.day {
+  width: 60rpx;
+  height: 60rpx;
+  font-size: 26rpx;
+  font-weight: 200;
+  border-radius: 0;
+}
+
+.week {
+  line-height: 74rpx;
+  color: black;
+  font-weight: normal;
+}
+
+.calendar .disable-day-color {
+  color: #c4c4c4;
+}
+
+.calendar .disable-day-circle {
+  background-color: transparent;
+}
+
+.calendar .normal-day-color {
+  color: #000;
+  font-weight: bold;
+}
+
+.calendar .day-choosed-color {
+  color: #000;
+  font-weight: bold;
+}
+
+.calendar .border-radius {
+  border-radius: 0;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.calendar .pink-bg {
+  background-color: transparent;
+  border: 1px black solid;
+  transition: all 0.3s;
+  animation-name: choosed;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}

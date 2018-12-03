@@ -1,4 +1,13 @@
-// pages/display/display.js
+import initCalendar from '../../template/calendar/index';
+import { getSelectedDay } from '../../template/calendar/index';
+// import initDatepicker from '../../template/datepicker/index';
+const conf = {
+  disablePastDay: false,
+  defaultDay: false,
+  // placeholder: 'Pick a date', // input 输入框
+  // type: 'normal',
+  };
+
 Page({
 
   /**
@@ -26,7 +35,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    initCalendar(conf);
+    // initDatepicker(conf);
   },
 
   /**
