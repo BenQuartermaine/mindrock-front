@@ -32,25 +32,11 @@ Page({
   },
   redirectDashboard: function () {
 
-    const challenge_id = this.data.challenge.id
-    const userId = wx.getStorageSync("userId")
-    const app = getApp()
-    const dev = app.globalData.dev
-    const prod = app.globalData.prod
-
-    const request = {
-      user_id: userId
-    }
-    wx.request({
-      url: prod + `/api/v1/assignments/${assignment_id}/journals/${journals_id}/assignments`,
-      method: "GET",
-      data: request,
-      success(res) {
+  
         wx.switchTab({
           url: '/pages/dashboard/dashboard',
         })
-      }
-    })
+     
   },
   getDisplayData() {
     const userId = wx.getStorageSync("userId")
