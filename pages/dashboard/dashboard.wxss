@@ -1,4 +1,5 @@
 @import '/style/fonts.wxss';
+
 .head-wrapper {
   display: flex;
   margin-top: 20rpx;
@@ -39,8 +40,8 @@
  font-family: 'Gotham';
 }
 .toggle-sign {
-  width: 30rpx;
-  height: 30rpx;
+  width: 20rpx;
+  height: 20rpx;
   display: flex;
   padding-right:15rpx;
 }
@@ -48,22 +49,21 @@
   background: #FFFFFF;
   border: 1px solid #E7E7E7;
   border-top: none;
-  border-radius: 5px;
-  width: 95vw;
   margin: 0 auto;
   margin-bottom: 30rpx;
   overflow:hidden;
   height: auto;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 20px 20px;
 }
 .challenge-wrapper-short {
   background: #FFFFFF;
   border: 1px solid #E7E7E7;
-  border-radius: 20px;
-  width: 90vw;
+  border-radius: 10rpx;
   margin: 0 auto;
   margin-bottom: 30rpx;
   height: 300rpx;
-  transition: 1s;
 }
 .day {
   display: flex;
@@ -71,7 +71,7 @@
   margin: 15rpx 20rpx 15rpx 20rpx;
   background: #FFFFFF;
   border: 1px solid #E7E7E7;
-  border-radius: 3px;
+  border-radius: 10rpx;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
   padding: 20rpx;
   font-size: 24rpx;
@@ -95,7 +95,8 @@
   border: 1px solid #327383;
   padding: 20rpx;
   color: white;
-  border-radius: 10px 20px 0 0; 
+  box-shadow: 0px -3px 2px rgba(144, 144, 144, 0.25);
+  border-radius: 20px 20px 0px 0px;
   font-family: 'Gotham';
   text-transform: capitalize;
   display: flex;
@@ -109,36 +110,31 @@
   font-size:25rpx;
   font-family: 'Gotham';
 }
+.dashboard-wrapper {
+  padding-top: 20rpx;
+}
 
-.locked{
+.locked {
   width:40rpx;
   height: 40rpx;
   border-radius: 50%;
   padding-left:20rpx;
 }
-button{
-  border:2rpx solid #A0BE3E;
-  /* padding: 10px 15px; */
-  border-radius: 15px;
-  height: 60rpx;
-  width:140rpx;
+
+button {
+  border: 2rpx solid #019C85;
+  border-radius: 10rpx;
   background-color: white;
   font-size:18rpx;
-  color: #A0BE3E;
+  color: #019C85;
   font-family: 'Gotham';
   font-weight: 300;
-  font-style: normal;
-
-}
-
-.button:hover {
-  opacity: 1;
-  text-decoration: none;
-  color:#327383;
+  text-align: center;
+  display: flex;
+  align-content: center;
 }
 
 .description{
-height:100rpx;
 padding:20rpx;
 font-size:25rpx;
 overflow: hidden;
@@ -152,9 +148,7 @@ overflow:hidden;
 padding:20rpx;
 font-size:25rpx;
 }
-.day-list-short{
-height:0rpx;
-}
+
 
 /* Toggle button team & dashboard */
 .active-class {
@@ -171,9 +165,24 @@ height:0rpx;
 .inactive-class {
   color: #E7E7E7;
 }
-
 .dashboardTeamToggle {
   display: flex;
   justify-content: center;
   padding: 10rpx;
+}
+.journal-show {
+  color: #37529E;
+  border: 2rpx solid #37529E;
+}
+/* Team Page css */
+.team-wrapper {
+  margin-top: 20rpx;
+  padding: 20rpx;
+  background: #FFFFFF;
+  box-shadow: 0px -3px 2px rgba(144, 144, 144, 0.25);
+  border-radius: 20px 20px 0px 0px;
+  border: 2rpx solid #E7E7E7;
+}
+.challenge-header {
+
 }
