@@ -36,9 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-
-			"current": -1,
-
+			"current": 10,
 			"list": [
 				{
 					"id": -1,
@@ -98,6 +96,12 @@
 					"id": -1,
 					"name": "display",
 					"pathName": "pages/display/display",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "share",
+					"pathName": "pages/share/share",
 					"query": ""
 				}
 			]

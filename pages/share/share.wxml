@@ -1,0 +1,9 @@
+<view>
+  <view class="header">
+    <h1>Creativity Challenge</h1>
+  </view>
+
+    <view class='wrapper'>
+    <image src="/img/1.jpg"></image>
+    </view>
+  </view>
