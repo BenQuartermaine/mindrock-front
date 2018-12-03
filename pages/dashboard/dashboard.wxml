@@ -21,6 +21,13 @@
   </view>
 </view>
 
+<!-- Menu toggle function -->
+<view class='dashboardTeamToggle'>
+  <text wx:for='{{dashboardTeamToggle}}' data-idx="{{index}}" class="mutual-class {{dashboardTeamNum==index ? 'active-class' : 'inactive-class'}}" data-toggle="{{index}}" bindtap='dashboardTeamFunction'>{{item}}</text>
+</view>
+
+
+<view hidden='{{dashboardTeamNum !== 0}}'>
 <block wx:for="{{user.challenges}}" wx:for-item="challenge">
   
   <block wx:if="{{challenge.assignments[challenge.assignments.length - 1].date >= currentDay}}">
@@ -61,7 +68,7 @@
                 <button bindtap='journalLog' data-assignment="{{assignment.id}}">Journal</button>
               </view>
               <view wx:else>
-                <image class='locked'src='/img/pass.png'/>
+                <image class='locked' src='/img/pass.png'/>
               </view>
             </view>
             <!-- Day has yet to be completed -->
@@ -77,21 +84,18 @@
   <view class='history-header'>
     <view>History</view>
   </view>
-    
-    <!-- History challenge section (outside) -->
-      <view class='challenge-wrapper'>
+          <view class='challenge-wrapper'>
       <view class="row stats">
-    <!-- Current challenge section (outside) -->
         <view class='challenge-name'>{{challenge.name}}</view>
-        <!-- Minus/plus sign icon for toggling keyframe -->
+   
         <image class='toggle-sign' bindtap='expand' src='{{collapse? max : min}}'></image>
       </view>
       <view class="description">{{challenge.description}}</view>
 
-      <!-- Day 1 through 7 -->
+  
       <view class='challenge-day-list'>
         <block wx:for="{{challenge.assignments}}" wx:for-item="assignment">
-          <!-- If the day has been completed -->
+      
           <view class='day'>
             <view>
               <text>Day {{index + 1}}</text>
@@ -108,3 +112,5 @@
     </view>
   </block>
 </block>
+
+</view>
