@@ -22,7 +22,7 @@ Page({
     const assignment_id = data.assignment
 
     wx.navigateTo({
-      url: `../journal/journal?assignment=${assignment_id}`,
+      url: `../journal/journal?id=${assignment_id}`,
     })
   },
 
@@ -47,7 +47,7 @@ Page({
     const page = this
 
     wx.request({
-      url: dev + `api/v1/users/${userId}`,
+      url: prod + `api/v1/users/${userId}`,
       method: "GET",
       success(res) {
         page.setData(
