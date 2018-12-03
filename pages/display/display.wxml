@@ -1,0 +1,19 @@
+<view class='head-wrapper'>
+<view class="title">My journals</view>
+  
+  <view class="personal-info">
+    <image class='avatar' src="{{avatar}}"/>
+    <view class="total">You have 22 journals!!</view>
+  </view>
+</view>
+
+<view class="journal-container">
+  <view class="journal">
+    <view class="date">2018.12.03</view>
+    <image class='icon' src="/img/calendar.png"/>
+  </view>
+ <image class="pic" src="{{photo[2]}}"></image>
+ <view class="content">it went well today</view>
+</view>
+  
+  

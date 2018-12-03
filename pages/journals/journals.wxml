@@ -1,6 +1,0 @@
-
-<view class="wrapper">
-  <view class="title">My Journals</view>
-  <view class="date">date</view>
-  <image src='/img/calender.png'></image>
-</view>

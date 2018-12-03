@@ -1,1 +1,14 @@
-/* pages/display/display.wxss */
+@import '/style/fonts.wxss';
+
+.title{
+  font-family: 'Gotham';
+  margin: 80rpx 0;
+}
+
+.avatar {
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 50%;
+  margin-right: 50rpx;
+  margin-left:30rpx;
+}
