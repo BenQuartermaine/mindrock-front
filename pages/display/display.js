@@ -36,7 +36,7 @@ Page({
       user_id: userId
     }
     wx.request({
-      url: prod + `/api/v1/challenges/${challenge_id}/assignments`,
+      url: prod + `/api/v1/assignments/${assignment_id}/journals/${journals_id}/assignments`,
       method: "GET",
       data: request,
       success(res) {
