@@ -28,8 +28,9 @@
       <view class= "content-row">
         <image id="pic" src="/img/1.jpg"></image>
         <view class="{{showExpand? 'summary-long': 'summary'}}">
+          <image class="dropdown" src="{{showExpand? '/img/min-bl.svg' : '/img/max-bl.svg'}}" bindtap="expand"></image>
           <textarea>{{challenge.description}}</textarea>
-        <image class="dropdown" src="{{showExpand? '/img/min-bl.svg' : '/img/max-bl.svg'}}" bindtap="expand"></image>
+      
     
       
     <!-- <view class="summary">it went well today.egle text chat is a famous anonymous text chat, with which you can chat with random interlocutors. Simple usability is everywhere, beautiful design and great functionality while nothing distracts the communication. -->
