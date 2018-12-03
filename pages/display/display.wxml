@@ -1,19 +1,26 @@
 <view class='head-wrapper'>
-<view class="title">My journals</view>
-  
-  <view class="personal-info">
-    <image class='avatar' src="{{avatar}}"/>
-    <view class="total">You have 22 journals!!</view>
+  <view class="title">My journals</view>
+  <view class= 'head-container'>
+    <view class="personal-info">
+      <image class='avatar' src="{{avatar}}"/>
+      <view class="total">You have 22 journals!!</view>
+    </view>
   </view>
 </view>
 
 <view class="journal-container">
-  <view class="journal">
+  <view class="row">
     <view class="date">2018.12.03</view>
-    <image class='icon' src="/img/calendar.png"/>
+    <image id='icon' src="/img/calendar.png"/>
   </view>
- <image class="pic" src="{{photo[2]}}"></image>
- <view class="content">it went well today</view>
+  <view class = "content-row">
+    <view class= "images">
+      <image id="pic" src="/img/1.jpg"></image>
+    </view>
+    <view class="summary">it went well today.egle text chat is a famous anonymous text chat, with which you can chat with random interlocutors. Simple usability is everywhere, beautiful design and great functionality while nothing distracts the communication.
+    </view>
+  </view>
 </view>
-  
-  
+  <button bindtap="redirectDashboard">Go back</button>
+              <!-- <button bindtap='journalLog' data-assignment="{{assignment.id}}">Journal</button>
+   -->
