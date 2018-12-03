@@ -22,5 +22,5 @@
     <text>How to take the challenge</text>
     <button bindtap='clickToDash'>Individual</button>
   </view>
-   <button bindtap='clickToDash'>Create a team</button>  
+   <button bindtap='createTeam'>Create a team</button>  
 </view>
