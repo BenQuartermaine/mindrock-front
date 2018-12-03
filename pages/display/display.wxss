@@ -1,8 +1,84 @@
-@import '/style/fonts.wxss';
 
+ @import '/template/calendar/index.wxss';
+ /* @import '/template/datepicker/index.wxss'; */
+.calendar-wrap {
+  width: 98%;
+  margin: 0 10rpx;
+  height: 570rpx;
+  background: rgba(250,250,250,0.9);
+  color: black;
+  box-shadow: 1px 4px 7px #c1c1c1;
+  border-radius:5px;
+}
+.pink-color {
+  color:black;
+}
+
+.grid,
+.week {
+  width: 100rpx;
+  height: 60rpx;
+}
+
+.day {
+  width: 60rpx;
+  height: 60rpx;
+  font-size: 26rpx;
+  font-weight: 200;
+  border-radius: 0;
+}
+
+.week {
+  line-height: 74rpx;
+  color: black;
+  font-weight: normal;
+}
+
+.calendar .disable-day-color {
+  color: #c4c4c4;
+}
+
+.calendar .disable-day-circle {
+  background-color: transparent;
+}
+
+.calendar .normal-day-color {
+  color: #000;
+  font-weight: bold;
+}
+
+.calendar .day-choosed-color {
+  color: #000;
+  font-weight: bold;
+}
+
+.calendar .border-radius {
+  border-radius: 0;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.calendar .pink-bg {
+  background-color: transparent;
+  border: 1px black solid;
+  transition: all 0.3s;
+  animation-name: choosed;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@import '/style/fonts.wxss';
+/* .head-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+} */
 .title{
   font-family: 'Gotham';
-  margin: 80rpx 0;
+  margin: 50rpx 0;
 }
 
 .avatar {
@@ -10,18 +86,25 @@
   width: 150rpx;
   height: 150rpx;
   border-radius: 50%;
-  margin-right: 50rpx;
-  margin-left:30rpx;
+  margin: 50rpx;
+
+}
+.total{
+  display: flex;
+
 }
 
 .personal-info{
   display: flex;
   justify-content: center;
+   text-align: center;
   font-family: 'Gotham';
   font-weight: 300;
   font-style: normal;
   font-size: 28rpx;
+  align-items: center;
 }
+
 
 .content{
   display: flex;
@@ -29,36 +112,42 @@
 }
 .head-container{
   background: #FFFFFF;
-  border: 1px solid #E7E7E7;
-  border-top: none;
-  border-radius: 8px;
-  width:95vw;
+  border: 2px solid #E7E7E7;
+  border-bottom: none;
+  border-radius: 15px;
+  width:100%;
   margin: 0 auto;
+  
 }
 
 .journal-container{
   display: flex;
   flex-direction: column;
-  background: #FFFFFF;
-  border: 1px solid #E7E7E7;
-  border-top: none;
-  border-radius: 5px;
-  width: 95vw;
+  /* background: #FFFFFF;
+  border: 1px solid #E7E7E7; */
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 30rpx;
   overflow:hidden;
   height: 100vh;
+  /* align-items: center;
+  justify-content: center; */
 }
 
 .row{
 display: flex;
 justify-content: space-between;
 margin-top:25rpx;
+background: #E7E7E7;
+padding:20rpx;
+width: 95%;
+border-radius: 8rpx;
 }
 #icon {
   display: flex;
   width: 50rpx;
   height:50rpx;
+  padding-right:25rpx;
   
 }
 
@@ -66,6 +155,9 @@ margin-top:25rpx;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
+  margin: 25rpx 0;
+ 
 }
 .images {
   display: flex;
@@ -76,12 +168,15 @@ margin-top:25rpx;
   font-weight: 300;
   font-style: normal;
   font-size: 28rpx;
+  padding-left: 25rpx;
 
 }
 #pic{
   display:flex;
-  width: 100%;
+  width: 95%;
   margin-top:20rpx;
+  align-items: center;
+  
 }
 .images{
   background: #FFFFFF;
@@ -97,13 +192,63 @@ margin-top:25rpx;
   border-top: none;
   border-radius: 5px;
 
+
 }
 
 .summary{
+  display: flex;
   font-family: 'Gotham';
   font-weight: 300;
   font-style: normal;
   font-size: 28rpx;
   margin-top:40rpx;
   padding:20rpx;
+  width:90%;
+  border: 2px solid #E7E7E7;
+  border-radius: 8rpx;
+  overflow: hidden;
+  height: 300rpx;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+  .summary-long{
+  display: flex;
+  font-family: 'Gotham';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 28rpx;
+  margin-top:40rpx;
+  padding:20rpx;
+  width:90%;
+  border: 2px solid #E7E7E7;
+  border-radius: 8rpx;
+  height: 800rpx;
+  align-items: center;
+   flex-direction: column;
+  }
+ 
+
+button {
+  width:90vw;
+  border-radius: 8rpx;
+  line-height:2.55555556;
+  color:#327383;
+  font-size: 12px;
+  margin-top: 60rpx;
+  margin-bottom: 60rpx; 
+  border: 1rpx solid #327383;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  text-align:center;
+  font-family: 'Gotham';
+  font-weight: 600;
+  font-style: normal;
+  padding-top: 10rpx;
+}
+
+.dropdown{
+  display:flex;
+  width:8%;
+  height:20rpx;
+  
 }

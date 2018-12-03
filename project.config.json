@@ -36,7 +36,9 @@
 			"list": []
 		},
 		"miniprogram": {
+
 			"current": -1,
+
 			"list": [
 				{
 					"id": -1,
@@ -51,7 +53,7 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 2,
 					"name": "dashboard",
 					"pathName": "pages/dashboard/dashboard",
 					"query": ""
@@ -84,6 +86,12 @@
 					"id": -1,
 					"name": "account",
 					"pathName": "pages/account/account",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "display",
+					"pathName": "pages/display/display",
 					"query": ""
 				},
 				{

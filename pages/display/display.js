@@ -1,4 +1,13 @@
-// pages/display/display.js
+import initCalendar from '../../template/calendar/index';
+import { getSelectedDay } from '../../template/calendar/index';
+// import initDatepicker from '../../template/datepicker/index';
+const conf = {
+  disablePastDay: false,
+  defaultDay: false,
+  // placeholder: 'Pick a date', // input 输入框
+  // type: 'normal',
+  };
+
 Page({
 
   /**
@@ -13,7 +22,13 @@ Page({
       '/img/6.jpg',
       '/img/7.jpg',
       '/img/8.jpg',
-    ]
+    ],
+    calendar_show: false
+  },
+  showCalendar: function () {
+    this.setData({
+      calendar_show: true
+    })
   },
   redirectDashboard: function () {
 
@@ -27,7 +42,7 @@ Page({
       user_id: userId
     }
     wx.request({
-      url: prod + `/api/v1/challenges/${challenge_id}/assignments`,
+      url: prod + `/api/v1/assignments/${assignment_id}/journals/${journals_id}/assignments`,
       method: "GET",
       data: request,
       success(res) {
@@ -58,6 +73,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+
   onLoad: function () {
     console.log()
     this.getDisplayData()
@@ -66,6 +82,7 @@ Page({
       avatar: userInfo.avatarUrl
     })
     console.log(this.data)
+
 
   },
 
@@ -80,9 +97,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
-  },
 
+    initCalendar(conf);
+    // initDatepicker(conf);
+
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

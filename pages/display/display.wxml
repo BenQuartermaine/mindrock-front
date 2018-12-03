@@ -1,26 +1,48 @@
+
+<!-- import calendar template -->
+<import src="/template/calendar/index.wxml"/>
+
+<!-- <view class="datepicker-box">
+    <template is="datepicker" data="{{...datepicker}}" />
+</view> -->
+
 <view class='head-wrapper'>
   <view class="title">My journals</view>
   <view class= 'head-container'>
     <view class="personal-info">
       <image class='avatar' src="{{avatar}}"/>
       <view class="total">You have 22 journals!!</view>
+     </view>
+    <view class="journal-container">
+      <view class="row">
+        <view class="date">2018.12.03</view>
+        <image id='icon' src="/img/calendar.png" bindtap="showCalendar"></image>
+      </view>
+
+      <block wx:if="{{calendar_show}}">
+        <view class="calendar-wrap">
+          <template is="calendar" data="{{...calendar}}" />
+        </view>
+      </block>
+
+      <view class= "content-row">
+        <image id="pic" src="/img/1.jpg"></image>
+        <view class="{{showExpand? 'summary-long': 'summary'}}">
+          <image class="dropdown" src="{{showExpand? '/img/min-bl.svg' : '/img/max-bl.svg'}}" bindtap="expand"></image>
+          <textarea>{{challenge.description}}</textarea>
+      
+    
+      
+    <!-- <view class="summary">it went well today.egle text chat is a famous anonymous text chat, with which you can chat with random interlocutors. Simple usability is everywhere, beautiful design and great functionality while nothing distracts the communication. -->
+    </view>
+    </view>
     </view>
   </view>
 </view>
 
-<view class="journal-container">
-  <view class="row">
-    <view class="date">2018.12.03</view>
-    <image id='icon' src="/img/calendar.png"/>
-  </view>
-  <view class = "content-row">
-    <view class= "images">
-      <image id="pic" src="/img/1.jpg"></image>
-    </view>
-    <view class="summary">it went well today.egle text chat is a famous anonymous text chat, with which you can chat with random interlocutors. Simple usability is everywhere, beautiful design and great functionality while nothing distracts the communication.
-    </view>
-  </view>
-</view>
-  <button bindtap="redirectDashboard">Go back</button>
-              <!-- <button bindtap='journalLog' data-assignment="{{assignment.id}}">Journal</button>
-   -->
+  
+      <button bindtap="redirectDashboard">Go back</button>
+              <!-- <button bindtap='journalLog' data-assignment="{{assignment.id}}">Journal</butt
+
+
+
