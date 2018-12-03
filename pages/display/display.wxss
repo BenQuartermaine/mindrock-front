@@ -137,7 +137,8 @@ border-radius: 8rpx;
   border-radius: 8rpx;
   overflow: hidden;
   height: 300rpx;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
   .summary-long{
@@ -153,6 +154,7 @@ border-radius: 8rpx;
   border-radius: 8rpx;
   height: 800rpx;
   align-items: center;
+   flex-direction: column;
   }
  
 
@@ -174,6 +176,8 @@ button {
 }
 
 .dropdown{
+  display:flex;
   width:8%;
   height:20rpx;
+  
 }
