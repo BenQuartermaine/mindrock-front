@@ -2,8 +2,8 @@
  @import '/template/calendar/index.wxss';
  /* @import '/template/datepicker/index.wxss'; */
 .calendar-wrap {
-  width: calc(100% - 2px);
-  margin: auto 0;
+  width: 98%;
+  margin: 0 10rpx;
   height: 570rpx;
   background: rgba(250,250,250,0.9);
   color: black;
@@ -16,7 +16,7 @@
 
 .grid,
 .week {
-  width: 80rpx;
+  width: 100rpx;
   height: 60rpx;
 }
 
@@ -67,7 +67,8 @@
   animation-duration: 0.5s;
   animation-timing-function: linear;
   animation-iteration-count: 1;
-=======
+}
+
 @import '/style/fonts.wxss';
 /* .head-wrapper{
   display: flex;

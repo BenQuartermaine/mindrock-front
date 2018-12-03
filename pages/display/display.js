@@ -22,7 +22,13 @@ Page({
       '/img/6.jpg',
       '/img/7.jpg',
       '/img/8.jpg',
-    ]
+    ],
+    calendar_show: false
+  },
+  showCalendar: function () {
+    this.setData({
+      calendar_show: true
+    })
   },
   redirectDashboard: function () {
 
@@ -95,7 +101,7 @@ Page({
     initCalendar(conf);
     // initDatepicker(conf);
 
-
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

@@ -2,12 +2,6 @@
 <!-- import calendar template -->
 <import src="/template/calendar/index.wxml"/>
 
-
-
-<view class="calendar-wrap">
-   <template is="calendar" data="{{...calendar}}" />
-</view>
-
 <!-- <view class="datepicker-box">
     <template is="datepicker" data="{{...datepicker}}" />
 </view> -->
@@ -22,8 +16,14 @@
     <view class="journal-container">
       <view class="row">
         <view class="date">2018.12.03</view>
-        <image id='icon' src="/img/calendar.png"/>
+        <image id='icon' src="/img/calendar.png" bindtap="showCalendar"></image>
       </view>
+
+      <block wx:if="{{calendar_show}}">
+        <view class="calendar-wrap">
+          <template is="calendar" data="{{...calendar}}" />
+        </view>
+      </block>
 
       <view class= "content-row">
         <image id="pic" src="/img/1.jpg"></image>
