@@ -16,15 +16,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    photo: [
-      '/img/1.jpg',
-      '/img/2.jpg',
-      '/img/4.jpg',
-      '/img/5.jpg',
-      '/img/6.jpg',
-      '/img/7.jpg',
-      '/img/8.jpg',
-    ],
+  
     calendar_show: false,
   
   },
@@ -77,9 +69,9 @@ Page({
       method: "GET",
       success(res) {
         console.log(res.data)
-        const data = res.data.journals.journals[0]
+        const data = res.data.assignment.journals[0]
         page.setData({
-          date: res.data.journals.date,
+          date: res.data.assignment.date,
           content: data.content,
           id: data.id,
           photo_tag_list: data.photo_tag_list
