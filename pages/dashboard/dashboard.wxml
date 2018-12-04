@@ -16,7 +16,7 @@
     </view>
     <view class="row last">
       <view class="current">Longest Streak</view>
-      <view class="number">11 days</view>
+      <view class="number">{{longestStreak}}</view>
     </view>
   </view>
 </view>
@@ -35,7 +35,12 @@
         <view class="{{showExpand? 'challenge-wrapper-short': 'challenge-wrapper'}}">
           <view class="row stats">
             <view class='challenge-name'>{{challenge.dashboard.name}}</view>
-            <image class="toggle-sign" src="{{collapse? max : min }}" bindtap="expand"></image>
+              <!-- <view class="share-button"> 
+                <button id= "share" open-type='share'>
+                <image id="share-sign" src="/img/share.png"></image>
+                </button>
+              </view>  -->
+              <image id="toggle-sign" src="{{collapse? max : min }}" bindtap="expand"></image>
           </view>
           <view class="'description">{{challenge.dashboard.description}}</view>
           <view wx:if="{{!collapse}}">
@@ -80,7 +85,7 @@
         <view class='challenge-wrapper'>
           <view class="row stats">
             <view class='challenge-name'>{{challenge.name}}</view>
-            <image class='toggle-sign' bindtap='expand' src='{{collapse? max : min}}'></image>
+            <image id='toggle-sign' bindtap='expand' src='{{collapse? max : min}}'></image>
           </view>
           <view class="description">{{challenge.description}}</view>
           <view class='challenge-day-list'>
@@ -104,8 +109,6 @@
   </block>
 </view>
 
-
-
 <!-- TEAM PAGE CONTENT RENDER -->
 <view class='dashboard-wrapper' hidden='{{dashboardTeamNum == 0}}'>
   <block wx:for="{{user.challenges}}" wx:for-item="challenge">
@@ -115,24 +118,34 @@
         <view class="{{showExpand? 'challenge-wrapper-short': 'challenge-wrapper'}}">
           <view class="row stats">
             <view class='challenge-name'>{{challenge.team.name}}</view>
-            <image class="toggle-sign" src="{{collapse? max : min }}" bindtap="expand"></image>
-          </view>
+            <view class="icons">
+            <!-- <view class="toggle"> -->
+              <view class="share-button"> 
+              <image id="toggle-sign" src="{{collapse? max : min }}" bindtap="expand"></image>
+              <button id= "share" bindtap="showInvite">
+                <image id="share-sign" src="/img/share.png"></image>
+              </button>
+            </view> 
+          </view> 
+         </view>
           <view class="'description">{{challenge.team.description}}</view>
           <view wx:if="{{!collapse}}">
-            <block wx:for="{{challenge.team.assignments}}" wx:for-item="assignment">
+            <block wx:for="{{challenge.team.teams}}" wx:for-item="teamday">
               <view class='day-title'>
-                <text>Day {{index + 1}}</text>
+                <text class="day-text">Day {{index}}</text>
               </view>
-              <view class='day team-individual'>
-                <view class='avatar-width'>
-                  <image class="team-avatar" src="/img/1.jpg"></image>
-                </view>
-                <text class='assignment-team'>{{assignment}}</text>
+              <block wx:for="{{teamday}}" wx:for-item="human">
+                <view class='day team-individual'>
+                  <view class='avatar-width'>
+                    <image class="team-avatar" src="{{human.avatarUrl}}"></image>
+                  </view>
+                  <view class='assignment-team'>{{human.content}}</view>
 
-                <!-- Below is to be an if/else statment checking if the user has finished their challenge for the day -->
-                <image class="team-locked" src="/img/unlocked.png"></image>
-                <!-- <image class='locked' src='/img/locked.png' /> -->
-              </view>
+                  <!-- Below is to be an if/else statment checking if the user has finished their challenge for the day -->
+                  <image class="team-locked" src="/img/unlocked.png"></image>
+                  <!-- <image class='locked' src='/img/locked.png' /> -->
+                </view>
+              </block>
             </block>
           </view>
         </view>

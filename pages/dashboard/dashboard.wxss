@@ -39,12 +39,11 @@
  display: flex;
  font-family: 'Gotham';
 }
-.toggle-sign {
-  width: 20rpx;
-  height: 20rpx;
-  display: flex;
-  padding-right:15rpx;
-}
+ #toggle-sign {
+  width: 25rpx;
+  height: 25rpx;
+  margin-left: 25rpx;
+} 
 .challenge-wrapper {
   background: #FFFFFF;
   border: 1px solid #E7E7E7;
@@ -99,16 +98,16 @@
   border-radius: 20px 20px 0px 0px;
   font-family: 'Gotham';
   text-transform: capitalize;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  height: 60rpx;
 }
 
 .status, .challenge-name{
-  display:flex;
+  /* display:flex; */
   padding: 20rpx;
   font-size:25rpx;
   font-family: 'Gotham';
+
 }
 .dashboard-wrapper {
   padding-top: 20rpx;
@@ -119,19 +118,6 @@
   height: 40rpx;
   border-radius: 50%;
   padding-left:20rpx;
-}
-
-button {
-  border: 2rpx solid #019C85;
-  border-radius: 10rpx;
-  background-color: white;
-  font-size:18rpx;
-  color: #019C85;
-  font-family: 'Gotham';
-  font-weight: 300;
-  text-align: center;
-  display: flex;
-  align-content: center;
 }
 
 .description{
@@ -171,6 +157,10 @@ font-size:25rpx;
 .journal-show {
   color: #37529E;
   border: 2rpx solid #37529E;
+  font-family: gotham;
+  font-style: normal;
+  font-weight: 300rpx;
+  font-size: 22rpx;
 }
 /* Team Page css */
 .team-wrapper {
@@ -204,4 +194,28 @@ font-size:25rpx;
 
 .day-title {
   margin: 15rpx 20rpx 15rpx 20rpx;  
+}
+
+#share{
+  height: 50rpx;
+  background:transparent;
+  border-color: #327383;
+ 
+}
+#share::after{
+  border:none;
+}
+
+
+#share-sign{
+  width: 50rpx;
+  height: 50rpx;
+}
+.share-button{
+  display: flex;
+  align-items: center
+}
+.day-text{
+  font-family: gotham;
+  font-size: 25rpx;
 }

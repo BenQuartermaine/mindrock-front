@@ -1,4 +1,9 @@
 // pages/dashboard/dashboard.js
+
+const app = getApp()
+const dev = app.globalData.dev
+const prod = app.globalData.prod
+
 Page({
 
   data: {
@@ -15,7 +20,17 @@ Page({
       dashboardTeamNum: e.currentTarget.dataset.toggle
     })
   },
-
+  // onShareAppMessage: function () {
+  //   console.log('share');
+  //   wx.showShareMenu({
+  //     withShareTicket: true
+  //   })
+  // },
+  showInvite: function(){
+    wx.navigateTo({
+      url: '/pages/invite/invite',
+    })
+  },
   journalLog: function (e) {
     console.log(e)
     const data = e.currentTarget.dataset
@@ -39,10 +54,6 @@ Page({
 
   getDashboardData() {
     const userId = wx.getStorageSync("userId")
-
-    const app = getApp()
-    const dev = app.globalData.dev
-    const prod = app.globalData.prod
 
     const page = this
 
@@ -102,6 +113,8 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    const page = this
+    console.log("onload")
     console.log(options)
     this.getDashboardData()
     const userInfo = wx.getStorageSync("userInfo")
@@ -109,6 +122,15 @@ Page({
       avatar: userInfo.avatarUrl
     })
     console.log(this.data)
+    wx.request({
+      url: prod + `api/v1/users/${page.data.userId}`,
+      method: "GET",
+      success(res) {
+        page.setData({
+          longestStreak: res.data.user.max
+        })
+      }
+    })
   },
 
   /**

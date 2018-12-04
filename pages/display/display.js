@@ -36,35 +36,43 @@ Page({
     const prod = app.globalData.prod
     const page = this
   },
-  
-  // dayPicker: function (e) {
-  //   console.log("daypicker");
-  //   console.log(e);
-  //   let { value } = e.detail;
-  //   value['inputDate'] = 0;
-  //   const current_day = getSelectedDay()[0] || 0;
-  //   let inputDate = '';
 
-  //   if (current_day) {
-  //     let inputDate = new Date(`${current_day.year}-${current_day.month}-${current_day.day}`);
-  //     let inputDate = (inputDate.toISOString()).toString()
-  //     value['inputDate'] = 1;
-  //   };
-
-  //   console.log(value);
-  // },
   dayPicker: function () {
-   
+    const page = this
+    const userId = wx.getStorageSync("userId")
     console.log(getSelectedDay());
     let choose = getSelectedDay()[0];
     console.log(choose);
-    let chooseDate = `${choose.year}-${choose.month}-${choose.day}`;
-    let journalDate = (chooseDate.toString());
-    console.log(journalDate);
+    let chooseDate ="";
+    if (choose.day < 10) {
+      chooseDate = `${choose.year}-${choose.month}-0${choose.day}`;
+    } else {
+      chooseDate = `${choose.year}-${choose.month}-${choose.day}`;
+    }
+    console.log(chooseDate);
     this.setData({
-      date: journalDate,
+      date: chooseDate,
       calendar_show: false
     })
+    wx.request({
+      url: dev + `api/v1/users/${userId}/assignments?date=${page.data.date}`,
+      method: "GET",
+      success(res) {
+        console.log("assignments")
+        let data = res.data.assignments[0].journals[0]
+        page.setData({
+          content: data.content,
+          id: data.id,
+          photo_tag_list: data.photo_tag_list
+        })
+            
+      }
+      
+    })
+  },
+
+  selectAssignment(date) {
+
   },
   /**
    * 生命周期函数--监听页面加载
@@ -77,18 +85,20 @@ Page({
     const assignment_id = options.id
     this.getDisplayData()
     const userInfo = wx.getStorageSync("userInfo")
+    const userId = wx.getStorageSync("userId")
     this.setData({
       avatar: userInfo.avatarUrl,
-      assignment_id: assignment_id
+      assignment_id: assignment_id,
+      userId: userId
     })
    
     
     wx.request({
-      url: prod + `api/v1/assignments/${assignment_id}/journals`,
+      url: dev + `api/v1/assignments/${assignment_id}/journals`,
       method: "GET",
       success(res) {
         console.log(res.data)
-        const data = res.data.assignment.journals[0]
+        let data = res.data.assignment.journals[0]
         page.setData({
           date: res.data.assignment.date,
           content: data.content,

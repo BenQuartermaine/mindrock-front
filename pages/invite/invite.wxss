@@ -1,0 +1,138 @@
+
+.header-row{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin:20rpx 10rpx 50rpx 20rpx;
+}
+.header {
+ /* margin-top:30rpx 0rpx; */
+ font-size: 45rpx;
+ font-family: 'Gotham';
+ font-weight: bold;
+ /* padding: 30rpx; */
+ display: flex;
+}
+#share{
+  /* display: flex; */
+  width:20vw;
+  border-radius: 8rpx;
+  line-height:2.55555556;
+  color: white;
+  background:#327383;
+  font-size: 12px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  text-align:center;
+  font-family: 'Gotham';
+}
+
+.share-button{
+  display: flex;
+}
+
+.container, .avatars{
+  padding-top:20rpx;
+  background: #FFFFFF;
+  box-shadow: 0px -3px 2px rgba(144, 144, 144, 0.25);
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+}
+
+.des-title{
+  font-family: 'Gotham';
+  font-size:25rpx;
+  padding-top:20rpx;
+  padding-left: 20rpx;
+  font-weight: bold;
+}
+
+.dropdown{
+  width:5%;
+  height:20rpx;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  padding:15rpx;
+}
+
+.team-avatar {
+  border-radius: 50%;
+  height: 80rpx;
+  width: 80rpx;
+}
+
+.avatar-row{
+  display: flex;
+  padding:20rpx;
+  /* text-align: center; */
+}
+.team-avatar{
+  display: flex;
+}
+.name{
+  display: flex;
+  padding-left: 20rpx;
+  font-family: 'Gotham';
+  font-size: 20rpx;
+  align-items: center;
+}
+
+#accept, #decline {
+  width:30vw;
+  border-radius: 8rpx;
+  line-height:2.55555556;
+  color:#327383;
+  font-size: 12px;
+  margin-top: 60rpx;
+  border: 1rpx solid #327383;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  text-align:center;
+  font-family: 'Gotham';
+}
+
+.button-row{
+  display: flex;
+  margin-bottom:50rpx;
+}
+
+.des-section {
+  height: 200rpx;
+  margin: 50rpx 0 30rpx 0;
+  width:96%;
+  border: 1px solid lightgrey;
+  border-radius: 10rpx;
+  box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.25);
+}
+.des-section-long {
+  height: 580rpx;
+  margin: 50rpx 0 30rpx 0;
+  width:96%;
+  border: 1px solid lightgrey;
+  border-radius: 10rpx;
+  box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  .des-details {
+  font-size: 24rpx;
+  line-height: 30rpx;
+  padding: 20rpx;
+  /* overflow: hidden; */
+  height:160rpx;
+  display: block;
+  overflow-wrap:break-word;
+  overflow:hidden;
+  }
+
+  .des-details-long {
+  font-size: 24rpx;
+  line-height: 30rpx;
+  padding: 20rpx;
+  height:300rpx;
+  display: block;
+  overflow-wrap:break-word;
+  }
+
+  #pic{
+    width:95%;
+  }

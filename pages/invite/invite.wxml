@@ -1,0 +1,35 @@
+<view class="header-row">
+  <text class="header">7 Day {{challenge.name}} Challenge</text>
+  <view class="share-button"> 
+   <button id= "share" open-type='share'>Share</button>
+  </view> 
+</view>
+
+<view class="container">
+  <image class="pic" id="pic" src="{{photo[0]}}"></image>
+  <view class="{{showExpand? 'des-section-long': 'des-section'}}">
+    <view class="row">
+      <view class="des-title">Description</view>
+      <image class="dropdown" src="{{showExpand? '/img/min-bl.svg' : '/img/max-bl.svg'}}" bindtap="expand"></image>
+    </view>
+    <view class="{{showExpand? 'des-details-long': 'des-details'}}">
+      <text>{{challenge.description}}</text>
+   </view>
+   </view>
+      
+      <view class="avatars">
+        <view class="avatar-row">
+          <image class="team-avatar" src="/img/1.jpg"></image>
+          <text class="name">Claire</text>
+        </view>
+          
+         <view class="avatar-row">
+           <image class="team-avatar" src="/img/1.jpg"></image>
+           <view class="name">Ruben</view>
+         </view>
+      </view>
+   </view>
+   <view class="button-row">
+    <button id= "accept" bindtap='clickToAccept' open-type='getUserInfo'>Accept</button>
+    <button id= "decline" bindtap='clickToDecline'>Decline</button>
+  </view>

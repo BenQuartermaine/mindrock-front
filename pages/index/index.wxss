@@ -26,11 +26,12 @@
   width: 200rpx;
 }
 .card-category {
- font-size: 20rpx;
- color: black;
- font-weight: 300;
+ font-size: 18rpx;
+ color:grey;
+ font-weight: 400;
  font-style: normal;
  font-family: 'Gotham';
+ padding-top:15rpx;
 }
 .index-header {
   font-weight: bold;
