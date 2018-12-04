@@ -1,7 +1,7 @@
 <view class="header">
- <text class="header">7 Day {{challenge.name}} Challenge</text>
+  <text class="header">7 Day {{challenge.name}} Challenge</text>
 </view>
- 
+
 <view class="container">
   <image class="pic" src="{{photo[0]}}"></image>
   <view class="{{showExpand? 'des-section-long': 'des-section'}}">
@@ -10,7 +10,7 @@
       <image class="dropdown" src="{{showExpand? '/img/min-bl.svg' : '/img/max-bl.svg'}}" bindtap="expand"></image>
     </view>
     <view class="{{showExpand? 'des-details-long': 'des-details'}}">
-    <textarea>{{challenge.description}}</textarea>
+      <textarea>{{challenge.description}}</textarea>
 
     </view>
   </view>
@@ -23,7 +23,7 @@
     <text>How to take the challenge</text>
     <button bindtap='clickToDash'>Accepet Challenge by Yourself</button>
   </view>
-   <button bindtap='createTeam'>Create a Team for this Challenge</button>  
+  <button bindtap='createTeam'>Create a Team for this Challenge</button>
 
-</view>
+
 </view>
