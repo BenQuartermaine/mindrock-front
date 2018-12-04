@@ -2,13 +2,16 @@
  @import '/template/calendar/index.wxss';
  /* @import '/template/datepicker/index.wxss'; */
 .calendar-wrap {
-  width: 98%;
-  margin: 0 10rpx;
+  width: 100%;
+  margin-top: 30rpx;
   height: 570rpx;
   background: rgba(250,250,250,0.9);
   color: black;
-  box-shadow: 1px 4px 7px #c1c1c1;
+  /* box-shadow: 1px 4px 7px #c1c1c1; */
   border-radius:5px;
+  text-align: center;
+  
+
 }
 .pink-color {
   color:black;
@@ -103,7 +106,6 @@ padding:30rpx;
   align-items: center;
 }
 
-
 .content{
   display: flex;
   
@@ -131,8 +133,7 @@ padding:30rpx;
 .row{
 display: flex;
 justify-content: space-between;
-margin-top:25rpx;
-padding:20rpx;
+padding-top:25rpx;
 width: 95%;
 text-align:center;
 font-family:'Gotham';
@@ -142,11 +143,10 @@ font-style:normal;
 
 }
 #icon {
-  display: flex;
+  /* display: flex; */
   width: 35rpx;
   height:35rpx;
-  padding-right:25rpx;
-  
+
 }
 
 .content-row{
@@ -157,35 +157,24 @@ font-style:normal;
   position: relative;
  
 }
-.images {
-  display: flex;
-  height:500rpx;
-}
+
 .date{
-  display:flex;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 28rpx;
+  /* display:flex; */
+  font-family: gotham;
+  padding-top:25rpx;
+  font-size: 20rpx;
   padding-left: 25rpx;
 
 }
-#pic{
-  display:flex;
-  width: 95%;
+
+img-content{
+ /* display:flex;
+  width: 100%; */
   margin:20rpx;
   align-items: center;
-  height: 400rpx;
+  height: 800rpx;
   border: 1px solid #E7E7E7;
   border-radius: 8rpx;
-  
-  
-}
-.images{
-  background: #FFFFFF;
-  border: 1px solid #E7E7E7;
-  border-top: none;
-  border-radius: 5px;
-
 }
 
 .content{
@@ -213,21 +202,22 @@ font-style:normal;
 }
 
 
-button {
+.button {
   width:90vw;
   border-radius: 8rpx;
   line-height:2.55555556;
   color:#327383;
   font-size: 12px;
-  margin-top: 0rpx;
-  margin-bottom: 120rpx; 
   border: 1rpx solid #327383;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
-  text-align:center;
   font-family: 'Gotham';
-  font-weight: 600;
+  font-weight: 300;
   font-style: normal;
-  padding-top: 20rpx;
+
+}
+.button.bottom{
+  margin-top: 0rpx;
+  margin-bottom: 120rpx; 
 }
 
 .dropdown{
@@ -242,4 +232,9 @@ p{
   margin-right: 350rpx;
   font-family: 'Gotham';
   font-weight: 300;
+}
+
+.button.cal{
+  margin-top: 50rpx;
+  padding-bottom: 30rpx; 
 }

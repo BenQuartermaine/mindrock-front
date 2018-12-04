@@ -93,12 +93,6 @@
 					"query": ""
 				},
 				{
-					"id": -1,
-					"name": "share",
-					"pathName": "pages/share/share",
-					"query": ""
-				},
-				{
 					"id": 11,
 					"name": "invite",
 					"pathName": "pages/invite/invite",

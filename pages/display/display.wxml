@@ -10,14 +10,16 @@
     <view class="journal-container">
       <view class="row">
         <view class="date">{{date}}</view>
-        <image id='icon' src="/img/calendar.png" bindtap="showCalendar"></image>
+        <view class="cal">
+          <image id='icon' src="/img/calendar.png" bindtap="showCalendar"></image>
+        </view> 
       </view>
 
       <block wx:if="{{calendar_show}}">
         <view class="calendar-wrap">
           <template is="calendar" data="{{...calendar}}" />
         </view>
-        <button bindtap='dayPicker'> Check</button>
+        <button class="button cal" bindtap='dayPicker'> Check</button>
       </block>
 
       <!-- <view class="datepicker-box">
@@ -25,7 +27,9 @@
 </view> -->
 
       <view class= "content-row">
-        <image id="pic" src="{{photo_tag_list}}"></image>
+        <view class="img-content">
+          <image id="pic" src="{{photo_tag_list}}"></image>
+        </view>
         <p>Here is what you wrote</p>
           <text class="summary">{{content}}</text>
       </view>
@@ -33,7 +37,7 @@
   </view>
 </view>
   
-<button bindtap="redirectDashboard">Go back</button>
+<button class="button bottom" bindtap="redirectDashboard">Go back</button>
 
 
 
