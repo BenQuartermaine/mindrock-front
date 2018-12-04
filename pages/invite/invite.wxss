@@ -93,6 +93,7 @@
 
 .button-row{
   display: flex;
+  margin-bottom:50rpx;
 }
 
 .des-section {
