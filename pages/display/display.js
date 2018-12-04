@@ -43,11 +43,15 @@ Page({
     console.log(getSelectedDay());
     let choose = getSelectedDay()[0];
     console.log(choose);
-    let chooseDate = `${choose.year}-${choose.month}-${choose.day}`;
-    let journalDate = (chooseDate.toString());
-    console.log(journalDate);
+    let chooseDate ="";
+    if (choose.day < 10) {
+      chooseDate = `${choose.year}-${choose.month}-0${choose.day}`;
+    } else {
+      chooseDate = `${choose.year}-${choose.month}-${choose.day}`;
+    }
+    console.log(chooseDate);
     this.setData({
-      date: journalDate,
+      date: chooseDate,
       calendar_show: false
     })
     wx.request({
