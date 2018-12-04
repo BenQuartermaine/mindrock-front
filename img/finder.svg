@@ -1,0 +1,19 @@
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_5" y="52.424" x="22.597" width="25.672" height="23.633" fill="#327383"/>
+  <rect id="svg_7" y="76.057" x="22.597" width="25.672" height="2.361" fill="#195968"/>
+  <rect id="svg_10" y="21.582" x="52.686" width="24.717" height="25.191" fill="#327383"/>
+  <rect id="svg_12" y="46.773" x="52.686" width="24.717" height="2.361" fill="#195968"/>
+  <path id="svg_15" fill="#327383" d="m48.269,46.773l-25.672,0l0,-25.191l25.672,0l0,25.191z"/>
+  <rect id="svg_17" y="46.773" x="22.597" width="25.672" height="2.361" fill="#195968"/>
+  <rect id="svg_20" y="52.424" x="52.686" width="24.717" height="23.633" fill="#327383"/>
+  <rect id="svg_22" y="76.057" x="52.686" width="24.717" height="2.361" fill="#195968"/>
+  <ellipse id="svg_23" ry="8.426" rx="8.483" fill="#F6F7F7" cy="33.268" cx="35.55"/>
+ </g>
+</svg>
