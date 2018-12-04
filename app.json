@@ -8,7 +8,7 @@
     "pages/show/show",
     "pages/confirm/confirm",
     "pages/display/display",
-    "pages/share/share"
+    "pages/profile/profile"
 
   ],
   "window": {
