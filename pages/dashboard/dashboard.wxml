@@ -50,7 +50,7 @@
                     <button bindtap='journalHistory' class='journal-show' data-assignment="{{assignment.id}}">History</button>
                   </view>
                   <view wx:else>
-                    fail
+                    fai
                   </view>
                 </view>
                 <!-- If the current day -->
@@ -93,7 +93,7 @@
                   <button bindtap='journalHistory' class='journal-show' data-assignment="{{assignment.id}}">History</button>
                 </view>
                 <view wx:else>
-                  <text>Failed</text>
+                  <image class='locked' src='/img/fail.png' />
                 </view>
               </view>
             </block>
@@ -132,7 +132,7 @@
                     <button bindtap='journalHistory' class='journal-show' data-assignment="{{assignment.id}}">History</button>
                   </view>
                   <view wx:else>
-                    <text>Failed</text>
+                    <image class='locked' src='/img/fail.png' />
                   </view>
                 </view>
                 <!-- If the current day -->
