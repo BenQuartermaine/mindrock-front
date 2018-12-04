@@ -122,7 +122,7 @@
             <!-- <view class="toggle"> -->
               <view class="share-button"> 
               <image id="toggle-sign" src="{{collapse? max : min }}" bindtap="expand"></image>
-              <button id= "share" open-type='share'>
+              <button id= "share" bindtap="showInvite">
                 <image id="share-sign" src="/img/share.png"></image>
               </button>
             </view> 
