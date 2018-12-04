@@ -35,7 +35,12 @@
         <view class="{{showExpand? 'challenge-wrapper-short': 'challenge-wrapper'}}">
           <view class="row stats">
             <view class='challenge-name'>{{challenge.dashboard.name}}</view>
-            <image class="toggle-sign" src="{{collapse? max : min }}" bindtap="expand"></image>
+              <!-- <view class="share-button"> 
+                <button id= "share" open-type='share'>
+                <image id="share-sign" src="/img/share.png"></image>
+                </button>
+              </view>  -->
+              <image id="toggle-sign" src="{{collapse? max : min }}" bindtap="expand"></image>
           </view>
           <view class="'description">{{challenge.dashboard.description}}</view>
           <view wx:if="{{!collapse}}">
@@ -80,7 +85,7 @@
         <view class='challenge-wrapper'>
           <view class="row stats">
             <view class='challenge-name'>{{challenge.name}}</view>
-            <image class='toggle-sign' bindtap='expand' src='{{collapse? max : min}}'></image>
+            <image id='toggle-sign' bindtap='expand' src='{{collapse? max : min}}'></image>
           </view>
           <view class="description">{{challenge.description}}</view>
           <view class='challenge-day-list'>
@@ -104,8 +109,6 @@
   </block>
 </view>
 
-
-
 <!-- TEAM PAGE CONTENT RENDER -->
 <view class='dashboard-wrapper' hidden='{{dashboardTeamNum == 0}}'>
   <block wx:for="{{user.challenges}}" wx:for-item="challenge">
@@ -115,13 +118,21 @@
         <view class="{{showExpand? 'challenge-wrapper-short': 'challenge-wrapper'}}">
           <view class="row stats">
             <view class='challenge-name'>{{challenge.team.name}}</view>
-            <image class="toggle-sign" src="{{collapse? max : min }}" bindtap="expand"></image>
-          </view>
+            <view class="icons">
+            <!-- <view class="toggle"> -->
+              <view class="share-button"> 
+              <image id="toggle-sign" src="{{collapse? max : min }}" bindtap="expand"></image>
+              <button id= "share" open-type='share'>
+                <image id="share-sign" src="/img/share.png"></image>
+              </button>
+            </view> 
+          </view> 
+         </view>
           <view class="'description">{{challenge.team.description}}</view>
           <view wx:if="{{!collapse}}">
             <block wx:for="{{challenge.team.teams}}" wx:for-item="teamday">
               <view class='day-title'>
-                <text>Day {{index}}</text>
+                <text class="day-text">Day {{index}}</text>
               </view>
               <block wx:for="{{teamday}}" wx:for-item="human">
                 <view class='day team-individual'>

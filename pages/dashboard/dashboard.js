@@ -15,7 +15,12 @@ Page({
       dashboardTeamNum: e.currentTarget.dataset.toggle
     })
   },
-
+  onShareAppMessage: function () {
+    console.log('share');
+    wx.showShareMenu({
+      withShareTicket: true
+    })
+  },
   journalLog: function (e) {
     console.log(e)
     const data = e.currentTarget.dataset
