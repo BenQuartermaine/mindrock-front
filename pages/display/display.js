@@ -55,7 +55,7 @@ Page({
       calendar_show: false
     })
     wx.request({
-      url: dev + `api/v1/users/${userId}/assignments?date=${page.data.date}`,
+      url: prod + `api/v1/users/${userId}/assignments?date=${page.data.date}`,
       method: "GET",
       success(res) {
         console.log("assignments")
@@ -94,7 +94,7 @@ Page({
    
     
     wx.request({
-      url: dev + `api/v1/assignments/${assignment_id}/journals`,
+      url: prod + `api/v1/assignments/${assignment_id}/journals`,
       method: "GET",
       success(res) {
         console.log(res.data)
