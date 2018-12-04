@@ -58,8 +58,7 @@ Page({
       success(res) {
         page.setData(
           res.data
-        )
-      }
+        )}
     })
     const d = new Date()
     const year = d.getFullYear()
@@ -117,15 +116,7 @@ Page({
       avatar: userInfo.avatarUrl
     })
     console.log(this.data)
-    wx.request({
-      url: prod + `api/v1/users/${page.data.userId}`,
-      method: "GET",
-      success(res) {
-        page.setData({
-          longestStreak: res.data.user.max
-        })
-      }
-    })
+   
   },
 
   /**
