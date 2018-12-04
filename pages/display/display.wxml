@@ -3,8 +3,6 @@
 <import src="/template/calendar/index.wxml"/>
 <import src="/template/datepicker/index.wxml"/>
 
-
-
 <view class='head-wrapper'>
   <view class="title">My Journals</view>
   <view class= 'head-container'>
@@ -28,18 +26,14 @@
 
       <view class= "content-row">
         <image id="pic" src="{{photo_tag_list}}"></image>
-        <view class="{{showExpand? 'summary-long': 'summary'}}">
-        
-          <text>{{content}}</text>
-      
-    </view>
-    </view>
+        <p>Here is what you wrote</p>
+          <text class="summary">{{content}}</text>
+      </view>
     </view>
   </view>
 </view>
-
   
-      <button bindtap="redirectDashboard">Go back</button>
+<button bindtap="redirectDashboard">Go back</button>
 
 
 
