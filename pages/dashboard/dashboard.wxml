@@ -109,18 +109,17 @@
 <!-- TEAM PAGE CONTENT RENDER -->
 <view class='dashboard-wrapper' hidden='{{dashboardTeamNum == 0}}'>
   <block wx:for="{{user.challenges}}" wx:for-item="challenge">
-    <block wx:if="{{challenge.dashboard}}">
+    <block wx:if="{{challenge.team}}">
       <!-- What is dashboard referring to? -->
-      <block wx:if="{{challenge.dashboard.assignments[challenge.dashboard.assignments.length - 1].date >= currentDay}}">
         <!-- Current challenge section (inside) -->
         <view class="{{showExpand? 'challenge-wrapper-short': 'challenge-wrapper'}}">
           <view class="row stats">
-            <view class='challenge-name'>{{challenge.dashboard.name}}</view>
+            <view class='challenge-name'>{{challenge.team.name}}</view>
             <image class="toggle-sign" src="{{collapse? max : min }}" bindtap="expand"></image>
           </view>
-          <view class="'description">{{challenge.dashboard.description}}</view>
+          <view class="'description">{{challenge.team.description}}</view>
           <view wx:if="{{!collapse}}">
-            <block wx:for="{{challenge.dashboard.assignments}}" wx:for-item="assignment">
+            <block wx:for="{{challenge.team.assignments}}" wx:for-item="assignment">
               <view class='day-title'>
                 <text>Day {{index + 1}}</text>
               </view>
@@ -137,7 +136,7 @@
             </block>
           </view>
         </view>
-      </block>
+      
     </block>
   </block>
 </view>
