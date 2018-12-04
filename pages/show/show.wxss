@@ -10,7 +10,7 @@
  margin-top:45rpx;
  margin-bottom:25rpx;
  font-size: 40rpx;
-font-family: 'Gotham';
+ font-family: 'Gotham';
   padding: 30rpx;
 }
 
@@ -93,7 +93,6 @@ button {
 }
 
 .instruction{
-
   font-family: 'Gotham';
   font-weight: 200;
   font-style: normal;
