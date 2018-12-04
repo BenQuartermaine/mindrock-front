@@ -63,7 +63,7 @@
                 <!-- If the current day -->
                 <view wx:elif="{{assignment.date == currentDay}}">
                   <view wx:if="{{!assignment.status}}">
-                    <button bindtap='journalLog' data-assignment="{{assignment.id}}">Journal</button>
+                    <button bindtap='journalLog' class='journal-show' data-assignment="{{assignment.id}}">Journal</button>
                   </view>
                   <view wx:else>
                     <button bindtap='journalHistory' class='journal-show' data-assignment="{{assignment.id}}">History</button>
