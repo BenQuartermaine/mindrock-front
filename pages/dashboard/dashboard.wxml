@@ -16,7 +16,7 @@
     </view>
     <view class="row last">
       <view class="current">Longest Streak</view>
-      <view class="number">11 days</view>
+      <view class="number">{{longestStreak}}</view>
     </view>
   </view>
 </view>
