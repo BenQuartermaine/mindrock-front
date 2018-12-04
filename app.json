@@ -27,15 +27,15 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "img/index.png",
-        "selectedIconPath": "img/index.png",
-        "text": ""
+        "iconPath": "img/finder.png",
+        "selectedIconPath": "img/finder.png",
+        "text": "Challenges"
       },
       {
         "pagePath": "pages/dashboard/dashboard",
         "iconPath": "img/dashboard.png",
         "selectedIconPath": "img/dashboard.png",
-        "text": ""
+        "text": "Dashboard"
       },
       {
         "pagePath": "pages/account/account",
