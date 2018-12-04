@@ -21,8 +21,8 @@ Page({
    */
   onLoad: function (options) {
     // get user_id from local storage if it exists
-    let userId = wx.getStorageSync("userId")
-    if (userId) {
+    let userInfo = wx.getStorageSync("userInfo")
+    if (userInfo) {
       wx.switchTab({
         // if already has user_id, switch to index page
         url: '../index/index',

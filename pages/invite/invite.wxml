@@ -30,6 +30,6 @@
       </view>
    </view>
    <view class="button-row">
-    <button id= "accept"bindtap='clickToAccept'>Accepet</button>
+    <button id= "accept" bindtap='clickToAccept' open-type='getUserInfo'>Accept</button>
     <button id= "decline" bindtap='clickToDecline'>Decline</button>
   </view>
