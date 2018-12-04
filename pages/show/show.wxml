@@ -1,29 +1,34 @@
-<view class="header">
-  <text class="header">7 Day {{challenge.name}} Challenge</text>
-</view>
-
+<image class="pic" src="{{photo[0]}}">
+</image>
 <view class="container">
-  <image class="pic" src="{{photo[0]}}"></image>
-  <view class="{{showExpand? 'des-section-long': 'des-section'}}">
-    <view class="row">
-      <view class="des-title">Description</view>
-      <image class="dropdown" src="{{showExpand? '/img/min-bl.svg' : '/img/max-bl.svg'}}" bindtap="expand"></image>
-    </view>
-    <view class="{{showExpand? 'des-details-long': 'des-details'}}">
-      <textarea>{{challenge.description}}</textarea>
-
+  <view>
+    <view class='difficulty-tag'>Hard</view>
+  </view>
+  <view class="header">
+    <view>
+      <text class="">7 Day {{challenge.name}} Challenge</text>
     </view>
   </view>
+
+  <view class='des-section'>
+    <view class="row">
+      <view class="des-title">Description</view>
+    </view>
+    <textarea class='description-textarea'>{{challenge.description}}</textarea>
+  </view>
   <view wx:if="{{challenge_list.length > 0}}">
-    <text>You've already got a challenge!</text>
+    <view class='state-text'>
+      <text>You've already got a challenge!</text>
+    </view>
     <button bindtap='NavigateToDashboard'>Go to Challenge</button>
   </view>
   <view wx:else>
-
-    <text>How to take the challenge</text>
-    <button bindtap='clickToDash'>Accepet Challenge by Yourself</button>
+    <view class='state-text'>
+      <text>How would you like to take the challenge?</text>
+    </view>
+    <view class='button-alignment'>
+      <button bindtap='clickToDash'>Individual</button>
+      <button bindtap='createTeam'>Team</button>
+    </view>
   </view>
-  <button bindtap='createTeam'>Create a Team for this Challenge</button>
-
-
 </view>
