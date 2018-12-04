@@ -1,40 +1,22 @@
 <view class="wrapper">
-  <view class="container">
-
-    <view class="content">
-      <text class="header">
-        Awesome Job!
-      </text>
-
+  <view class="container-row">
+      <view class="header">🎉Awesome Job🎉</view>
       <block>
-        <view wx:if="{{assignment_id%7 == 0}}">
-          <text>
-            You finished MindRock Challenge Day 7!
-          </text>
-          <text>
-            Now Go Accept A New MindRock Challange!
-          </text>
+        <view wx:if="{{assignment_id%7 == 0}}" >
+          <view class="message">You finished MindRock Challenge Day 7!</view>
+          <view class="challange">Now Go Accept A New MindRock Challange! 💪 </view>
         </view>
 
         <view wx:else>
-          <text>
-            You finished MindRock Challenge 
-          </text>
-          <text>
-            🤘🏻Day {{assignment_id%7}}🤘🏻
-          </text>
+          <view class="message">You've Finished The Challenge </view>
+          <view class="challenge">🤘🏻Day {{assignment_id%7}}🤘🏻</view>
         </view>
-      
       </block>   
-
     </view>
 
-   
-
-    <view class="btn">
-     <button open-type="share">Share</button>
+    <view class="btn-row">
+      <button open-type="share">Share</button>
       <button bindtap='backHome'>Home</button>
-     </view>
+    </view>
+   </view>
 
-  </view>
-</view>
