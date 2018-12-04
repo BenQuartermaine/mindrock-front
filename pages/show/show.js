@@ -49,6 +49,7 @@ Page({
     const app = getApp()
     const dev = app.globalData.dev
     const prod = app.globalData.prod
+    const page = this
 
     const request = {
       userId: userId,
@@ -60,9 +61,7 @@ Page({
       method: "POST",
       data: request,
       success(res) {
-        wx.switchTab({
-          url: '/pages/dashboard/dashboard',
-        })
+        page.clickToDash()
       }
     })
   },
