@@ -19,8 +19,8 @@
     <button bindtap='NavigateToDashboard'>Go to Challenge</button>
   </view>
   <view wx:else>
-    <text>How to take the challenge</text>
+    <view class="instruction" style="text-align:center">How to take the challenge</view>
     <button bindtap='clickToDash'>Individual</button>
-  </view>
    <button bindtap='createTeam'>Create a team</button>  
+</view>
 </view>
