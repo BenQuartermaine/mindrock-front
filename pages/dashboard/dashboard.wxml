@@ -16,7 +16,7 @@
     </view>
     <view class="row last">
       <view class="current">Longest Streak</view>
-      <view class="number">{{user.max}}/{{user.total_days}}</view>
+      <view class="number">{{user.max}}/{{user.total}}</view>
     </view>
   </view>
 </view>
