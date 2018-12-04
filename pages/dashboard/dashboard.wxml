@@ -104,50 +104,35 @@
   </block>
 </view>
 
+
+
 <!-- TEAM PAGE CONTENT RENDER -->
 <view class='dashboard-wrapper' hidden='{{dashboardTeamNum == 0}}'>
   <block wx:for="{{user.challenges}}" wx:for-item="challenge">
-    <block wx:if="{{challenge.team}}">
-      <block wx:if="{{challenge.assignments[challenge.assignments.length - 1].date <= currentDay}}">
+    <block wx:if="{{challenge.dashboard}}">
+      <!-- What is dashboard referring to? -->
+      <block wx:if="{{challenge.dashboard.assignments[challenge.dashboard.assignments.length - 1].date >= currentDay}}">
         <!-- Current challenge section (inside) -->
         <view class="{{showExpand? 'challenge-wrapper-short': 'challenge-wrapper'}}">
-          <view class="row stats challenge-wrapper">
-            <view class='challenge-header'>
-              <view class='challenge-name'>{{challenge.name}}</view>
-              <view class="'description">{{challenge.description}}</view>
-            </view>
+          <view class="row stats">
+            <view class='challenge-name'>{{challenge.dashboard.name}}</view>
             <image class="toggle-sign" src="{{collapse? max : min }}" bindtap="expand"></image>
           </view>
-
-
+          <view class="'description">{{challenge.dashboard.description}}</view>
           <view wx:if="{{!collapse}}">
-            <block wx:for="{{challenge.assignments}}" wx:for-item="assignment">
-              <!-- If the day has been completed -->
-              <view class='day'>
-                <view>
-                  <text>Day {{index + 1}}</text>
+            <block wx:for="{{challenge.dashboard.assignments}}" wx:for-item="assignment">
+              <view class='day-title'>
+                <text>Day {{index + 1}}</text>
+              </view>
+              <view class='day team-individual'>
+                <view class='avatar-width'>
+                  <image class="team-avatar" src="/img/1.jpg"></image>
                 </view>
-                <view wx:if="{{assignment.date < currentDay}}">
-                  <view wx:if="{{assignment.status}}">
-                    <button bindtap='journalHistory' class='journal-show' data-assignment="{{assignment.id}}">History</button>
-                  </view>
-                  <view wx:else>
-                    <image class='locked' src='/img/fail.png' />
-                  </view>
-                </view>
-                <!-- If the current day -->
-                <view wx:elif="{{assignment.date == currentDay}}">
-                  <view wx:if="{{!assignment.status}}">
-                    <button bindtap='journalLog' data-assignment="{{assignment.id}}">Journal</button>
-                  </view>
-                  <view wx:else>
-                    <button bindtap='journalHistory' class='journal-show' data-assignment="{{assignment.id}}">History</button>
-                  </view>
-                </view>
-                <!-- Day has yet to be completed -->
-                <view wx:else>
-                  <image class='locked' src='/img/locked.png' />
-                </view>
+                <text class='assignment-team'>{{assignment}}</text>
+
+                <!-- Below is to be an if/else statment checking if the user has finished their challenge for the day -->
+                <image class="team-locked" src="/img/unlocked.png"></image>
+                <!-- <image class='locked' src='/img/locked.png' /> -->
               </view>
             </block>
           </view>

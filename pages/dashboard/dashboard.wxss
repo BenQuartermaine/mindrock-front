@@ -148,8 +148,6 @@ overflow:hidden;
 padding:20rpx;
 font-size:25rpx;
 }
-
-
 /* Toggle button team & dashboard */
 .active-class {
   color: black;
@@ -183,6 +181,27 @@ font-size:25rpx;
   border-radius: 20px 20px 0px 0px;
   border: 2rpx solid #E7E7E7;
 }
-.challenge-header {
+.team-avatar {
+  border-radius: 50%;
+  height: 80rpx;
+  width: 80rpx;
+}
+.avatar-width {
+  width: 80rpx;
+}
+.team-locked {
+  height: 50rpx;
+  width: 50rpx;
+}
+.team-individual {
+  align-items: center;
+}
+.assignment-team {
+  position: relative;
+  left: -140rpx;
+  top: -20rpx;
+}
 
+.day-title {
+  margin: 15rpx 20rpx 15rpx 20rpx;  
 }
