@@ -40,7 +40,7 @@ button {
   opacity: 50%;
   /* background:transparent; */
   font-family: YatraOne;
-  background-color:rgba(3, 117, 133, 0.4);
+  background-color:rgb(3, 117, 133);
   color: white;
   font-size:25rpx;
 }
