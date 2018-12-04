@@ -6,15 +6,17 @@
  margin-bottom: 40rpx;
 
 }
-.category text {
+
+#name {
   margin: 35rpx;
   background-color: rgba(144, 144, 144, 0.08);
   border-radius: 30rpx;
   font-family: 'Gotham';
   font-size: 30rpx;
-  padding: 30rpx 20rpx 10rpx 30rpx; 
-  /* height: 10rpx; */
+  padding:15rpx;
+
 }
+
 
 .card {
   border-radius: 50%;
@@ -68,15 +70,14 @@
 }
 .modules {
   background: #FFFFFF;
-  /* border: 1px solid #E7E7E7; */
   box-sizing: border-box;
   border-radius: 6px;
-  /* margin-left: 20px; */
-  margin-bottom: 10px;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.02);
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.12);
 }
 .courage {
   color: #E83E30;
+  padding: 10rpx;
 }
 
 .habit-building {

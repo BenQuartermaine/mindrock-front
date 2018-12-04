@@ -128,15 +128,11 @@ padding:30rpx;
 .journal-container{
   display: flex;
   flex-direction: column;
-  /* background: #FFFFFF;
-  border: 1px solid #E7E7E7; */
   width: 100%;
   margin: 0 auto;
-  margin-bottom: 30rpx;
   overflow:hidden;
   height: 100vh;
-  /* align-items: center;
-  justify-content: center; */
+ 
 }
 
 .row{
@@ -200,8 +196,6 @@ font-style:normal;
   border: 1px solid #E7E7E7;
   border-top: none;
   border-radius: 5px;
-
-
 }
 
 .summary{
@@ -244,8 +238,8 @@ button {
   line-height:2.55555556;
   color:#327383;
   font-size: 12px;
-  margin-top: 60rpx;
-  margin-bottom: 60rpx; 
+  margin-top: 0rpx;
+  margin-bottom: 120rpx; 
   border: 1rpx solid #327383;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   text-align:center;

@@ -1,40 +1,10 @@
 import initCalendar from '../../template/calendar/index';
 import { getSelectedDay } from '../../template/calendar/index';
-import initDatepicker from '../../template/datepicker/index';
+// import initDatepicker from '../../template/datepicker/index';
 const conf = {
   disablePastDay: false,
-  defaultDay: false,
-  afterTapDay: (currentSelect, allSelectedDays) => { },
-  /**
-   * 日期点击事件（此事件会完全接管点击事件）
-   * @param { object } currentSelect 当前点击的日期
-   * @param { object } event 日期点击事件对象
-   */
-  onTapDay(currentSelect, event) { },
-  /**
-   * 日历初次渲染完成后触发事件，如设置事件标记
-   */
-  afterCalendarRender() { },
-  };
-const config = {
-  disablePastDay: false, // 是否禁选过去日期
-  showInput: false, // 默认为 true
-  placeholder: '请选择日期', // input 输入框
-  type: 'normal', // [normal 普通单选模式(默认), timearea 时间区域选择模式(待开发), multiSelect 多选模式(待完善)]
-
-  /**
-   * 选择日期后执行的事件
-   * @param { object } currentSelect 当前点击的日期
-   */
-  afterTapDay: (currentSelect) => { },
-
-  /**
-   * 日期点击事件（此事件会完全接管点击事件）
-   * @param { object } currentSelect 当前点击的日期
-   * @param {object} event 日期点击事件对象
-   */
-  onTapDay(currentSelect, event) { },
-}
+  defaultDay: false
+};
 const app = getApp();
 const dev = app.globalData.dev;
 const prod = app.globalData.prod;
@@ -44,7 +14,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    calendar_show: false,
+    calendar_show: false
   
   },
   showCalendar: function () {
@@ -53,10 +23,11 @@ Page({
     })
   },
   redirectDashboard: function () {
-        wx.switchTab({
-          url: '/pages/dashboard/dashboard',
-        })
+    wx.switchTab({
+      url: '/pages/dashboard/dashboard'
+    })
   },
+
   getDisplayData() {
     const userId = wx.getStorageSync("userId")
 
@@ -65,15 +36,36 @@ Page({
     const prod = app.globalData.prod
     const page = this
   },
-    // wx.request({
-    //   url: dev + `api/v1/users/${userId}`,
-    //   method: "GET",
-    //   success(res) {
-    //     page.setData(
-    //       res.data
-    //     )
-    //   }
-    // })
+  
+  // dayPicker: function (e) {
+  //   console.log("daypicker");
+  //   console.log(e);
+  //   let { value } = e.detail;
+  //   value['inputDate'] = 0;
+  //   const current_day = getSelectedDay()[0] || 0;
+  //   let inputDate = '';
+
+  //   if (current_day) {
+  //     let inputDate = new Date(`${current_day.year}-${current_day.month}-${current_day.day}`);
+  //     let inputDate = (inputDate.toISOString()).toString()
+  //     value['inputDate'] = 1;
+  //   };
+
+  //   console.log(value);
+  // },
+  dayPicker: function () {
+   
+    console.log(getSelectedDay());
+    let choose = getSelectedDay()[0];
+    console.log(choose);
+    let chooseDate = `${choose.year}-${choose.month}-${choose.day}`;
+    let journalDate = (chooseDate.toString());
+    console.log(journalDate);
+    this.setData({
+      date: journalDate,
+      calendar_show: false
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -121,7 +113,7 @@ Page({
   onShow: function () {
 
     initCalendar(conf);
-    initDatepicker(config);
+    // initDatepicker(config);
 
   },
   /**
