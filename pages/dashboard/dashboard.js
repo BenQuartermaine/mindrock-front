@@ -20,10 +20,15 @@ Page({
       dashboardTeamNum: e.currentTarget.dataset.toggle
     })
   },
-  onShareAppMessage: function () {
-    console.log('share');
-    wx.showShareMenu({
-      withShareTicket: true
+  // onShareAppMessage: function () {
+  //   console.log('share');
+  //   wx.showShareMenu({
+  //     withShareTicket: true
+  //   })
+  // },
+  showInvite: function(){
+    wx.navigateTo({
+      url: '/pages/invite/invite',
     })
   },
   journalLog: function (e) {
