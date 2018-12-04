@@ -28,8 +28,6 @@
 
 .share-button{
   display: flex;
-   
-
 }
 
 .container, .avatars{
@@ -132,4 +130,8 @@
   height:300rpx;
   display: block;
   overflow-wrap:break-word;
+  }
+
+  #pic{
+    width:95%;
   }

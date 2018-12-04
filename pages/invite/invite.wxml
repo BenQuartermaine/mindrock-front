@@ -6,7 +6,7 @@
 </view>
 
 <view class="container">
-  <image class="pic" src="{{photo[0]}}"></image>
+  <image class="pic" id="pic" src="{{photo[0]}}"></image>
   <view class="{{showExpand? 'des-section-long': 'des-section'}}">
     <view class="row">
       <view class="des-title">Description</view>
