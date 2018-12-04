@@ -101,6 +101,10 @@
   align-items: center;
   height: 60rpx;
 }
+.a{
+  display: flex;
+  padding-right: 40rpx;
+}
 
 .status, .challenge-name{
   /* display:flex; */

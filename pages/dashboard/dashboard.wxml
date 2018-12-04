@@ -40,7 +40,9 @@
                 <image id="share-sign" src="/img/share.png"></image>
                 </button>
               </view>  -->
+            <view class="a">
               <image id="toggle-sign" src="{{collapse? max : min }}" bindtap="expand"></image>
+            </view>   
           </view>
           <view class="'description">{{challenge.dashboard.description}}</view>
           <view wx:if="{{!collapse}}">
