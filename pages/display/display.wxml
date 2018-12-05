@@ -37,7 +37,7 @@
   </view>
 </view>
   
-<button class="button bottom" bindtap="redirectDashboard">Go back</button>
+<button class="button" bindtap="redirectDashboard">Go back</button>
 
 
 

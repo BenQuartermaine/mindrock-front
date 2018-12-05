@@ -50,12 +50,9 @@ button {
   border: 1rpx solid #327383;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   text-align:center;
-  font-family: 'Gotham';
-  font-weight: 600;
-  font-style: normal;
-  padding-top: 10rpx;
   width: 40vw;
   background: transparent;
+  font-weight: bold;
 
 }
 
