@@ -21,6 +21,15 @@
     <text class='description-textarea'>{{challenge.description}}</text>
   </view>
 
+  
+
+  <view wx:if="{{challenge_team.length > 0 || challenge_dash.length >0 }}">
+    <view class="challenge-you">
+      <text>You've already got a challenge!</text>
+    </view>
+    <button bindtap='NavigateToDashboard'>Go to Challenge</button>
+  </view>
+
   <view wx:if="{{joined_d || joined_t}}">
 
   </view>
@@ -33,11 +42,6 @@
         <button bindtap='createTeam'>Create a Team!</button>
       </view>
     </view>
-  </view>
-
-  <view wx:if="{{challenge_team.length > 0 || challenge_dash.length >0 }}">
-    <text class='challenge-you'>You've already got a challenge!</text>
-    <button bindtap='NavigateToDashboard'>Go to Challenge</button>
   </view>
 
 </view>
