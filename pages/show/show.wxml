@@ -22,19 +22,20 @@
   </view>
 
   <view wx:if="{{joined_d || joined_t}}">
-    <text>You've already got this challenge!</text>
+    
   </view>
   <view wx:else>
     <view wx:if="{{challenge_dash.length == 0}}">
       <view class='button-alignment'>
-        <button bindtap='clickToDash'>Accept Challenge!</button>
+        <button bindtap='clickToDash'>Individual Challenge!</button>
+      </view>
+    </view>
     <view wx:if="{{challenge_team.length == 0}}">
         <button bindtap='createTeam'>Create a Team!</button>
       </view>
      </view>
     </view>
   </view>
-
 
   <view wx:if="{{challenge_team.length > 0 || challenge_dash.length >0 }}">
     <text class='challenge-you'>You've already got a challenge!</text>

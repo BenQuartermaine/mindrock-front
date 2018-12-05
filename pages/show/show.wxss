@@ -56,7 +56,8 @@ display: block;
 overflow-wrap:break-word;
 overflow:hidden;
 }
-button {
+
+.instruction{
   border-radius: 8rpx;
   color:#327383;
   font-size: 22rpx;
@@ -68,13 +69,7 @@ button {
   margin-bottom: 30rpx;
   padding:10rpx;
 }
-.instruction {
-  font-family: 'Gotham';
-  font-weight: 200;
-  font-style: normal;
-  padding-top: 40rpx;
-  font-size: 30rpx;
-}
+
 .difficulty-tag {
   color: white;
   border-radius: 8rpx;
@@ -87,6 +82,7 @@ button {
   display: flex;
   padding: 40rpx;
 }
+
 .state-text {
   width: 600rpx;
   display: flex;
@@ -102,6 +98,21 @@ button {
   line-height:40rpx;
   width: 96vw;
 }
+
+.button-alignment button {
+  border-radius: 8rpx;
+  color:#327383;
+  font-size: 12px;
+  border: 1rpx solid #327383;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  text-align:center;
+  font-weight: bold;
+  width: 50vw;
+  background: transparent;
+  margin-top:20rpx;
+  padding-top: 10rpx;
+  }
+
 .view-challenge {
   /* font-weight: bold; */
   font-size: 50rpx;
