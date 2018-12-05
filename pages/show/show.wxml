@@ -1,39 +1,49 @@
+<view class='view-challenge'>
+  <text>View Challenge</text>
+</view>
+
+
 <image class="pic" src="{{photo[0]}}">
 </image>
 <view class="container">
   <view class="header">
+    <text class="header-inline">7 Day {{challenge.name}} Challenge</text>
     <view>
-      <text class="">7 Day {{challenge.name}} Challenge</text>
+      <view class='difficulty-tag' style="{{howDifficultColor}}">{{howDifficult}}</view>
     </view>
-      <view>
-    <view class='difficulty-tag' style="{{howDifficultColor}}">{{howDifficult}}</view>
-  </view>
   </view>
 
   <view class='des-section'>
-    <view class="row">
-      <view class="des-title">Description</view>
+    <view class="des-title">
+      <view>Description</view>
     </view>
-    <text class='description-textarea'>{{challenge.description}}</text>
+    <view class='description-textarea'>
+     <text>{{challenge.description}}</text>
+    </view>
+   
   </view>
 
-  <view wx:if="{{joined_d || joined_t}}">
-    <!-- <text>You've already got this challenge!</text> -->
-  </view>
-  <view wx:elif="{{challenge_dash.length == 0}}">
-    <view class='button-alignment'>
-      <button bindtap='clickToDash'>Accept Challenge!</button>
-    </view>
-  </view>
-  <view wx:elif="{{challenge_team.length == 0}}">
-    <view class='button-alignment'>
-      <button bindtap='createTeam'>Create a Team!</button>
-    </view>
-  </view>
+  
 
   <view wx:if="{{challenge_team.length > 0 || challenge_dash.length >0 }}">
-    <text>You've already got this challenge!</text>
+    <view class="challenge-you">
+      <text>You've already got a challenge!</text>
+    </view>
     <button bindtap='NavigateToDashboard'>Go to Challenge</button>
   </view>
 
+  <view wx:if="{{joined_d || joined_t}}">
+
+  </view>
+  <view wx:else>
+    <view class='button-alignment'>
+      <view wx:if="{{challenge_dash.length == 0}}">
+        <button bindtap='clickToDash'>Individual Challenge!</button>
+      </view>
+      <view wx:if="{{challenge_team.length == 0}}">
+        <button bindtap='createTeam'>Create a Team!</button>
+      </view>
+    </view>
+  </view>
+  
 </view>

@@ -1,9 +1,7 @@
-<view class="header-row">
+<view class="header-container">
+  <button id= "share" open-type='share'>Share</button>
   <text class="header">7 Day {{challenge_name}} Challenge</text>
-  <view class="share-button"> 
-   <button id= "share" open-type='share'>Share</button>
-  </view> 
-</view>
+ </view> 
 
 <view class="container">
   <image class="pic" id="pic" src="{{photo[0]}}"></image>
@@ -26,7 +24,7 @@
       </block>   
    </view>
   <block wx:if="{{ismember}}">
-    <text>You are already in the team🤪</text>
+    <text class= "confirm">You are already in the team🤪</text>
      <button id= "decline" bindtap='clickToDecline'>Back</button>
   </block>
   <block wx:else>

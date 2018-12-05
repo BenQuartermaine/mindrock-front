@@ -125,8 +125,7 @@ padding:30rpx;
   width: 100%;
   margin: 0 auto;
   overflow:hidden;
-  height:90vh;
-    
+  height:80vh;  
 }
 
 .row{
@@ -136,10 +135,8 @@ padding-top:25rpx;
 width: 95%;
 text-align:center;
 font-family:'Gotham';
-font-weight:600;
+font-weight:300;
 font-style:normal;
-
-
 }
 #icon {
   /* display: flex; */
@@ -158,7 +155,6 @@ font-style:normal;
 }
 
 .date{
-  /* display:flex; */
   font-family: gotham;
   padding-top:25rpx;
   font-size: 20rpx;
@@ -166,14 +162,13 @@ font-style:normal;
 
 }
 
-img-content{
- /* display:flex;
-  width: 100%; */
+.img-content{
   margin:20rpx;
   align-items: center;
-  height: 800rpx;
+  height: 700rpx;
   border: 1px solid #E7E7E7;
   border-radius: 8rpx;
+  width: 95%;
 }
 
 .content{
@@ -207,8 +202,8 @@ img-content{
   background: transparent;
   width:45vw;
   text-align: center;
-  padding: 0;
   font-weight: bold;
+  margin-top:30rpx;
 }
 
 
