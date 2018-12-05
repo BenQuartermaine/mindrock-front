@@ -124,8 +124,10 @@ Page({
     console.log(options)
     this.getDashboardData()
     const userInfo = wx.getStorageSync("userInfo")
+    const userId = wx.getStorageSync("userId")
     this.setData({
       avatar: userInfo.avatarUrl,
+      userId: userId,
       dashboardTeamNum: app.globalData.toggle_tab
     })
     console.log(this.data)
