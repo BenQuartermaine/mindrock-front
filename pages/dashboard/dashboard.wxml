@@ -24,7 +24,7 @@
     </view>
     <view class="row">
       <view class="current">Collection</view>
-      <view class="number"><image id="rock" src="/img/rock.png"></image></view>
+      <view class="number collection"><image id="rock" src="/img/rock.png"></image></view>
     </view>
   </view>
 </view>
