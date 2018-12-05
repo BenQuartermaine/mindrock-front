@@ -14,9 +14,10 @@
   </view>
 
   <view class='des-section'>
-    <view class="row">
-      <view class="des-title">Description</view>
-    </view>
+  <view class="des-title">
+    <view>Description</view>
+  </view>
+    
     <text class='description-textarea'>{{challenge.description}}</text>
   </view>
 
@@ -30,15 +31,14 @@
       </view>
     </view>
     <view wx:if="{{challenge_team.length == 0}}">
-      <view class='button-alignment'>
         <button bindtap='createTeam'>Create a Team!</button>
       </view>
+     </view>
     </view>
   </view>
 
-
-  <view wx:if="{{challenge_team.length > 0 || challenge_dash.length > 0 }}">
-    <text>You've already got a challenge!</text>
+  <view wx:if="{{challenge_team.length > 0 || challenge_dash.length >0 }}">
+    <text class='challenge-you'>You've already got a challenge!</text>
     <button bindtap='NavigateToDashboard'>Go to Challenge</button>
   </view>
 

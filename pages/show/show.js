@@ -15,7 +15,7 @@ Page({
     ],
     difficulty: ['Easy', 'Medium', 'Hard'],
     howDifficult: 'Medium',
-    difficultyColor: ['background-color: #37529E', 'background-color: #F98B34', 'background-color: #E83E30'],
+    difficultyColor: ['background-color: #1B51B8', 'background-color: #D1693E', 'background-color: #B8321B'],
     howDifficultColor: "background-color: green",
   },
   

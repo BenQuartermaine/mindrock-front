@@ -42,7 +42,6 @@
 }
 .des-section {
   height: 200rpx;
-  margin: 50rpx 0 30rpx 0;
   width: 98%;
   border: 1px solid lightgrey;
   border-radius: 10rpx;
@@ -81,6 +80,7 @@ overflow:hidden;
 }
 .button-alignment {
   display: flex;
+  padding: 40rpx;
 }
 
 .state-text {
@@ -96,7 +96,7 @@ overflow:hidden;
   padding-top:20rpx;
   font-size:30rpx;
   line-height:40rpx;
-  width:96vw;
+  width: 96vw;
 }
 
 .button-alignment button {
@@ -114,5 +114,13 @@ overflow:hidden;
   }
 
 .view-challenge {
-  padding: 20rpx 20rpx 10rpx 20rpx;
+  /* font-weight: bold; */
+  font-size: 50rpx;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  font-family: 'Gotham'; 
+}
+.challenge-you {
+  margin: 40rpx;
 }
