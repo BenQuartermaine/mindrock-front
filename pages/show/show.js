@@ -15,7 +15,7 @@ Page({
     ],
     difficulty: ['Easy', 'Medium', 'Hard'],
     howDifficult: 'Medium',
-    difficultyColor: ['background-color: blue', 'background-color: orange', 'background-color: red'],
+    difficultyColor: ['background-color: #1B51B8', 'background-color: #D1693E', 'background-color: #B8321B'],
     howDifficultColor: "background-color: green",
   },
   
@@ -103,19 +103,6 @@ Page({
         })
       }
     })
-  },
-
-  expand:function () {
-    console.log(this.data.showExpand)
-    if (this.data.showExpand) {
-      this.setData({
-        showExpand: false
-      })
-    } else {
-      this.setData({
-        showExpand: true
-      })
-    }
   },
 
   NavigateToDashboard: function() {

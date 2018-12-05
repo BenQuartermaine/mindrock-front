@@ -52,7 +52,7 @@ Page({
     if (userInfo) {
       console.log("hi")
       wx.request({
-        url: prod + `/api/v1/teams/${page.data.team_id}`,
+        url: prod + `api/v1/teams/${page.data.team_id}`,
         method: "PUT",
         data: {
           userId: userId
@@ -79,7 +79,7 @@ Page({
               console.log(res.data)
               // update team & create assignment
               wx.request({
-                url: prod + `/api/v1/teams/${page.data.team_id}`,
+                url: prod + `api/v1/teams/${page.data.team_id}`,
                 method: "PUT",
                 data: {
                   userId: userId
@@ -108,7 +108,7 @@ Page({
       user_id: userId
     }
     wx.request({
-      url: prod + `/api/v1/challenges/${challenge_id}/assignments`,
+      url: prod + `api/v1/challenges/${challenge_id}/assignments`,
       method: "POST",
       data: request,
       success(res) {
