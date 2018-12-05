@@ -58,16 +58,7 @@ Page({
     wx.request({
       url: prod + `api/v1/users/${userId}/assignments?date=${page.data.date}`,
       method: "GET",
-      // fail(res) {
-      //   console.log(res)
-      //   wx.showModal({
-      //     title: 'No Journal on Seleted Day',
-      //     content: 'Complete your Challenge and Write a Journal. Make your Mind Stronger!',
-      //     showCancel: false,
-      //     confirmText: "Rock",
-      //     confirmColor: "#3CC51F"
-      //   })
-      // },    
+
       success(res) {
         console.log("assignments")
         console.log(res)
@@ -83,7 +74,7 @@ Page({
         })
           page.setData({
             content: "Your Mind Rocks",
-            photo_tag_list: ""
+            photo_tag_list: "/img/fail.png"
           })
         } else{
           let data = response[0].journals[0]
