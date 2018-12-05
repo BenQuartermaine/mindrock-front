@@ -17,7 +17,10 @@
     <view class="des-title">
       <view>Description</view>
     </view>
-    <text class='description-textarea'>{{challenge.description}}</text>
+    <view class='description-textarea'>
+     <text>{{challenge.description}}</text>
+    </view>
+   
   </view>
 
   
@@ -42,5 +45,5 @@
       </view>
     </view>
   </view>
-
+  
 </view>
