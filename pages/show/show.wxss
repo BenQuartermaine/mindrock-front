@@ -62,14 +62,12 @@ button {
   color:#327383;
   font-size: 22rpx;
   border: 1rpx solid #327383;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   text-align: center;
   width: 40vw;
-  padding: 10rpx;
   background: transparent;
   font-weight: bold;
   margin-bottom: 30rpx;
-
+  padding:10rpx;
 }
 .instruction {
   font-family: 'Gotham';

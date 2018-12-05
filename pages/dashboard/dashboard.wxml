@@ -18,6 +18,14 @@
       <view class="current">Longest Streak</view>
       <view class="number">{{user.max}}/{{user.total}}</view>
     </view>
+    <view class="row">
+      <view class="current">Level</view>
+      <view class="number">WonderMind</view>
+    </view>
+    <view class="row">
+      <view class="current">Collection</view>
+      <view class="number"><image id="rock" src="/img/rock.png"></image></view>
+    </view>
   </view>
 </view>
 
