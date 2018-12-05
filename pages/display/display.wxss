@@ -75,11 +75,10 @@
 
 .title{
 margin-top:45rpx;
-margin-bottom:25rpx;
-font-size:40rpx;
+margin-bottom:15rpx;
+font-size:48rpx;
 font-family:'Gotham';
 padding:30rpx;
-
 }
 
 .avatar {
@@ -198,23 +197,24 @@ img-content{
   overflow: hidden;
   height: 300rpx;
   flex-direction: column;
-  align-items: flex-end;
 }
 
 
 .button {
-  width:90vw;
   border-radius: 8rpx;
-  line-height:2.55555556;
   color:#327383;
   font-size: 12px;
   border: 1rpx solid #327383;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  text-align:center;
   font-family: 'Gotham';
-  font-weight: 300;
+  font-weight: 600;
   font-style: normal;
-
+  padding-top: 10rpx;
+  width: 40vw;
+  background: transparent;
 }
+
 .button.bottom{
   margin-top: 0rpx;
   margin-bottom: 120rpx; 

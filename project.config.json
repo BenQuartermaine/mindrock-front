@@ -82,12 +82,6 @@
 				},
 				{
 					"id": -1,
-					"name": "account",
-					"pathName": "pages/account/account",
-					"query": ""
-				},
-				{
-					"id": -1,
 					"name": "display",
 					"pathName": "pages/display/display",
 					"query": ""
