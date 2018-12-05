@@ -49,7 +49,7 @@ Page({
     if (userInfo) {
       console.log("hi")
       wx.request({
-        url: `/api/v1/teams/${page.data.team_id}`,
+        url: prod + `/api/v1/teams/${page.data.team_id}`,
         method: "PUT",
         data: {
           userId: userId
@@ -76,7 +76,7 @@ Page({
               console.log(res.data)
               // update team & create assignment
               wx.request({
-                url: `/api/v1/teams/${page.data.team_id}`,
+                url: prod + `/api/v1/teams/${page.data.team_id}`,
                 method: "PUT",
                 data: {
                   userId: userId
@@ -121,12 +121,12 @@ Page({
    */
   onLoad: function (options) {
     // get team/challenge id from the click in dashboard
-    // const team_id = options.team_id
-    // const challenge_id = options.challenge_id
-    // this.setData({
-    //   team_id: team_id
-    //   challenge_id: challenge_id
-    // })
+    const team_id = options.team_id
+    const challenge_id = options.challenge_id
+    this.setData({
+      team_id: team_id,
+      challenge_id: challenge_id
+    })
     // get user_id from local storage if it exists
     let userId = wx.getStorageSync("userId")
     if (userId) {

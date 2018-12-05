@@ -26,9 +26,14 @@ Page({
   //     withShareTicket: true
   //   })
   // },
-  showInvite: function(){
+  showInvite: function(e){
+    console.log(e)
+    const data = e.currentTarget.dataset.team
+    const challenge_id = data.id
+    const team_id = data.team_id.id
+    
     wx.navigateTo({
-      url: '/pages/invite/invite',
+      url: `/pages/invite/invite?team_id=${team_id}&challenge_id=${challenge_id}`,
     })
   },
   journalLog: function (e) {
