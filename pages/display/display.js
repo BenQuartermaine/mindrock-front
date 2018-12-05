@@ -54,19 +54,48 @@ Page({
       date: chooseDate,
       calendar_show: false
     })
+
     wx.request({
       url: prod + `api/v1/users/${userId}/assignments?date=${page.data.date}`,
       method: "GET",
+      // fail(res) {
+      //   console.log(res)
+      //   wx.showModal({
+      //     title: 'No Journal on Seleted Day',
+      //     content: 'Complete your Challenge and Write a Journal. Make your Mind Stronger!',
+      //     showCancel: false,
+      //     confirmText: "Rock",
+      //     confirmColor: "#3CC51F"
+      //   })
+      // },    
       success(res) {
         console.log("assignments")
-        let data = res.data.assignments[0].journals[0]
-        page.setData({
-          content: data.content,
-          id: data.id,
-          photo_tag_list: data.photo_tag_list
+        console.log(res)
+        let response = res.data.assignments
+        console.log(response)
+        if (response.length == 0 ) {
+          wx.showModal({
+          title: 'No Journal on Seleted Day',
+          content: 'Keep Working to Make your Mind Stronger!',
+          showCancel: false,
+          confirmText: "Rock",
+          confirmColor: "#3CC51F"
         })
-            
+          page.setData({
+            content: "Your Mind Rocks",
+            photo_tag_list: ""
+          })
+        } else{
+          let data = response[0].journals[0]
+          page.setData({
+            content: data.content,
+            id: data.id,
+            photo_tag_list: data.photo_tag_list
+          })
+        }
+        
       }
+     
       
     })
   },
