@@ -47,17 +47,6 @@ display: block;
 overflow-wrap:break-word;
 overflow:hidden;
 }
-button {
-  border-radius: 8rpx;
-  color:#327383;
-  font-size: 22rpx;
-  border: 1rpx solid #327383;
-  text-align: center;
-  width: 40vw;
-  background: transparent;
-  font-weight: bold;
-  padding:10rpx;
-}
 .instruction{
   font-family: 'Gotham';
   font-weight: 200;
@@ -79,6 +68,7 @@ button {
 .button-alignment {
   display: flex;
 }
+
 .state-text {
   width: 600rpx;
   display: flex;
@@ -93,4 +83,17 @@ button {
   font-size:30rpx;
   line-height:40rpx;
   width:96vw;
+}
+.button-alignment button {
+  border-radius: 8rpx;
+  color:#327383;
+  font-size: 12px;
+  border: 1rpx solid #327383;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  text-align:center;
+  font-weight: bold;
+  width: 50vw;
+  background: transparent;
+  margin-top:20rpx;
+  padding-top: 10rpx;
 }
