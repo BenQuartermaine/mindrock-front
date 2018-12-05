@@ -27,6 +27,7 @@
    </view>
   <block wx:if="{{ismember}}">
     <text>You are already in the team🤪</text>
+     <button id= "decline" bindtap='clickToDecline'>Back</button>
   </block>
   <block wx:else>
     <view class="button-row">
