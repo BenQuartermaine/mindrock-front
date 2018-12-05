@@ -15,6 +15,7 @@ App({
     // development mode testing api
     dev: '',
      // production mode testing api
-    prod: ''
+    prod: '',
+    toggle_tab: 0
   }
 })
