@@ -136,16 +136,18 @@
             <view class='day-title'>
               <text class="day-text">Day {{index}}</text>
             </view>
-            <view wx:if="{{index < currentDay}}">
-              <view wx:if="{{human.status}}">
-                <button bindtap='journalHistory' class='journal-show' data-assignment="{{human.assignment_id}}">History</button>
-              </view>
-              <view wx:else>
-                <image class='locked' src='/img/fail.png' />
-              </view>
+            <view wx:if="{{teamday[0] < currentDay}}">
+              <block wx:for="{{teamday[1]}}" wx:for-item="human">
+                <view wx:if="{{human.status}}">
+                  <button bindtap='journalHistory' class='journal-show' data-assignment="{{human.assignment_id}}">History</button>
+                </view>
+                <view wx:else>
+                  <image class='locked' src='/img/fail.png' />
+                </view>
+              </block>
             </view>
-            <view wx:elif="{{index == currentDay}}">
-              <block wx:for="{{teamday}}" wx:for-item="human">
+            <view wx:elif="{{teamday[0] == currentDay}}">
+              <block wx:for="{{teamday[1]}}" wx:for-item="human">
                 <view class='day team-individual'>
                   <view class='avatar-width'>
                     <image class="team-avatar" src="{{human.avatarUrl}}"></image>
@@ -173,7 +175,7 @@
               </block>
             </view>
             <view wx:else>
-              <block wx:for="{{teamday}}" wx:for-item="human">
+              <block wx:for="{{teamday[1]}}" wx:for-item="human">
                 <view class='day team-individual'>
                   <view class='avatar-width'>
                     <image class="team-avatar" src="{{human.avatarUrl}}"></image>
