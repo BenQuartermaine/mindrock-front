@@ -5,9 +5,9 @@
     <view>
       <text class="">7 Day {{challenge.name}} Challenge</text>
     </view>
-      <view>
-    <view class='difficulty-tag' style="{{howDifficultColor}}">{{howDifficult}}</view>
-  </view>
+    <view>
+      <view class='difficulty-tag' style="{{howDifficultColor}}">{{howDifficult}}</view>
+    </view>
   </view>
 
   <view class='des-section'>
@@ -20,19 +20,22 @@
   <view wx:if="{{joined_d || joined_t}}">
     <!-- <text>You've already got this challenge!</text> -->
   </view>
-  <view wx:elif="{{challenge_dash.length == 0}}">
-    <view class='button-alignment'>
-      <button bindtap='clickToDash'>Accept Challenge!</button>
+  <view wx:else>
+    <view wx:if="{{challenge_dash.length == 0}}">
+      <view class='button-alignment'>
+        <button bindtap='clickToDash'>Accept Challenge!</button>
+      </view>
     </view>
-  </view>
-  <view wx:elif="{{challenge_team.length == 0}}">
-    <view class='button-alignment'>
-      <button bindtap='createTeam'>Create a Team!</button>
+    <view wx:if="{{challenge_team.length == 0}}">
+      <view class='button-alignment'>
+        <button bindtap='createTeam'>Create a Team!</button>
+      </view>
     </view>
   </view>
 
+
   <view wx:if="{{challenge_team.length > 0 || challenge_dash.length >0 }}">
-    <text>You've already got this challenge!</text>
+    <text>You've already got a challenge!</text>
     <button bindtap='NavigateToDashboard'>Go to Challenge</button>
   </view>
 
