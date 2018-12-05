@@ -1,10 +1,13 @@
+  <view class='view-challenge'>
+    <text >View Challenge</text>
+  </view>
+  
+
 <image class="pic" src="{{photo[0]}}">
 </image>
 <view class="container">
   <view class="header">
-    <view>
-      <text class="">7 Day {{challenge.name}} Challenge</text>
-    </view>
+      <text class="header-inline">7 Day {{challenge.name}} Challenge</text>
     <view>
       <view class='difficulty-tag' style="{{howDifficultColor}}">{{howDifficult}}</view>
     </view>
@@ -18,7 +21,7 @@
   </view>
 
   <view wx:if="{{joined_d || joined_t}}">
-    <!-- <text>You've already got this challenge!</text> -->
+    <text>You've already got this challenge!</text>
   </view>
   <view wx:else>
     <view wx:if="{{challenge_dash.length == 0}}">
