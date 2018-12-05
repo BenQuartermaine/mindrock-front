@@ -94,9 +94,12 @@
 .description-textarea {
   padding-left:20rpx;
   padding-top:20rpx;
-  font-size:30rpx;
+  font-size:25rpx;
   line-height:40rpx;
   width: 96vw;
+  margin-top:20rpx;
+  text-indent: auto;
+  margin-left: 25rpx;
 }
 
 button {
