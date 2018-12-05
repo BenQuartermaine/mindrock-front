@@ -12,15 +12,38 @@ Page({
     showExpand: false, 
     photo: [
       '/img/1.jpg',
-      '/img/2.jpg',
-      '/img/3.jpg',
-      '/img/4.jpg',
-      '/img/5.jpg',
-      '/img/6.jpg',
-      '/img/7.jpg',
-      '/img/8.jpg',
-    ]
+    ],
+    difficulty: ['Easy', 'Medium', 'Hard'],
+    howDifficult: 'Medium',
+    difficultyColor: ['background-color: blue', 'background-color: orange', 'background-color: red'],
+    howDifficultColor: "background-color: green",
   },
+  
+  randomSelector: function (data) {
+    console.log('Random selector selecting a difficulty...')
+    let difficult = this.data.difficulty[Math.floor(Math.random() * this.data.difficulty.length)]
+    let difColor = this.data.difficultyColor
+    let howDifficult = this.howDifficult
+    let howDifficultColor = this.howDifficultColor
+    let newDifColor = ""
+    let difficulty = this.data.difficulty
+
+    this.setData({
+      howDifficult: difficult,
+    })
+// If statememt determining the 
+   if (difficult == difficulty[0]) {
+      newDifColor = difColor[0]
+   } else if (difficult == difficulty[1]) {
+      newDifColor = difColor[1]
+    } else {
+      newDifColor = difColor[2]
+    }
+    this.setData({
+      howDifficultColor: newDifColor
+    })
+  },
+
   clickToDash:function (){
 
     const challenge_id = this.data.challenge.id
@@ -94,6 +117,7 @@ Page({
   onLoad: function (options) {
     console.log('challenges')
     console.log(options)
+    this.randomSelector(this.data)
     const app = getApp()
     const that = this
     const dev = app.globalData.dev

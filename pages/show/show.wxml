@@ -1,13 +1,13 @@
 <image class="pic" src="{{photo[0]}}">
 </image>
 <view class="container">
-  <view>
-    <view class='difficulty-tag'>Hard</view>
-  </view>
   <view class="header">
     <view>
       <text class="">7 Day {{challenge.name}} Challenge</text>
     </view>
+      <view>
+    <view class='difficulty-tag' style="{{howDifficultColor}}">{{howDifficult}}</view>
+  </view>
   </view>
 
   <view class='des-section'>
@@ -24,7 +24,7 @@
   </view>
   <view wx:else>
     <view class='button-alignment'>
-      <button bindtap='clickToDash'>Accept this Challenge!</button>
+      <button bindtap='clickToDash'>Accept Challenge!</button>
     </view>
   </view>
 
