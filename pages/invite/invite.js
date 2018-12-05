@@ -1,5 +1,7 @@
 // pages/invite/invite.js
 const app = getApp()
+const dev = app.globalData.dev
+const prod = app.globalData.prod
 Page({
 
   /**
@@ -10,7 +12,8 @@ Page({
     photo: [
       '/img/1.jpg',
       '/img/2.jpg'
-    ]
+    ],
+    ismember: false
   },
 
   onShareAppMessage: function(){
@@ -120,12 +123,19 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    const page = this
+    console.log("team")
+    console.log(options)
     // get team/challenge id from the click in dashboard
     const team_id = options.team_id
     const challenge_id = options.challenge_id
+    const challenge_name = options.challenge_name
+    const description = options.description
     this.setData({
       team_id: team_id,
-      challenge_id: challenge_id
+      challenge_id: challenge_id,
+      challenge_name: challenge_name,
+      description: description
     })
     // get user_id from local storage if it exists
     let userId = wx.getStorageSync("userId")
@@ -134,8 +144,7 @@ Page({
     } else {
       // if no userid in storage
       // get api url from globalData, dev for testing, prod for production
-      const dev = app.globalData.dev
-      const prod = app.globalData.prod
+   
       //send post request to wx
       wx.login({
         success: (res) => {
@@ -155,7 +164,29 @@ Page({
       })
 
     }
-
+  // get team members info
+    wx.request({
+      url: prod + `api/v1/teams/${page.data.team_id}`,
+      method: "GET",
+      success(res) {
+        console.log("memebers id")
+        console.log(res)
+        page.setData({
+          members: res.data.team.members
+        })
+        console.log(page.data)
+        let person = []
+        let i
+        // hide accept for team leader
+        for (i = 0; i < page.data.members.length; i++) {
+          person.push(page.data.members[i].id)
+        }
+        page.setData({
+          ismember: person.includes(userId),
+        })
+      }
+    })
+   
   },
 
   /**
