@@ -1,6 +1,6 @@
 
- @import '/template/calendar/index.wxss';
- /* @import '/template/datepicker/index.wxss'; */
+@import '/template/calendar/index.wxss';
+@import '/style/fonts.wxss';
 .calendar-wrap {
   width: 100%;
   margin-top: 30rpx;
