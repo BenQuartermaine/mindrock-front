@@ -97,9 +97,8 @@
   font-size:25rpx;
   line-height:40rpx;
   width: 96vw;
-  margin-top:20rpx;
   text-indent: auto;
-  margin-left: 25rpx;
+
 }
 
 button {
@@ -125,5 +124,5 @@ button {
   font-family: 'Gotham'; 
 }
 .challenge-you {
-  padding: 20rpx;
+  padding: 40rpx;
 }
