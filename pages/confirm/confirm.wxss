@@ -41,23 +41,12 @@ font-style: normal;
   margin-bottom: 50rpx;
 }
 
-/* button {
-  font-weight: 300;
-  font-style: normal;
-  width: 200rpx;
-  border-radius: 8rpx;
-  font-size: 12px;
- 
- 
-} */
 
 button{
   border-radius: 8rpx;
   color: #327383;
   font-size: 12px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
-  font-family: 'Gotham';
-  font-weight: 300;
-  font-style: normal;
-   margin: 30rpx;
+  margin: 30rpx;
+  width: 40vw;
 }

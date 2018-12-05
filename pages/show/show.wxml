@@ -17,7 +17,6 @@
     <view class="des-title">
       <view>Description</view>
     </view>
-
     <text class='description-textarea'>{{challenge.description}}</text>
   </view>
 
