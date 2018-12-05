@@ -58,7 +58,8 @@ button {
   font-weight: 600;
   font-style: normal;
   padding-top: 10rpx;
-  width: 49vw;
+  width: 40vw;
+  background: transparent;
 }
 .instruction{
   font-family: 'Gotham';
