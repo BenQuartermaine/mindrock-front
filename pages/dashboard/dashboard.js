@@ -27,13 +27,15 @@ Page({
   //   })
   // },
   showInvite: function(e){
-    console.log(e)
+    console.log("Invite")
+    // console.log(e)
     const data = e.currentTarget.dataset.team
     const challenge_id = data.id
     const team_id = data.team_id.id
-    
+    const challenge_name = data.name
+    const description = data.description
     wx.navigateTo({
-      url: `/pages/invite/invite?team_id=${team_id}&challenge_id=${challenge_id}`,
+      url: `/pages/invite/invite?team_id=${team_id}&challenge_id=${challenge_id}&challenge_name=${challenge_name}&description=${description}`,
     })
   },
   journalLog: function (e) {
