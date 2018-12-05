@@ -34,7 +34,7 @@
     </view>
   </view>
   <view wx:else>
-    <view class='button-alignment'>
+    <view class='button-alignment' >
       <button bindtap='createTeam'>Create a Team!</button>
     </view>
   </view>

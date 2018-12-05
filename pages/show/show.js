@@ -32,16 +32,20 @@ Page({
     const request = {
       user_id: userId
     }
+    app.globalData.toggle_tab = 0
+    
     wx.request({
-      url: prod + `/api/v1/challenges/${challenge_id}/assignments`,
+      url: prod + `api/v1/challenges/${challenge_id}/assignments`,
       method: "POST",
       data: request,
       success(res) {
         wx.switchTab({
           url: '/pages/dashboard/dashboard',
         })
+        
       }
     })
+  
   },
 
   createTeam: function () {
@@ -54,15 +58,26 @@ Page({
 
     const request = {
       userId: userId,
-      challenge_id: challenge_id
+      challenge_id: challenge_id,
+      user_id: userId
     }
-
+    app.globalData.toggle_tab = 1
+    console.log(app.globalData.toggle_tab)
     wx.request({
-      url: prod + `/api/v1/teams`,
+      url: prod + `api/v1/teams`,
       method: "POST",
       data: request,
       success(res) {
-        page.clickToDash()
+        wx.request({
+          url: prod + `api/v1/challenges/${challenge_id}/assignments`,
+          method: "POST",
+          data: request,
+          success(res) {
+            wx.switchTab({
+              url: '/pages/dashboard/dashboard',
+            })
+          }
+        })
       }
     })
   },

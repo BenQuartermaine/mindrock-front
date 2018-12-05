@@ -123,7 +123,8 @@ Page({
     this.getDashboardData()
     const userInfo = wx.getStorageSync("userInfo")
     this.setData({
-      avatar: userInfo.avatarUrl
+      avatar: userInfo.avatarUrl,
+      dashboardTeamNum: app.globalData.toggle_tab
     })
     console.log(this.data)
    
@@ -142,9 +143,11 @@ Page({
     this.getDashboardData()
     const userInfo = wx.getStorageSync("userInfo")
     this.setData({
-      avatar: userInfo.avatarUrl
+      avatar: userInfo.avatarUrl,
+      dashboardTeamNum: app.globalData.toggle_tab
     })
     console.log(this.data)
+    
   },
 
   /**
