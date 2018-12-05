@@ -24,7 +24,7 @@
   </view>
   <view wx:else>
     <view class='button-alignment'>
-      <button bindtap='clickToDash'>Individual</button>
+      <button bindtap='clickToDash'>Accept this Challenge!</button>
     </view>
   </view>
 
@@ -35,7 +35,7 @@
   </view>
   <view wx:else>
     <view class='button-alignment'>
-      <button bindtap='createTeam'>Team</button>
+      <button bindtap='createTeam'>Create a Team!</button>
     </view>
   </view>
   <view wx:if="{{challenge_team.length > 0 || challenge_dass.length >0 }}">
