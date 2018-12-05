@@ -136,7 +136,14 @@
             <view class='day-title'>
               <text class="day-text">Day {{index}}</text>
             </view>
-            <view wx:if="{{index < currentDay}}">History stuff</view>
+            <view wx:if="{{index < currentDay}}">
+              <view wx:if="{{human.status}}">
+                <button bindtap='journalHistory' class='journal-show' data-assignment="{{human.assignment_id}}">History</button>
+              </view>
+              <view wx:else>
+                <image class='locked' src='/img/fail.png' />
+              </view>
+            </view>
             <view wx:elif="{{index == currentDay}}">
               <block wx:for="{{teamday}}" wx:for-item="human">
                 <view class='day team-individual'>
@@ -159,7 +166,7 @@
                       <button bindtap='journalHistory' class='journal-show' data-assignment="{{human.assignment_id}}">History</button>
                     </view>
                     <view wx:else>
-                      not completed
+                      <image class='locked' src='/img/fail.png' />
                     </view>
                   </view>
                 </view>
