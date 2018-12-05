@@ -6,7 +6,8 @@ Page({
    */
   data: {
     joined: false,
-    challenge_list: [],
+    challenge_dash: [],
+    challenge_team: [],
     challenge: {},
     showExpand: false, 
     photo: [
@@ -115,7 +116,8 @@ Page({
           success(res) {
             console.log(res)
             let i
-            let id = []
+            let id_c = []
+            let id_t = []
             for (i = 0; i < res.data.user.challenges.length; i++) {
               const d = new Date()
               const year = d.getFullYear()
@@ -128,15 +130,24 @@ Page({
               } else {
                 date = `${year}-${month}-${day}`;
               }
+              
               if (res.data.user.challenges[i].dashboard) {
-                if (res.data.user.challenges[i].dashboard.assignments[6].date >= date) {
-                  id.push(res.data.user.challenges[i].id);
+                if (res.data.user.challenges[i].dashboard.assignments[res.data.user.challenges[i].dashboard.assignments.length - 1].date >= date) {
+                  id_c.push(res.data.user.challenges[i].dashboard.id);
+                }
+              }
+              
+              if (res.data.user.challenges[i].team) {
+                if (Object.keys(res.data.user.challenges[i].team.teams)[Object.keys(res.data.user.challenges[i].team.teams).length - 1] >= date) {
+                  id_t.push(res.data.user.challenges[i].team.id);
                 }
               }
             }
             that.setData({
-              challenge_list: id,
-              joined: id.includes(challenge.id)
+              challenge_dash: id_c,
+              challenge_team: id_t,
+              joined_d: id_c.includes(challenge.id),
+              joined_t: id_t.includes(challenge.id)
             })
           }
         })
