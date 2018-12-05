@@ -3,10 +3,13 @@
 .container{
   padding: 0rpx;
   background: #FFFFFF;
+  /* border: 1px solid lightgrey; */
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 20px 20px;
+
 }
 
 .header {
- margin-top:60rpx;
  font-size: 40rpx;
  font-family: 'Gotham';
  padding: 30rpx;
@@ -14,11 +17,18 @@
  flex-direction: column;
  justify-content: center;
  align-items: center;
+ height: 150rpx;
 }
-
+.header-inline {
+  padding: 30rpx;
+  font-weight: bold;
+}
 .pic {
   width: 100vw;
   height: 30vh;
+  box-shadow: 2px -2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 20px 20px 0px 0px;
+  margin-top: 10rpx;
 }
 .des-title{
   font-family: 'Gotham';
@@ -33,7 +43,7 @@
 .des-section {
   height: 200rpx;
   margin: 50rpx 0 30rpx 0;
-  width:98%;
+  width: 98%;
   border: 1px solid lightgrey;
   border-radius: 10rpx;
   box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.25);
@@ -58,8 +68,10 @@ button {
   padding: 10rpx;
   background: transparent;
   font-weight: bold;
+  margin-bottom: 30rpx;
+
 }
-.instruction{
+.instruction {
   font-family: 'Gotham';
   font-weight: 200;
   font-style: normal;
@@ -67,15 +79,12 @@ button {
   font-size: 30rpx;
 }
 .difficulty-tag {
-  /* background-color: #C4C4C4; */
+  color: white;
   border-radius: 8rpx;
   padding: 15rpx;
   font-size: 30rpx;
   width: 120rpx;
   text-align: center;
-  position:absolute;
-  right:15rpx;
-  top:31vh;
 }
 .button-alignment {
   display: flex;
@@ -94,4 +103,7 @@ button {
   font-size:30rpx;
   line-height:40rpx;
   width:96vw;
+}
+.view-challenge {
+  padding: 20rpx 20rpx 10rpx 20rpx;
 }
