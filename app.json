@@ -31,8 +31,8 @@
       },
       {
         "pagePath": "pages/dashboard/dashboard",
-        "iconPath": "img/dash.png",
-        "selectedIconPath": "img/dash.png"
+        "iconPath": "img/play.png",
+        "selectedIconPath": "img/play.png"
       }
     ]
   }
