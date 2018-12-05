@@ -122,8 +122,10 @@ Page({
     console.log(options)
     this.getDashboardData()
     const userInfo = wx.getStorageSync("userInfo")
+    const userId = wx.getStorageSync("userId")
     this.setData({
-      avatar: userInfo.avatarUrl
+      avatar: userInfo.avatarUrl,
+      userId: userId
     })
     console.log(this.data)
    

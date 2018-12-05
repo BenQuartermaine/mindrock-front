@@ -35,14 +35,14 @@
         <view class="{{showExpand? 'challenge-wrapper-short': 'challenge-wrapper'}}">
           <view class="row stats">
             <view class='challenge-name'>{{challenge.dashboard.name}}</view>
-              <!-- <view class="share-button"> 
+            <!-- <view class="share-button"> 
                 <button id= "share" open-type='share'>
                 <image id="share-sign" src="/img/share.png"></image>
                 </button>
               </view>  -->
             <view class="a">
               <image id="toggle-sign" src="{{collapse? max : min }}" bindtap="expand"></image>
-            </view>   
+            </view>
           </view>
           <view class="'description">{{challenge.dashboard.description}}</view>
           <view wx:if="{{!collapse}}">
@@ -116,26 +116,56 @@
   <block wx:for="{{user.challenges}}" wx:for-item="challenge">
     <block wx:if="{{challenge.team}}">
       <!-- What is dashboard referring to? -->
-        <!-- Current challenge section (inside) -->
-        <view class="{{showExpand? 'challenge-wrapper-short': 'challenge-wrapper'}}">
-          <view class="row stats">
-            <view class='challenge-name'>{{challenge.team.name}}</view>
-            <view class="icons">
+      <!-- Current challenge section (inside) -->
+      <view class="{{showExpand? 'challenge-wrapper-short': 'challenge-wrapper'}}">
+        <view class="row stats">
+          <view class='challenge-name'>{{challenge.team.name}}</view>
+          <view class="icons">
             <!-- <view class="toggle"> -->
-              <view class="share-button"> 
+            <view class="share-button">
               <image id="toggle-sign" src="{{collapse? max : min }}" bindtap="expand"></image>
-              <button id= "share" bindtap="showInvite" data-team="{{challenge.team}}">
+              <button id="share" bindtap="showInvite" data-team="{{challenge.team}}">
                 <image id="share-sign" src="/img/share.png"></image>
               </button>
-            </view> 
-          </view> 
-         </view>
-          <view class="'description">{{challenge.team.description}}</view>
-          <view wx:if="{{!collapse}}">
-            <block wx:for="{{challenge.team.teams}}" wx:for-item="teamday">
-              <view class='day-title'>
-                <text class="day-text">Day {{index}}</text>
-              </view>
+            </view>
+          </view>
+        </view>
+        <view class="'description">{{challenge.team.description}}</view>
+        <view wx:if="{{!collapse}}">
+          <block wx:for="{{challenge.team.teams}}" wx:for-item="teamday">
+            <view class='day-title'>
+              <text class="day-text">Day {{index}}</text>
+            </view>
+            <view wx:if="{{index < currentDay}}">History stuff</view>
+            <view wx:elif="{{index == currentDay}}">
+              <block wx:for="{{teamday}}" wx:for-item="human">
+                <view class='day team-individual'>
+                  <view class='avatar-width'>
+                    <image class="team-avatar" src="{{human.avatarUrl}}"></image>
+                  </view>
+                  <view class='assignment-team'>{{human.content}}</view>
+
+                  <!-- Below is to be an if/else statment checking if the user has finished their challenge for the day -->
+                  <view wx:if="{{userId == human.user_id}}">
+                    <view wx:if="{{human.status}}">
+                      <button bindtap='journalHistory' class='journal-show' data-assignment="{{human.assignment_id}}">History</button>
+                    </view>
+                    <view wx:else>
+                      <button bindtap='journalLog' class='journal-show' data-assignment="{{human.assignment_id}}">Journal</button>
+                    </view>
+                  </view>
+                  <view wx:else>
+                    <view wx:if="{{human.status}}">
+                      <button bindtap='journalHistory' class='journal-show' data-assignment="{{human.assignment_id}}">History</button>
+                    </view>
+                    <view wx:else>
+                      not completed
+                    </view>
+                  </view>
+                </view>
+              </block>
+            </view>
+            <view wx:else>
               <block wx:for="{{teamday}}" wx:for-item="human">
                 <view class='day team-individual'>
                   <view class='avatar-width'>
@@ -148,10 +178,11 @@
                   <!-- <image class='locked' src='/img/locked.png' /> -->
                 </view>
               </block>
-            </block>
-          </view>
+            </view>
+          </block>
         </view>
-      
+      </view>
+
     </block>
   </block>
 </view>
