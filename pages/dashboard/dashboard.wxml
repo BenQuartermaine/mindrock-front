@@ -1,19 +1,8 @@
 <!-- Avatar -->
 <view class='head-wrapper'>
-  <view>
-    <image class='dashboard-avatar' src="{{avatar}}" />
-  </view>
-
+  <view><image class='dashboard-avatar' src="{{avatar}}" /></view>
   <!-- Stats section -->
   <view class='stats-wrapper head'>
-    <!-- <view class="row">
-      <view class="current">Current Day</view>
-      <view class="number">2/7</view>
-    </view>
-    <view class="row">
-      <view class="current">Current Streak</view>
-      <view class="number">2/7</view>
-    </view> -->
     <view class="row last">
       <view class="current">Longest Streak</view>
       <view class="number">{{user.max}}/{{user.total}}</view>

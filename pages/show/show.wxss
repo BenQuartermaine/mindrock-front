@@ -10,18 +10,19 @@
 }
 
 .header {
- font-size: 40rpx;
- font-family: 'Gotham';
+ font-size: 35rpx;
+ /* font-family: 'Gotham'; */
  padding: 30rpx;
  display: flex;
  flex-direction: column;
  justify-content: center;
  align-items: center;
  height: 150rpx;
+ font-weight: bold;
 }
 .header-inline {
   padding: 30rpx;
-  font-weight: bold;
+
 }
 .pic {
   width: 100vw;
@@ -31,11 +32,10 @@
   margin-top: 10rpx;
 }
 .des-title{
-  font-family: 'Gotham';
+  font-weight: bolder;
   font-size:25rpx;
   padding-top:30rpx;
   padding-left: 15rpx;
-  font-weight: bold;
 }
 .challenge-name {
   margin-top:30rpx;
@@ -73,14 +73,14 @@
 .difficulty-tag {
   color: white;
   border-radius: 8rpx;
-  padding: 15rpx;
+  padding: 20rpx 15rpx;
   font-size: 30rpx;
   width: 120rpx;
   text-align: center;
 }
 .button-alignment {
   display: flex;
-  padding: 40rpx;
+  padding: 30rpx;
 }
 
 .state-text {
@@ -116,12 +116,11 @@ button {
   }
 
 .view-challenge {
-  /* font-weight: bold; */
+  font-weight: bold;
   font-size: 50rpx;
   text-align: center;
-  margin-bottom: 20px;
-  margin-top: 40px;
-  font-family: 'Gotham'; 
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 .challenge-you {
   padding: 40rpx;
