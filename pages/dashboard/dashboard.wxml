@@ -134,7 +134,7 @@
         <view wx:if="{{!collapse}}">
           <block wx:for="{{challenge.team.teams}}" wx:for-item="teamday">
             <view class='day-title'>
-              <text class="day-text">Day {{index}}</text>
+              <text class="day-text">Day {{index + 1}}</text>
             </view>
             <view wx:if="{{teamday[0] < currentDay}}">
               <block wx:for="{{teamday[1]}}" wx:for-item="human">
