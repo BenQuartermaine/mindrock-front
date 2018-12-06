@@ -16,7 +16,7 @@
 .title {
   display: flex;
   color: white;
-  opacity: 0.6;
+  /* opacity: 0.6; */
   font-size: 60px;
   font-weight: bolder;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
@@ -25,13 +25,11 @@
 .subtitle {
   display: flex;
   font-size: 20px;
-  font-weight: lighter;
+  /* font-weight: lighter; */
   color:white;
-  opacity: 0.6;
+  opacity: 0.8;
   margin-top: 30rpx;
   margin-bottom: 30px;
-  font-family: YatraOne;
-    /* 'Badtaste DEMO'; */
 } 
 button {
   /* background-color: rgb(3, 117, 133); */

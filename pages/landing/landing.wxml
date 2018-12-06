@@ -1,7 +1,7 @@
-<view class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('/img/landing.jpg');">
+<view class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('/img/sunrise.jpg');">
   <view class="content">
     <view class="title">MindRock</view>
-    <view class="subtitle">for stronger minds</view>
+    <view class="subtitle">For Stronger Minds</view>
     <button bindtap='login' open-type="getUserInfo" bindgetuserinfo="getUserInfo">
     Start Your Journey
     </button>
