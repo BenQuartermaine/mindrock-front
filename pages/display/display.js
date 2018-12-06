@@ -74,7 +74,7 @@ Page({
         })
           page.setData({
             content: "Your Mind Rocks",
-            photo_tag_list: "/img/fail.png"
+            photo_tag_list: "/img/sunrise.png"
           })
         } else{
           let data = response[0].journals[0]
