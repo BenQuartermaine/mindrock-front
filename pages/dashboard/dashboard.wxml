@@ -1,6 +1,8 @@
 <!-- Avatar -->
 <view class='head-wrapper'>
-  <view><image class='dashboard-avatar' src="{{avatar}}" /></view>
+  <view>
+    <image class='dashboard-avatar' src="{{avatar}}" />
+  </view>
   <!-- Stats section -->
   <view class='stats-wrapper head'>
     <view class="row last">
@@ -13,7 +15,9 @@
     </view>
     <view class="row">
       <view class="current">Collection</view>
-      <view class="number collection"><image id="rock" src="/img/rock.png"></image></view>
+      <view class="number collection">
+        <image id="rock" src="/img/rock.png"></image>
+      </view>
     </view>
   </view>
 </view>
@@ -135,11 +139,17 @@
             </view>
             <view wx:if="{{teamday[0] < currentDay}}">
               <block wx:for="{{teamday[1]}}" wx:for-item="human">
-                <view wx:if="{{human.status}}">
-                  <button bindtap='journalHistory' class='journal-show' data-assignment="{{human.assignment_id}}">History</button>
-                </view>
-                <view wx:else>
-                  <image class='locked' src='/img/fail.png' />
+                <view class='day team-individual'>
+                  <view class='avatar-width'>
+                    <image class="team-avatar" src="{{human.avatarUrl}}"></image>
+                  </view>
+                  <view class='assignment-team'>{{human.content}}</view>
+                  <view wx:if="{{human.status}}">
+                    <button bindtap='journalHistory' class='journal-show' data-assignment="{{human.assignment_id}}">History</button>
+                  </view>
+                  <view wx:else>
+                    <image class='locked' src='/img/fail.png' />
+                  </view>
                 </view>
               </block>
             </view>
