@@ -67,6 +67,7 @@
   width: 47vw;
   background: transparent;
   margin-top:40rpx;
+  margin-bottom: 30rpx;
 }
 
 .button-row{
