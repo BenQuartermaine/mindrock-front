@@ -24,20 +24,17 @@
   margin-top: 30rpx;
 }
 .current {
-  padding:15rpx;
   font-size:25rpx;
-  font-family: 'Gotham';
-  font-weight: 300;
-  font-style: normal;
-  
+  /* margin-left: 40rpx; */
 }
 .number{
- padding-top:30rpx;
- padding-left:20rpx;
  font-size:20rpx;
  margin-left: 20rpx;
- display: flex;
- font-family: 'Gotham';
+}
+.a-container{
+  right: 100rpx;
+  top:60rpx;
+  position: absolute;
 }
  #toggle-sign {
   width: 35rpx;
@@ -74,9 +71,6 @@
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
   padding: 20rpx;
   font-size: 24rpx;
-  font-family: 'Gotham';
-  font-weight: 300;
-  font-style: normal;
 }
 .day:last-child{
   margin-bottom: 25rpx;
@@ -85,7 +79,10 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #C4C4C4;
-  align-items: center;
+  vertical-align: middle;
+  padding: 15rpx 0rpx;
+ 
+
 }
 
 .row.stats{
@@ -95,7 +92,6 @@
   color: white;
   box-shadow: 0px -3px 2px rgba(144, 144, 144, 0.25);
   border-radius: 20px 20px 0px 0px;
-  font-family: 'Gotham';
   text-transform: capitalize;
   align-items: center;
   height: 60rpx;
@@ -109,7 +105,6 @@
   /* display:flex; */
   padding: 20rpx;
   font-size:25rpx;
-  font-family: 'Gotham';
 
 }
 .dashboard-wrapper {
@@ -127,9 +122,6 @@
 padding:20rpx;
 font-size:25rpx;
 overflow: hidden;
-font-family: 'Gotham';
-font-weight: 300;
-font-style: normal;
 }
 .description-long{
 height:300rpx;
