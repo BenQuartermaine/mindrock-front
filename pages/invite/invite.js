@@ -184,6 +184,7 @@ Page({
         }
         page.setData({
           ismember: person.includes(userId),
+          isleader: page.data.leader == userId
         })
       }
     })

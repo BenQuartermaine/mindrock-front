@@ -1,7 +1,9 @@
 <view class="header-container">
-  <button id= "share" open-type='share'>Share</button>
+  <block wx:if="{{isleader}}"> 
+    <button id="share" open-type='share'>Share</button>
+  </block>
   <text class="header">7 Day {{challenge_name}} Challenge</text>
- </view> 
+</view>
 
 <view class="container">
   <image class="pic" id="pic" src="{{photo[0]}}"></image>
@@ -12,24 +14,24 @@
     </view>
     <view class="{{showExpand? 'des-details-long': 'des-details'}}">
       <text>{{description}}</text>
-   </view>
-   </view>
-      <block wx:for="{{members}}" wx:for-item="member">
-        <view class="avatars">
-          <view class="avatar-row">
-            <image class="team-avatar" src="{{member.avatarUrl}}"></image>
-            <text class="name">{{member.nickName}}</text>
-          </view>
-        </view>
-      </block>   
-   </view>
-  <block wx:if="{{ismember}}">
-    <text class= "confirm">You are already in the team🤪</text>
-     <button id= "decline" bindtap='clickToDecline'>Back</button>
-  </block>
-  <block wx:else>
-    <view class="button-row">
-      <button id= "accept" bindtap='clickToAccept' open-type='getUserInfo'>Accept</button>
-      <button id= "decline" bindtap='clickToDecline'>Decline</button>
+    </view>
+  </view>
+  <block wx:for="{{members}}" wx:for-item="member">
+    <view class="avatars">
+      <view class="avatar-row">
+        <image class="team-avatar" src="{{member.avatarUrl}}"></image>
+        <text class="name">{{member.nickName}}</text>
+      </view>
     </view>
   </block>
+</view>
+<block wx:if="{{ismember}}">
+  <text class="confirm">You are already in the team🤪</text>
+  <button id="decline" bindtap='clickToDecline'>Back</button>
+</block>
+<block wx:else>
+  <view class="button-row">
+    <button id="accept" bindtap='clickToAccept' open-type='getUserInfo'>Accept</button>
+    <button id="decline" bindtap='clickToDecline'>Decline</button>
+  </view>
+</block>
