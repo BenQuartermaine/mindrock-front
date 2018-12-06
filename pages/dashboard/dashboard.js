@@ -20,12 +20,7 @@ Page({
       dashboardTeamNum: e.currentTarget.dataset.toggle
     })
   },
-  // onShareAppMessage: function () {
-  //   console.log('share');
-  //   wx.showShareMenu({
-  //     withShareTicket: true
-  //   })
-  // },
+
   showInvite: function(e){
     console.log("Invite")
     // console.log(e)

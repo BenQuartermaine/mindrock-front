@@ -191,7 +191,6 @@ font-size:25rpx;
 }
 .assignment-team {
   position: relative;
-  left: -140rpx;
   top: -20rpx;
 }
 

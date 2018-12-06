@@ -74,10 +74,10 @@
 @import '/style/fonts.wxss';
 
 .title{
-margin-top:45rpx;
+margin-top:30rpx;
 margin-bottom:15rpx;
 font-size:48rpx;
-font-family:'Gotham';
+font-weight: bold;
 padding:30rpx;
 }
 
