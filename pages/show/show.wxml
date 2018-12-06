@@ -38,10 +38,10 @@
   <view wx:else>
     <view class='button-alignment'>
       <view wx:if="{{challenge_dash.length == 0}}">
-        <button bindtap='clickToDash'>Individual Challenge!</button>
+        <button bindtap='clickToDash'>Individual!</button>
       </view>
       <view wx:if="{{challenge_team.length == 0}}">
-        <button bindtap='createTeam'>Create a Team!</button>
+        <button bindtap='createTeam'>Team!</button>
       </view>
     </view>
   </view>
