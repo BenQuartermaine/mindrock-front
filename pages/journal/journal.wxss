@@ -1,4 +1,4 @@
-@import '/style/fonts.wxss';
+
 .header {
   margin: 25rpx 0 30rpx 25rpx;
 

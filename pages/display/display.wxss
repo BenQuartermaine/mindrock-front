@@ -1,6 +1,5 @@
 
 @import '/template/calendar/index.wxss';
-@import '/style/fonts.wxss';
 .calendar-wrap {
   width: 100%;
   margin-top: 30rpx;

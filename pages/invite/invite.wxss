@@ -1,4 +1,4 @@
-@import '/style/fonts.wxss';
+
 .header-container{
   position:relative;
   height: 150rpx;

@@ -1,4 +1,4 @@
-@import '/style/fonts.wxss';
+
 .wrapper {
   background: #327383;
   color: #FFFFFF;
