@@ -10,8 +10,8 @@ Page({
     collapse: false,
     min: '/img/min.svg',
     max: '/img/max.svg',
-    dashboardTeamToggle: ['Dashboard', 'Team'],
-    dashboardTeamNum: 1,
+    dashboardTeamToggle: ['Individual', 'Team'],
+    dashboardTeamNum: 0,
   },
 
   dashboardTeamFunction: function (e) {
