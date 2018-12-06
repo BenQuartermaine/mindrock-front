@@ -27,7 +27,7 @@
 
   <view wx:if="{{challenge_team.length > 0 || challenge_dash.length >0 }}">
     <view class="challenge-you">
-      <text>You've already got a challenge!</text>
+      <text>Complete your current challenge first!</text>
     </view>
     <button bindtap='NavigateToDashboard'>Go to Challenge</button>
   </view>
