@@ -133,7 +133,7 @@
                 </button>
               </block>
               <block wx:else>
-                Member
+                <view id="member">Member</view> 
               </block>
             </view>
           </view>

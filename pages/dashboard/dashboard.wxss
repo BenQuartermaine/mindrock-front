@@ -182,8 +182,12 @@ font-size:25rpx;
   align-items: center;
 }
 .assignment-team {
-  position: relative;
-  top: -20rpx;
+  width: 80%;
+  height: 100%;
+  padding-left: 30rpx;
+  padding-right: 15rpx;
+  overflow: hidden;
+ 
 }
 
 .day-title {
@@ -210,7 +214,6 @@ font-size:25rpx;
   align-items: center
 }
 .day-text{
-  font-family: gotham;
   font-size: 25rpx;
 }
 #rock {
@@ -222,4 +225,9 @@ font-size:25rpx;
 .collection {
   margin: 0;
   padding: 0;
+}
+
+#member{
+  font-size:25rpx;
+  padding-left: 15rpx;
 }
