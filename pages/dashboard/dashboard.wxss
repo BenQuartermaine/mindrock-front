@@ -224,4 +224,10 @@ font-size:25rpx;
 #rock {
   width: 25rpx;
   height: 25rpx;
+  margin: 0;
+}
+
+.collection {
+  margin: 0;
+  padding: 0;
 }
