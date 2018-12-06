@@ -125,9 +125,14 @@
             <!-- <view class="toggle"> -->
             <view class="share-button">
               <image id="toggle-sign" src="{{collapse? max : min }}" bindtap="expand"></image>
-              <button id="share" bindtap="showInvite" data-team="{{challenge.team}}">
-                <image id="share-sign" src="/img/share.png"></image>
-              </button>
+              <block wx:if="{{challenge.team.team_id.leader == userId}}">
+                <button id="share" bindtap="showInvite" data-team="{{challenge.team}}">
+                  <image id="share-sign" src="/img/share.png"></image>
+                </button>
+              </block>
+              <block wx:else>
+                Member
+              </block>
             </view>
           </view>
         </view>
