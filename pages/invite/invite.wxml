@@ -7,7 +7,7 @@
 
   <block wx:if="{{isleader}}"> 
     <view id='share-button'>
-      <button id="share" open-type='share'>Share</button>
+      <button id="share" open-type='share'>Invite</button>
     </view>
   </block>
   <view class="des-section">
