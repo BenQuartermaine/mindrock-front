@@ -40,8 +40,8 @@
  font-family: 'Gotham';
 }
  #toggle-sign {
-  width: 25rpx;
-  height: 25rpx;
+  width: 35rpx;
+  height: 50rpx;
   margin-left: 25rpx;
 } 
 .challenge-wrapper {
