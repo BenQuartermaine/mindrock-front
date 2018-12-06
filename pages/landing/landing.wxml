@@ -1,4 +1,4 @@
-<view class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('/img/sunrise.jpg');">
+<view class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://lc-jdccnuck.cn-n1.lcfile.com/fdbdea0a66317ada0d85.jpg');">
   <view class="content">
     <view class="title">MindRock</view>
     <view class="subtitle">For Stronger Minds</view>
