@@ -6,7 +6,6 @@
   height: 570rpx;
   background: rgba(250,250,250,0.9);
   color: black;
-  /* box-shadow: 1px 4px 7px #c1c1c1; */
   border-radius:5px;
   text-align: center;
   
@@ -96,10 +95,7 @@ padding:30rpx;
 .personal-info{
   display: flex;
   justify-content: center;
-   text-align: center;
-  font-family: 'Gotham';
-  font-weight: 300;
-  font-style: normal;
+  text-align: center;
   font-size: 28rpx;
   align-items: center;
 }
@@ -133,12 +129,8 @@ justify-content: space-between;
 padding-top:25rpx;
 width: 95%;
 text-align:center;
-font-family:'Gotham';
-font-weight:300;
-font-style:normal;
 }
 #icon {
-  /* display: flex; */
   width: 35rpx;
   height:35rpx;
 
@@ -154,7 +146,6 @@ font-style:normal;
 }
 
 .date{
-  font-family: gotham;
   padding-top:25rpx;
   font-size: 20rpx;
   padding-left: 25rpx;
@@ -179,9 +170,6 @@ font-style:normal;
 
 .summary{
   display: flex;
-  font-family: 'Gotham';
-  font-weight: 300;
-  font-style: normal;
   font-size: 28rpx;
   margin-top:20rpx;
   padding:20rpx;
@@ -216,8 +204,6 @@ p{
   font-size: 30rpx;
   padding: 20rpx;
   margin-right: 350rpx;
-  font-family: 'Gotham';
-  font-weight: 300;
 }
 
 .button.cal{
