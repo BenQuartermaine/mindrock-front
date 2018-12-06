@@ -10,7 +10,6 @@
 
 .header {
  font-size: 35rpx;
- /* font-family: 'Gotham'; */
  padding: 30rpx;
  display: flex;
  flex-direction: column;

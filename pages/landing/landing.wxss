@@ -30,17 +30,13 @@
   opacity: 0.6;
   margin-top: 30rpx;
   margin-bottom: 30px;
-  font-family: YatraOne;
-    /* 'Badtaste DEMO'; */
 } 
 button {
-  /* background-color: rgb(3, 117, 133); */
+
   border-radius: 5px;
   padding:15rpx 20rpx;
   text-align: center;
   opacity: 50%;
-  /* background:transparent; */
-  font-family: YatraOne;
   background-color:rgb(3, 117, 133);
   color: white;
   font-size:25rpx;

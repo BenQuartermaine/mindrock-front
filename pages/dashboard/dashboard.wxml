@@ -5,18 +5,20 @@
   </view>
   <!-- Stats section -->
   <view class='stats-wrapper head'>
-    <view class="row last">
-      <view class="current">Longest Streak</view>
-      <view class="number">{{user.max}}/{{user.total}}</view>
-    </view>
-    <view class="row">
-      <view class="current">Level</view>
-      <view class="number">WonderMind</view>
-    </view>
-    <view class="row">
-      <view class="current">Collection</view>
-      <view class="number collection">
-        <image id="rock" src="/img/rock.png"></image>
+    <view class="a-container">
+      <view class="row last">
+        <view class="current">Longest Streak</view>
+        <view class="number">{{user.max}}/{{user.total}}</view>
+      </view>
+      <view class="row">
+        <view class="current">Level</view>
+        <view class="number">WonderMind</view>
+      </view>
+      <view class="row">
+        <view class="current">Collection</view>
+        <view class="number collection">
+          <image id="rock" src="/img/rock.png"></image>
+        </view>
       </view>
     </view>
   </view>
