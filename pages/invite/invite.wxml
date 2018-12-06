@@ -1,16 +1,19 @@
 <view class="header-container">
-  <button id= "share" open-type='share'>Share</button>
   <text class="header">7 Day {{challenge_name}} Challenge</text>
- </view> 
+</view> 
 
 <view class="container">
-  <image class="pic" id="pic" src="{{photo[0]}}"></image>
-  <view class="{{showExpand? 'des-section-long': 'des-section'}}">
+  <image class="pic" id="pic" src="/img/waterfall.jpg"></image>
+
+  
+  <view id='share-button'>
+    <button id="share" open-type='share'>Share</button>
+  </view>
+  <view class="des-section">
     <view class="row">
       <view class="des-title">Description</view>
-      <image class="dropdown" src="{{showExpand? '/img/min-bl.svg' : '/img/max-bl.svg'}}" bindtap="expand"></image>
     </view>
-    <view class="{{showExpand? 'des-details-long': 'des-details'}}">
+    <view class="des-details-long">
       <text>{{description}}</text>
    </view>
    </view>
