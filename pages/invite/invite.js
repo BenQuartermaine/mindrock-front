@@ -172,6 +172,7 @@ Page({
         console.log("memebers id")
         console.log(res)
         page.setData({
+          leader: res.data.team.leader,
           members: res.data.team.members
         })
         console.log(page.data)
